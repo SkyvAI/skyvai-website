@@ -1836,6 +1836,630 @@ footer {
   </div>
 </section>
 
+
+
+<!-- ═══════════════════════════════════════
+     HOOK: BEFORE / AFTER
+════════════════════════════════════════ -->
+<section style="background:var(--ink2);padding:90px 40px;">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:48px;">
+      <div class="section-eyebrow" style="text-align:center;display:block;">Ehrlicher Vergleich</div>
+      <h2 class="section-title" style="text-align:center;">Wie Ihr Alltag <em>heute</em> aussieht —<br>und wie er aussehen <em>könnte</em></h2>
+    </div>
+    <div class="reveal" style="max-width:760px;margin:0 auto;">
+      <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNzAwIDI4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ2JhIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+CiAgICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM2ZDI4ZDkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwZWE1ZTkiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iMjgwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPgogIDwhLS0gQkVGT1JFIC0tPgogIDxyZWN0IHg9IjEwIiB5PSIxMCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIyNjAiIHJ4PSIxNiIgZmlsbD0iIzFjMDUwNSIgc3Ryb2tlPSIjZWY0NDQ0MzAiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjMwIiB5PSI0MiIgZmlsbD0iI2VmNDQ0NCIgZm9udC1zaXplPSIxMSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgbGV0dGVyLXNwYWNpbmc9IjIiPlZPUkhFUjwvdGV4dD4KICA8cmVjdCB4PSIyNSIgeT0iNTUiIHdpZHRoPSIyOTAiIGhlaWdodD0iMjgiIHJ4PSI2IiBmaWxsPSIjZWY0NDQ0MTAiLz4KICA8dGV4dCB4PSI0MCIgeT0iNzQiIGZpbGw9IiNlZjQ0NDQ5MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPvCfk6cgRS1NYWlscyBtYW51ZWxsIGJlYW50d29ydGVuPC90ZXh0PgogIDxyZWN0IHg9IjI1IiB5PSI5MSIgd2lkdGg9IjI5MCIgaGVpZ2h0PSIyOCIgcng9IjYiIGZpbGw9IiNlZjQ0NDQxMCIvPgogIDx0ZXh0IHg9IjQwIiB5PSIxMTAiIGZpbGw9IiNlZjQ0NDQ5MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPvCfk4QgQW5nZWJvdGUgMmggcHJvIFN0w7xjazwvdGV4dD4KICA8cmVjdCB4PSIyNSIgeT0iMTI3IiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0iI2VmNDQ0NDEwIi8+CiAgPHRleHQgeD0iNDAiIHk9IjE0NiIgZmlsbD0iI2VmNDQ0NDkwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+8J+TiiBSZXBvcnRpbmcgbWFudWVsbCBlcnN0ZWxsZW48L3RleHQ+CiAgPHJlY3QgeD0iMjUiIHk9IjE2MyIgd2lkdGg9IjI5MCIgaGVpZ2h0PSIyOCIgcng9IjYiIGZpbGw9IiNlZjQ0NDQxMCIvPgogIDx0ZXh0IHg9IjQwIiB5PSIxODIiIGZpbGw9IiNlZjQ0NDQ5MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPvCfkqwgS3VuZGVuYW5mcmFnZW4gPSBDaGFvczwvdGV4dD4KICA8cmVjdCB4PSIyNSIgeT0iMTk5IiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0iI2VmNDQ0NDEwIi8+CiAgPHRleHQgeD0iNDAiIHk9IjIxOCIgZmlsbD0iI2VmNDQ0NDkwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+4o+wIDEwaC9Xb2NoZSBWZXJ3YWx0dW5nPC90ZXh0PgogIDx0ZXh0IHg9IjE3MCIgeT0iMjU1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZWY0NDQ0NjAiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPuKAlCAzIE1vbmF0ZSBTdGlsbHN0YW5kIOKAlDwvdGV4dD4KICA8IS0tIEFSUk9XIC0tPgogIDx0ZXh0IHg9IjM1MCIgeT0iMTQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjMyIj7ihpI8L3RleHQ+CiAgPHRleHQgeD0iMzUwIiB5PSIxNzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9InVybCgjZ2JhKSIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+S0k8L3RleHQ+CiAgPCEtLSBBRlRFUiAtLT4KICA8cmVjdCB4PSIzNzAiIHk9IjEwIiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjI2MCIgcng9IjE2IiBmaWxsPSIjMDMwZjBhIiBzdHJva2U9IiMwNmQ2YzczMCIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KICA8dGV4dCB4PSIzOTAiIHk9IjQyIiBmaWxsPSIjMDZkNmM3IiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIiBsZXR0ZXItc3BhY2luZz0iMiI+TkFDSEhFUjwvdGV4dD4KICA8cmVjdCB4PSIzODUiIHk9IjU1IiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0iIzA2ZDZjNzEwIi8+CiAgPHRleHQgeD0iNDAwIiB5PSI3NCIgZmlsbD0iIzA2ZDZjNzkwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+4pyFIEtJIGFudHdvcnRldCBpbiAmbHQ7MiBNaW4uIGF1dG9tYXRpc2NoPC90ZXh0PgogIDxyZWN0IHg9IjM4NSIgeT0iOTEiIHdpZHRoPSIyOTAiIGhlaWdodD0iMjgiIHJ4PSI2IiBmaWxsPSIjMDZkNmM3MTAiLz4KICA8dGV4dCB4PSI0MDAiIHk9IjExMCIgZmlsbD0iIzA2ZDZjNzkwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+4pyFIEFuZ2Vib3QgaW4gMyBLbGlja3MsIEtJIGVyc3RlbGx0IGVzPC90ZXh0PgogIDxyZWN0IHg9IjM4NSIgeT0iMTI3IiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0iIzA2ZDZjNzEwIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIxNDYiIGZpbGw9IiMwNmQ2Yzc5MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPuKchSBEYXNoYm9hcmQgYWt0dWFsaXNpZXJ0IHNpY2ggc2VsYnN0PC90ZXh0PgogIDxyZWN0IHg9IjM4NSIgeT0iMTYzIiB3aWR0aD0iMjkwIiBoZWlnaHQ9IjI4IiByeD0iNiIgZmlsbD0iIzA2ZDZjNzEwIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIxODIiIGZpbGw9IiMwNmQ2Yzc5MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPuKchSBDaGF0Ym90IGzDtnN0IDgwJSBkZXIgQW5mcmFnZW48L3RleHQ+CiAgPHJlY3QgeD0iMzg1IiB5PSIxOTkiIHdpZHRoPSIyOTAiIGhlaWdodD0iMjgiIHJ4PSI2IiBmaWxsPSIjMDZkNmM3MTAiLz4KICA8dGV4dCB4PSI0MDAiIHk9IjIxOCIgZmlsbD0iIzA2ZDZjNzkwIiBmb250LXNpemU9IjEyIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+4pyFIDEwaC9Xb2NoZSDihpIgNDUgTWludXRlbjwvdGV4dD4KICA8dGV4dCB4PSI1MzAiIHk9IjI1NSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzA2ZDZjNzYwIiBmb250LXNpemU9IjExIiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj7igJQgYWIgV29jaGUgMSBtZXNzYmFyIOKAlDwvdGV4dD4KPC9zdmc+" alt="Vorher Nachher Vergleich" style="width:100%;border-radius:20px;">
+    </div>
+    <div class="reveal" style="text-align:center;margin-top:40px;">
+      <p style="font-size:17px;color:var(--muted);max-width:520px;margin:0 auto 28px;">Diese Transformation kostet Sie ein 30-minütiges Gespräch. Der Rest liegt bei uns.</p>
+      <a href="https://calendly.com/skyvai" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--violet),var(--sky));color:white;padding:14px 32px;border-radius:50px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 4px 30px rgba(109,40,217,.35);">
+        Jetzt kostenlos starten →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     BRANCHEN
+════════════════════════════════════════ -->
+<section style="background:var(--ink);padding:80px 40px;overflow:hidden;">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:40px;">
+      <div class="section-eyebrow" style="display:block;text-align:center;">Branchenübergreifend</div>
+      <h2 class="section-title" style="text-align:center;">KI funktioniert in <em>Ihrer Branche</em></h2>
+      <p class="section-sub" style="text-align:center;margin:0 auto;">Egal ob Handwerk, Handel oder Dienstleistung — wir haben für jede Branche den richtigen Ansatz.</p>
+    </div>
+    <div class="reveal">
+      <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgOTAwIDE0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImdpIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMjhkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBlYTVlOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgogIDxyZWN0IHdpZHRoPSI5MDAiIGhlaWdodD0iMTQwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPgogIDwhLS0gSGFuZHdlcmsgLS0+CiAgPHJlY3QgeD0iMTAiIHk9IjIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCIgcng9IjE2IiBmaWxsPSIjZmZmZmZmMDQiIHN0cm9rZT0iI2ZmZmZmZjA4IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI3MCIgeT0iNjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMzIiPvCflKc8L3RleHQ+CiAgPHRleHQgeD0iNzAiIHk9IjkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmZmZmNjAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5IYW5kd2VyazwvdGV4dD4KICA8dGV4dCB4PSI3MCIgeT0iMTA2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmQyOGQ5NDAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPi0zaC9UYWc8L3RleHQ+CiAgPCEtLSBIYW5kZWwgLS0+CiAgPHJlY3QgeD0iMTQ4IiB5PSIyMCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIxMDAiIHJ4PSIxNiIgZmlsbD0iI2ZmZmZmZjA0IiBzdHJva2U9IiNmZmZmZmYwOCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iMjA4IiB5PSI2OCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zaXplPSIzMiI+8J+bkjwvdGV4dD4KICA8dGV4dCB4PSIyMDgiIHk9IjkwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmZmZmNjAiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5IYW5kZWw8L3RleHQ+CiAgPHRleHQgeD0iMjA4IiB5PSIxMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwZWE1ZTk0MCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+KzQwJSBMZWFkczwvdGV4dD4KICA8IS0tIEluZHVzdHJpZSAtLT4KICA8cmVjdCB4PSIyODYiIHk9IjIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCIgcng9IjE2IiBmaWxsPSIjNmQyOGQ5MTAiIHN0cm9rZT0iIzZkMjhkOTMwIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSIzNDYiIHk9IjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjMyIj7wn4+tPC90ZXh0PgogIDx0ZXh0IHg9IjM0NiIgeT0iOTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNjNGI1ZmQiIGZvbnQtc2l6ZT0iMTIiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj5JbmR1c3RyaWU8L3RleHQ+CiAgPHRleHQgeD0iMzQ2IiB5PSIxMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM2ZDI4ZDk2MCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+LTY4JSBBdWZ3YW5kPC90ZXh0PgogIDwhLS0gR2VzdW5kaGVpdCAtLT4KICA8cmVjdCB4PSI0MjQiIHk9IjIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCIgcng9IjE2IiBmaWxsPSIjZmZmZmZmMDQiIHN0cm9rZT0iI2ZmZmZmZjA4IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI0ODQiIHk9IjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjMyIj7wn4+lPC90ZXh0PgogIDx0ZXh0IHg9IjQ4NCIgeT0iOTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmY2MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPkdlc3VuZGhlaXQ8L3RleHQ+CiAgPHRleHQgeD0iNDg0IiB5PSIxMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwNmQ2Yzc0MCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+Q2hhdGJvdCAyNC83PC90ZXh0PgogIDwhLS0gSW1tb2JpbGllbiAtLT4KICA8cmVjdCB4PSI1NjIiIHk9IjIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCIgcng9IjE2IiBmaWxsPSIjZmZmZmZmMDQiIHN0cm9rZT0iI2ZmZmZmZjA4IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI2MjIiIHk9IjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjMyIj7wn4+gPC90ZXh0PgogIDx0ZXh0IHg9IjYyMiIgeT0iOTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmY2MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPkltbW9iaWxpZW48L3RleHQ+CiAgPHRleHQgeD0iNjIyIiB5PSIxMDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwZWE1ZTk0MCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+QXV0by1FeHBvc2U8L3RleHQ+CiAgPCEtLSBEaWVuc3RsZWlzdHVuZyAtLT4KICA8cmVjdCB4PSI3MDAiIHk9IjIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEwMCIgcng9IjE2IiBmaWxsPSIjZmZmZmZmMDQiIHN0cm9rZT0iI2ZmZmZmZjA4IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8dGV4dCB4PSI3NjAiIHk9IjY4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXNpemU9IjMyIj7wn5K8PC90ZXh0PgogIDx0ZXh0IHg9Ijc2MCIgeT0iOTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmY2MCIgZm9udC1zaXplPSIxMiIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPkRpZW5zdGxlaXN0dW5nPC90ZXh0PgogIDx0ZXh0IHg9Ijc2MCIgeT0iMTA2IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmQyOGQ5NDAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPktJLUNvbnRlbnQ8L3RleHQ+CiAgPCEtLSBMb2dpc3RpayAtLT4KICA8cmVjdCB4PSI4MzgiIHk9IjIwIiB3aWR0aD0iNTIiIGhlaWdodD0iMTAwIiByeD0iMTYiIGZpbGw9IiNmZmZmZmYwNCIgc3Ryb2tlPSIjZmZmZmZmMDgiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9Ijg2NCIgeT0iNjgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc2l6ZT0iMjIiPvCfmpo8L3RleHQ+CiAgPHRleHQgeD0iODY0IiB5PSI5MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZmZmZjMwIiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj4rbWVocjwvdGV4dD4KPC9zdmc+" alt="Branchen" style="width:100%;max-width:960px;display:block;margin:0 auto;">
+    </div>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px;">
+      <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:12px;">🔧</div>
+        <div style="font-family:'Space Age',sans-serif;font-size:15px;margin-bottom:8px;">Handwerk & Industrie</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.6;">Angebotserstellung automatisieren, Terminplanung per KI, Dokumentation ohne Aufwand. Typisch: 3h täglich eingespart.</p>
+      </div>
+      <div style="background:rgba(109,40,217,.06);border:1px solid rgba(109,40,217,.2);border-radius:16px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:12px;">🛒</div>
+        <div style="font-family:'Space Age',sans-serif;font-size:15px;margin-bottom:8px;">Handel & E-Commerce</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.6;">Produktbeschreibungen, Kundensupport-Chatbot, automatisierte Newsletter. Typisch: +40% Conversion-Rate.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:12px;">💼</div>
+        <div style="font-family:'Space Age',sans-serif;font-size:15px;margin-bottom:8px;">Dienstleistung & Beratung</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.6;">Lead-Qualifizierung, Terminbuchung, Reporting-Automatisierung. Typisch: 60% weniger Verwaltungszeit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════ -->
+<section style="background:var(--ink2);padding:90px 40px;">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:52px;">
+      <div class="section-eyebrow" style="display:block;text-align:center;">Kundenstimmen</div>
+      <h2 class="section-title" style="text-align:center;">Was unsere Kunden<br><em>wirklich</em> sagen</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:22px;padding:32px;position:relative;transition:all .3s;" onmouseover="this.style.borderColor='rgba(109,40,217,.35)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+        <div style="font-size:36px;color:var(--violet-light);font-family:Georgia,serif;line-height:1;margin-bottom:16px;opacity:0.6;">"</div>
+        <p style="font-size:15px;color:rgba(232,228,240,.85);line-height:1.8;margin-bottom:24px;font-style:italic;">Ich habe nie gedacht, dass KI für meinen Handwerksbetrieb relevant ist. Seit SkyvAI unsere Angebotserstellung automatisiert hat, spare ich täglich 2 Stunden — und die Fehlerquote ist auf null gefallen.</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiMxYzFhMzgiLz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjMyIiByPSIxNCIgZmlsbD0iIzZkMjhkOSIgb3BhY2l0eT0iMC43Ii8+CiAgPHBhdGggZD0iTTE1LDcyIFE0MCw1MiA2NSw3MiIgZmlsbD0iIzZkMjhkOSIgb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPg==" alt="Thomas K." style="width:48px;height:48px;border-radius:50%;">
+          <div>
+            <div style="font-family:'Space Age',sans-serif;font-size:13px;">Thomas K.</div>
+            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:1px;">GF · HANDWERKSBETRIEB · ESSEN</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:24px;right:24px;display:flex;gap:3px;">
+          <span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="background:linear-gradient(160deg,rgba(109,40,217,.08),rgba(14,165,233,.05));border:1px solid rgba(109,40,217,.25);border-radius:22px;padding:32px;position:relative;">
+        <div style="font-size:36px;color:var(--sky-light);font-family:Georgia,serif;line-height:1;margin-bottom:16px;opacity:0.6;">"</div>
+        <p style="font-size:15px;color:rgba(232,228,240,.85);line-height:1.8;margin-bottom:24px;font-style:italic;">Der KI-Potenzial-Check war kostenlos und hat uns drei konkrete Ideen geliefert, die wir sofort umsetzen konnten. Kein Blabla, kein Pitch — einfach echte Ergebnisse. Genau das haben wir gesucht.</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiMwZjFmMmUiLz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjMyIiByPSIxNCIgZmlsbD0iIzBlYTVlOSIgb3BhY2l0eT0iMC43Ii8+CiAgPHBhdGggZD0iTTE1LDcyIFE0MCw1MiA2NSw3MiIgZmlsbD0iIzBlYTVlOSIgb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPg==" alt="Sandra M." style="width:48px;height:48px;border-radius:50%;">
+          <div>
+            <div style="font-family:'Space Age',sans-serif;font-size:13px;">Sandra M.</div>
+            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:1px;">MARKETINGLEITERIN · KMU · DÜSSELDORF</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:24px;right:24px;display:flex;gap:3px;">
+          <span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span>
+        </div>
+      </div>
+
+      <div class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:22px;padding:32px;position:relative;transition:all .3s;" onmouseover="this.style.borderColor='rgba(6,214,199,.35)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+        <div style="font-size:36px;color:var(--aqua);font-family:Georgia,serif;line-height:1;margin-bottom:16px;opacity:0.6;">"</div>
+        <p style="font-size:15px;color:rgba(232,228,240,.85);line-height:1.8;margin-bottom:24px;font-style:italic;">Dank SkyvAI haben wir den MID-Fördergutschein bekommen — 7.500 € zurück! Die Förderbegleitung war Gold wert. Das war allein schon die Zusammenarbeit wert, und dann kam der Chatbot noch obendrauf.</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgODAgODAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPGNpcmNsZSBjeD0iNDAiIGN5PSI0MCIgcj0iNDAiIGZpbGw9IiMwYTFhMWUiLz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjMyIiByPSIxNCIgZmlsbD0iIzA2ZDZjNyIgb3BhY2l0eT0iMC43Ii8+CiAgPHBhdGggZD0iTTE1LDcyIFE0MCw1MiA2NSw3MiIgZmlsbD0iIzA2ZDZjNyIgb3BhY2l0eT0iMC41Ii8+Cjwvc3ZnPg==" alt="Michael R." style="width:48px;height:48px;border-radius:50%;">
+          <div>
+            <div style="font-family:'Space Age',sans-serif;font-size:13px;">Michael R.</div>
+            <div style="font-size:11px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:1px;">INHABER · DIENSTLEISTUNG · KÖLN</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:24px;right:24px;display:flex;gap:3px;">
+          <span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span><span style="color:#f59e0b;font-size:14px;">★</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     NRW-FOKUS SECTION
+════════════════════════════════════════ -->
+<section style="background:var(--ink);padding:90px 40px;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;">
+      <div class="reveal">
+        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDMyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ20iIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMjhkOSIgc3RvcC1vcGFjaXR5PSIwLjYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMGVhNWU5IiBzdG9wLW9wYWNpdHk9IjAuNCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9ImdmIj48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSIyIiByZXN1bHQ9ImIiLz48ZmVNZXJnZT48ZmVNZXJnZU5vZGUgaW49ImIiLz48ZmVNZXJnZU5vZGUgaW49IlNvdXJjZUdyYXBoaWMiLz48L2ZlTWVyZ2U+PC9maWx0ZXI+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzIwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPgogIDwhLS0gTlJXIHNpbXBsaWZpZWQgc2hhcGUgLS0+CiAgPHBhdGggZD0iTTgwLDYwIEwxNDAsMzAgTDIyMCwyMCBMMzAwLDQwIEwzNjAsODAgTDM4MCwxNDAgTDM2MCwyMDAgTDMyMCwyNTAgTDI2MCwyODAgTDIwMCwyOTAgTDE0MCwyNzAgTDkwLDI0MCBMNjAsMTkwIEw0MCwxNDAgWiIgCiAgICBmaWxsPSJ1cmwoI2dtKSIgb3BhY2l0eT0iMC4yNSIgc3Ryb2tlPSIjNmQyOGQ5IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNSIvPgogIDwhLS0gQ2l0eSBkb3RzIC0tPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjE2MCIgcj0iOCIgZmlsbD0iIzZkMjhkOSIgZmlsdGVyPSJ1cmwoI2dmKSIgb3BhY2l0eT0iMC45Ii8+CiAgPHRleHQgeD0iMjE1IiB5PSIxNjQiIGZpbGw9IiNjNGI1ZmQiIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkTDvHNzZWxkb3JmPC90ZXh0PgogIDxjaXJjbGUgY3g9IjE2NSIgY3k9IjE0NSIgcj0iNiIgZmlsbD0iIzBlYTVlOSIgZmlsdGVyPSJ1cmwoI2dmKSIgb3BhY2l0eT0iMC44Ii8+CiAgPHRleHQgeD0iMTAwIiB5PSIxNDAiIGZpbGw9IiMzOGJkZjgiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkVzc2VuPC90ZXh0PgogIDxjaXJjbGUgY3g9IjIzMCIgY3k9IjE0MCIgcj0iNSIgZmlsbD0iIzBlYTVlOSIgb3BhY2l0eT0iMC43Ii8+CiAgPHRleHQgeD0iMjQwIiB5PSIxNDQiIGZpbGw9IiMzOGJkZjgiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkvDtmxuPC90ZXh0PgogIDxjaXJjbGUgY3g9IjE4NSIgY3k9IjEyNSIgcj0iNCIgZmlsbD0iIzA2ZDZjNyIgb3BhY2l0eT0iMC42Ii8+CiAgPHRleHQgeD0iMTU1IiB5PSIxMjAiIGZpbGw9IiMwNmQ2Yzc3MCIgZm9udC1zaXplPSI5IiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5Eb3J0bXVuZDwvdGV4dD4KICA8Y2lyY2xlIGN4PSIyNjAiIGN5PSIxMTUiIHI9IjQiIGZpbGw9IiMwNmQ2YzciIG9wYWNpdHk9IjAuNiIvPgogIDx0ZXh0IHg9IjI2OCIgeT0iMTE5IiBmaWxsPSIjMDZkNmM3NzAiIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+QmllbGVmZWxkPC90ZXh0PgogIDwhLS0gQ29ubmVjdGlvbiBsaW5lcyAtLT4KICA8bGluZSB4MT0iMjAwIiB5MT0iMTYwIiB4Mj0iMTY1IiB5Mj0iMTQ1IiBzdHJva2U9IiM2ZDI4ZDk0MCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPGxpbmUgeDE9IjIwMCIgeTE9IjE2MCIgeDI9IjIzMCIgeTI9IjE0MCIgc3Ryb2tlPSIjNmQyOGQ5NDAiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIxNjUiIHkxPSIxNDUiIHgyPSIxODUiIHkyPSIxMjUiIHN0cm9rZT0iIzBlYTVlOTMwIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMjMwIiB5MT0iMTQwIiB4Mj0iMjYwIiB5Mj0iMTE1IiBzdHJva2U9IiMwZWE1ZTkzMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPCEtLSBSYWRpYWwgZ2xvdyBmcm9tIETDvHNzZWxkb3JmIC0tPgogIDxjaXJjbGUgY3g9IjIwMCIgY3k9IjE2MCIgcj0iNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzZkMjhkOSIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjMiIHN0cm9rZS1kYXNoYXJyYXk9IjMiLz4KICA8Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNjAiIHI9IjcwIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZDI4ZDkiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4xNSIgc3Ryb2tlLWRhc2hhcnJheT0iMyIvPgogIDwhLS0gTGFiZWwgLS0+CiAgPHRleHQgeD0iMjAwIiB5PSIzMDUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYzMCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgbGV0dGVyLXNwYWNpbmc9IjMiPk5PUkRSSEVJTi1XRVNURkFMRU48L3RleHQ+Cjwvc3ZnPg==" alt="NRW Karte" style="width:100%;max-width:400px;border-radius:24px;display:block;margin:0 auto;">
+      </div>
+      <div class="reveal">
+        <div class="section-eyebrow">Heimvorteil</div>
+        <h2 class="section-title">Wir kennen <em>NRW</em> —<br>und Ihre Konkurrenz auch</h2>
+        <p class="section-sub" style="margin-bottom:32px;">Wir sind keine Fernberatung aus München. Wir sind in Düsseldorf und Essen zu Hause, kennen die IHK-Strukturen, die Förderprogramme und die Unternehmen in der Region.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🏛️</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;">MID-Gutschein NRW</div>
+              <div style="font-size:12px;color:var(--muted);">Wir begleiten Ihren Antrag — bis zu 15.000 € Förderung</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">🤝</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;">IHK-Netzwerk Düsseldorf & Essen</div>
+              <div style="font-size:12px;color:var(--muted);">Aktives Mitglied, regelmäßige Events, direkter Zugang</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:44px;height:44px;border-radius:12px;background:rgba(6,214,199,.1);border:1px solid rgba(6,214,199,.2);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">📍</div>
+            <div>
+              <div style="font-size:14px;font-weight:600;">Vor-Ort-Workshops in NRW</div>
+              <div style="font-size:12px;color:var(--muted);">Keine Zoom-only-Agentur — wir kommen zu Ihnen</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px;">
+          <div style="text-align:center;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:16px;">
+            <div style="font-family:'Space Age',sans-serif;font-size:24px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">700K+</div>
+            <div style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:4px;">KMU IN NRW</div>
+          </div>
+          <div style="text-align:center;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:16px;">
+            <div style="font-family:'Space Age',sans-serif;font-size:24px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">15K€</div>
+            <div style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:4px;">MID-FÖRDERUNG</div>
+          </div>
+          <div style="text-align:center;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:16px;">
+            <div style="font-family:'Space Age',sans-serif;font-size:24px;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">#1</div>
+            <div style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;margin-top:4px;">ZIEL NRW 2025</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ANIMIERTE STATS / ZAHLEN
+════════════════════════════════════════ -->
+<section style="background:linear-gradient(135deg,rgba(109,40,217,.08),rgba(14,165,233,.05));border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);padding:70px 40px;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center;">
+      <div class="reveal">
+        <div class="counter" data-target="68" style="font-family:'Space Age',sans-serif;font-size:52px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">0<span>%</span></div>
+        <div style="font-size:14px;color:var(--muted);margin-top:8px;">Zeitersparnis<br>durchschnittlich</div>
+      </div>
+      <div class="reveal">
+        <div class="counter" data-target="48" style="font-family:'Space Age',sans-serif;font-size:52px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">0<span>h</span></div>
+        <div style="font-size:14px;color:var(--muted);margin-top:8px;">Turnaround für den<br>KI-Potenzial-Check</div>
+      </div>
+      <div class="reveal">
+        <div class="counter" data-target="15000" data-suffix="€" style="font-family:'Space Age',sans-serif;font-size:52px;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">0<span>€</span></div>
+        <div style="font-size:14px;color:var(--muted);margin-top:8px;">NRW-Förderung<br>maximal möglich</div>
+      </div>
+      <div class="reveal">
+        <div class="counter" data-target="1" style="font-family:'Space Age',sans-serif;font-size:52px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">0<span>W</span></div>
+        <div style="font-size:14px;color:var(--muted);margin-top:8px;">Bis zu ersten<br>messbaren Ergebnissen</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FAQ
+════════════════════════════════════════ -->
+<section style="background:var(--ink2);padding:90px 40px;" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:52px;">
+      <div class="section-eyebrow" style="display:block;text-align:center;">Häufige Fragen</div>
+      <h2 class="section-title" style="text-align:center;">Wir antworten <em>ehrlich</em></h2>
+    </div>
+    <div style="max-width:780px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
+
+      <details class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;" open>
+        <summary style="font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Brauche ich technisches Vorwissen?
+          <span style="color:var(--violet-light);font-size:20px;transition:transform .3s;">+</span>
+        </summary>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px;">Nein. Wir sprechen Ihre Sprache — keine IT-Fachbegriffe, keine Buzzwords. Sie beschreiben uns Ihren Alltag, wir übersetzen das in KI-Lösungen. Unsere Kunden sind Handwerker, Händler und Dienstleister — kein einziger IT-Experte.</p>
+      </details>
+
+      <details class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;">
+        <summary style="font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Was kostet das Erstgespräch?
+          <span style="color:var(--violet-light);font-size:20px;">+</span>
+        </summary>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px;">Das Erstgespräch ist 100% kostenlos und dauert 30 Minuten. Auch der anschließende KI-Potenzial-Check ist kostenlos — Sie bekommen ein schriftliches Dokument mit 3 konkreten Quick-Wins. Erst danach entscheiden Sie, ob Sie weitermachen wollen.</p>
+      </details>
+
+      <details class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;">
+        <summary style="font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Wie schnell sehe ich erste Ergebnisse?
+          <span style="color:var(--violet-light);font-size:20px;">+</span>
+        </summary>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px;">Wir liefern in Woche 1 den ersten Quick-Win — das ist unser Versprechen. Kein monatelanger Konzeptaufwand, keine endlosen Meetings. Sie sehen konkrete, messbare Verbesserungen innerhalb der ersten 7 Tage nach Projektstart.</p>
+      </details>
+
+      <details class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;">
+        <summary style="font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Was ist der MID-Gutschein NRW und bekomme ich den?
+          <span style="color:var(--violet-light);font-size:20px;">+</span>
+        </summary>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px;">Der MID-Digitalisierungsgutschein ist ein NRW-Förderprogramm, das KMU bis zu 15.000 € (50% der Projektkosten) erstattet. Die meisten unserer Kunden qualifizieren sich dafür. Wir begleiten Sie kostenlos durch den Antragsprozess — Sie müssen nichts selbst einreichen oder verstehen.</p>
+      </details>
+
+      <details class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;">
+        <summary style="font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Kann ich jederzeit kündigen?
+          <span style="color:var(--violet-light);font-size:20px;">+</span>
+        </summary>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px;">Der AI-Partner-Retainer hat eine Mindestlaufzeit von 3 Monaten — danach monatlich kündbar. In der Praxis verlängern fast alle Kunden, weil die Ergebnisse für sich sprechen. Wir setzen nicht auf Knebelverträge, sondern auf echten Mehrwert.</p>
+      </details>
+
+      <details class="reveal" style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;cursor:pointer;transition:all .3s;">
+        <summary style="font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+          Was ist, wenn KI nicht das Richtige für mein Unternehmen ist?
+          <span style="color:var(--violet-light);font-size:20px;">+</span>
+        </summary>
+        <p style="font-size:14px;color:var(--muted);line-height:1.8;margin-top:14px;">Dann sagen wir Ihnen das — ehrlich und direkt, im kostenlosen Erstgespräch. Nicht jedes Unternehmen braucht sofort KI, und wir verkaufen keine Lösung, wenn das Problem nicht da ist. Unser Ruf basiert auf echten Empfehlungen, nicht auf schnellen Abschlüssen.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     MEGA CTA
+════════════════════════════════════════ -->
+
+
+<!-- ═══ BEFORE/AFTER ═══ -->
+<section style="background:var(--ink2);padding:90px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:60px;">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--sky-light);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px;">Vorher vs. Nachher<div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(14,165,233,.3),transparent);"></div></div>
+        <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;letter-spacing:-0.5px;margin-bottom:20px;">Was ändert sich <em style="font-style:normal;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;padding-right:4px;">konkret?</em></h2>
+        <p style="font-size:17px;color:var(--muted);line-height:1.8;margin-bottom:28px;">Der typische NRW-Mittelständler verbringt täglich 3 Stunden mit Aufgaben, die eine KI in 18 Minuten erledigt. Diese Zeit gehört dir zurück.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:14px 20px;">
+            <span style="font-size:14px;color:var(--muted);">⏰ Tägl. Zeitaufwand für Admin</span>
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:#ef4444;text-decoration:line-through;opacity:.6;">3h 00m</span>
+              <span style="color:var(--muted);">→</span>
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:var(--aqua);">18 Min</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:14px 20px;">
+            <span style="font-size:14px;color:var(--muted);">📧 Angebotserstellung</span>
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:#ef4444;text-decoration:line-through;opacity:.6;">45 Min</span>
+              <span style="color:var(--muted);">→</span>
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:var(--aqua);">30 Sek</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:14px 20px;">
+            <span style="font-size:14px;color:var(--muted);">📱 Content pro Woche</span>
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:#ef4444;text-decoration:line-through;opacity:.6;">8h</span>
+              <span style="color:var(--muted);">→</span>
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:var(--aqua);">30 Min</span>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:14px 20px;">
+            <span style="font-size:14px;color:var(--muted);">🤖 Kundenanfragen automatisch</span>
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:#ef4444;text-decoration:line-through;opacity:.6;">0%</span>
+              <span style="color:var(--muted);">→</span>
+              <span style="font-family:'Space Age',sans-serif;font-size:14px;color:var(--aqua);">80%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNzAwIDIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ2JhIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMjhkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA2ZDZjNyIvPjwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgogIDxyZWN0IHdpZHRoPSI3MDAiIGhlaWdodD0iMjAwIiBmaWxsPSJ0cmFuc3BhcmVudCIvPgogIDwhLS0gQkVGT1JFIHNpZGUgLS0+CiAgPHJlY3QgeD0iMTAiIHk9IjEwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgcng9IjE2IiBmaWxsPSIjMTIxMDJhIiBzdHJva2U9IiNlZjQ0NDQzMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHRleHQgeD0iMTYwIiB5PSIzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2VmNDQ0NCIgZm9udC1zaXplPSIxMSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSIgbGV0dGVyLXNwYWNpbmc9IjIiPlZPUkhFUjwvdGV4dD4KICA8IS0tIE1hbnVhbCBwcm9jZXNzIGNoYW9zIC0tPgogIDxyZWN0IHg9IjMwIiB5PSI1MCIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyMCIgcng9IjQiIGZpbGw9IiNlZjQ0NDQxMCIgc3Ryb2tlPSIjZWY0NDQ0MjAiLz4KICA8dGV4dCB4PSI0MCIgeT0iNjUiIGZpbGw9IiNmZmZmZmY0MCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPvCfk6cgRS1NYWlscyBtYW51ZWxsIGJlYW50d29ydGVuPC90ZXh0PgogIDxyZWN0IHg9IjMwIiB5PSI3OCIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyMCIgcng9IjQiIGZpbGw9IiNlZjQ0NDQxMCIgc3Ryb2tlPSIjZWY0NDQ0MjAiLz4KICA8dGV4dCB4PSI0MCIgeT0iOTMiIGZpbGw9IiNmZmZmZmY0MCIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPvCfk4QgQW5nZWJvdGUgaW4gV29yZCBlcnN0ZWxsZW48L3RleHQ+CiAgPHJlY3QgeD0iMzAiIHk9IjEwNiIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyMCIgcng9IjQiIGZpbGw9IiNlZjQ0NDQxMCIgc3Ryb2tlPSIjZWY0NDQ0MjAiLz4KICA8dGV4dCB4PSI0MCIgeT0iMTIxIiBmaWxsPSIjZmZmZmZmNDAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7wn5OKIFJlcG9ydHMgbWFudWVsbCB6dXNhbW1lbnN0ZWxsZW48L3RleHQ+CiAgPHJlY3QgeD0iMzAiIHk9IjEzNCIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyMCIgcng9IjQiIGZpbGw9IiNlZjQ0NDQxMCIgc3Ryb2tlPSIjZWY0NDQ0MjAiLz4KICA8dGV4dCB4PSI0MCIgeT0iMTQ5IiBmaWxsPSIjZmZmZmZmNDAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7wn5OxIFNvY2lhbCBNZWRpYSBwZXIgSGFuZCBwb3N0ZW48L3RleHQ+CiAgPCEtLSBUaW1lIGJhZGdlIC0tPgogIDxyZWN0IHg9IjMwIiB5PSIxNjIiIHdpZHRoPSIxMjAiIGhlaWdodD0iMjIiIHJ4PSI4IiBmaWxsPSIjZWY0NDQ0MjAiIHN0cm9rZT0iI2VmNDQ0NDQwIi8+CiAgPHRleHQgeD0iOTAiIHk9IjE3NyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZjYTVhNSIgZm9udC1zaXplPSIxMSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+4o+wIDNoIHTDpGdsaWNoPC90ZXh0PgogIDwhLS0gQXJyb3cgLS0+CiAgPHRleHQgeD0iMzUwIiB5PSIxMDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYzMCIgZm9udC1zaXplPSIyOCI+4oaSPC90ZXh0PgogIDxyZWN0IHg9IjMyOCIgeT0iODgiIHdpZHRoPSI0NCIgaGVpZ2h0PSI0NCIgcng9IjUwJSIgZmlsbD0idXJsKCNnYmEpIiBvcGFjaXR5PSIwLjE1Ii8+CiAgPCEtLSBBRlRFUiBzaWRlIC0tPgogIDxyZWN0IHg9IjM5MCIgeT0iMTAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMTgwIiByeD0iMTYiIGZpbGw9IiMxMjEwMmEiIHN0cm9rZT0iIzA2ZDZjNzMwIiBzdHJva2Utd2lkdGg9IjEuNSIvPgogIDx0ZXh0IHg9IjU0MCIgeT0iMzgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwNmQ2YzciIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGxldHRlci1zcGFjaW5nPSIyIj5NSVQgU0tZVkFJPC90ZXh0PgogIDxyZWN0IHg9IjQxMCIgeT0iNTAiIHdpZHRoPSIyNjAiIGhlaWdodD0iMjAiIHJ4PSI0IiBmaWxsPSIjMDZkNmM3MTAiIHN0cm9rZT0iIzA2ZDZjNzIwIi8+CiAgPHRleHQgeD0iNDIwIiB5PSI2NSIgZmlsbD0iI2ZmZmZmZmFhIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+4pqhIEUtTWFpbHMgYXV0b21hdGlzY2gga2F0ZWdvcmlzaWVydDwvdGV4dD4KICA8cmVjdCB4PSI0MTAiIHk9Ijc4IiB3aWR0aD0iMjYwIiBoZWlnaHQ9IjIwIiByeD0iNCIgZmlsbD0iIzA2ZDZjNzEwIiBzdHJva2U9IiMwNmQ2YzcyMCIvPgogIDx0ZXh0IHg9IjQyMCIgeT0iOTMiIGZpbGw9IiNmZmZmZmZhYSIgZm9udC1zaXplPSIxMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPuKaoSBBbmdlYm90ZSBpbiAzMCBTZWsuIGdlbmVyaWVydDwvdGV4dD4KICA8cmVjdCB4PSI0MTAiIHk9IjEwNiIgd2lkdGg9IjI2MCIgaGVpZ2h0PSIyMCIgcng9IjQiIGZpbGw9IiMwNmQ2YzcxMCIgc3Ryb2tlPSIjMDZkNmM3MjAiLz4KICA8dGV4dCB4PSI0MjAiIHk9IjEyMSIgZmlsbD0iI2ZmZmZmZmFhIiBmb250LXNpemU9IjEwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiI+4pqhIFJlcG9ydHMgbGF1ZmVuIGF1dG9tYXRpc2NoPC90ZXh0PgogIDxyZWN0IHg9IjQxMCIgeT0iMTM0IiB3aWR0aD0iMjYwIiBoZWlnaHQ9IjIwIiByeD0iNCIgZmlsbD0iIzA2ZDZjNzEwIiBzdHJva2U9IiMwNmQ2YzcyMCIvPgogIDx0ZXh0IHg9IjQyMCIgeT0iMTQ5IiBmaWxsPSIjZmZmZmZmYWEiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIj7imqEgQ29udGVudC1QaXBlbGluZSB2b2xsYXV0b21hdGlzY2g8L3RleHQ+CiAgPHJlY3QgeD0iNDEwIiB5PSIxNjIiIHdpZHRoPSIxMjAiIGhlaWdodD0iMjIiIHJ4PSI4IiBmaWxsPSIjMDZkNmM3MjAiIHN0cm9rZT0iIzA2ZDZjNzQwIi8+CiAgPHRleHQgeD0iNDcwIiB5PSIxNzciIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwNmQ2YzciIGZvbnQtc2l6ZT0iMTEiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPuKchSAxOCBNaW4uIHTDpGdsaWNoPC90ZXh0Pgo8L3N2Zz4=" alt="Vorher Nachher Vergleich" style="width:100%;border-radius:16px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NRW FOKUS + STATS ═══ -->
+<section style="background:var(--ink);padding:90px 40px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%, rgba(109,40,217,.05), transparent 70%);pointer-events:none;"></div>
+  <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div style="position:relative;">
+        <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAwIDM2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxyYWRpYWxHcmFkaWVudCBpZD0iZ24xIiBjeD0iNTAlIiBjeT0iNTAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNmQyOGQ5IiBzdG9wLW9wYWNpdHk9IjAuMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzZkMjhkOSIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD4KICAgIDxmaWx0ZXIgaWQ9Imdsb3ctbiI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMyIgcmVzdWx0PSJiIi8+PGZlTWVyZ2U+PGZlTWVyZ2VOb2RlIGluPSJiIi8+PGZlTWVyZ2VOb2RlIGluPSJTb3VyY2VHcmFwaGljIi8+PC9mZU1lcmdlPjwvZmlsdGVyPgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjM2MCIgZmlsbD0iIzBhMDgxNCIvPgogIDxlbGxpcHNlIGN4PSIyNTAiIGN5PSIxODAiIHJ4PSIyMjAiIHJ5PSIxNjAiIGZpbGw9InVybCgjZ24xKSIvPgogIDwhLS0gTlJXIHNpbXBsaWZpZWQgb3V0bGluZSAtLT4KICA8cGF0aCBkPSJNMTIwLDgwIEwxNjAsNjAgTDIwMCw2NSBMMjQwLDU1IEwyODAsNjAgTDMyMCw3MCBMMzYwLDkwIEwzODAsMTIwIEwzNzAsMTUwIEwzODAsMTgwIEwzNjAsMjEwIEwzNDAsMjQwIEwzMDAsMjYwIEwyNjAsMjcwIEwyMjAsMjY1IEwxODAsMjYwIEwxNTAsMjQwIEwxMzAsMjEwIEwxMTAsMTg1IEwxMDAsMTU1IEwxMTAsMTI1IFoiIAogICAgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNmQyOGQ5IiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW9wYWNpdHk9IjAuNCIvPgogIDxwYXRoIGQ9Ik0xMjAsODAgTDE2MCw2MCBMMjAwLDY1IEwyNDAsNTUgTDI4MCw2MCBMMzIwLDcwIEwzNjAsOTAgTDM4MCwxMjAgTDM3MCwxNTAgTDM4MCwxODAgTDM2MCwyMTAgTDM0MCwyNDAgTDMwMCwyNjAgTDI2MCwyNzAgTDIyMCwyNjUgTDE4MCwyNjAgTDE1MCwyNDAgTDEzMCwyMTAgTDExMCwxODUgTDEwMCwxNTUgTDExMCwxMjUgWiIgCiAgICBmaWxsPSIjNmQyOGQ5IiBmaWxsLW9wYWNpdHk9IjAuMDQiLz4KICA8IS0tIEdyaWQgLS0+CiAgPGxpbmUgeDE9IjAiIHkxPSIxMjAiIHgyPSI1MDAiIHkyPSIxMjAiIHN0cm9rZT0iI2ZmZmZmZjA1IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMCIgeTE9IjE4MCIgeDI9IjUwMCIgeTI9IjE4MCIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIwIiB5MT0iMjQwIiB4Mj0iNTAwIiB5Mj0iMjQwIiBzdHJva2U9IiNmZmZmZmYwNSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPGxpbmUgeDE9IjEyNSIgeTE9IjAiIHgyPSIxMjUiIHkyPSIzNjAiIHN0cm9rZT0iI2ZmZmZmZjA1IiBzdHJva2Utd2lkdGg9IjEiLz4KICA8bGluZSB4MT0iMjUwIiB5MT0iMCIgeDI9IjI1MCIgeTI9IjM2MCIgc3Ryb2tlPSIjZmZmZmZmMDUiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIzNzUiIHkxPSIwIiB4Mj0iMzc1IiB5Mj0iMzYwIiBzdHJva2U9IiNmZmZmZmYwNSIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPCEtLSBDaXR5IGRvdHMgd2l0aCBwdWxzZSAtLT4KICA8IS0tIETDvHNzZWxkb3JmIC0tPgogIDxjaXJjbGUgY3g9IjE5OCIgY3k9IjE3NSIgcj0iOCIgZmlsbD0iIzZkMjhkOSIgb3BhY2l0eT0iMC4xNSIgZmlsdGVyPSJ1cmwoI2dsb3ctbikiLz4KICA8Y2lyY2xlIGN4PSIxOTgiIGN5PSIxNzUiIHI9IjQiIGZpbGw9IiNhNzhiZmEiIGZpbHRlcj0idXJsKCNnbG93LW4pIi8+CiAgPGNpcmNsZSBjeD0iMTk4IiBjeT0iMTc1IiByPSIyIiBmaWxsPSJ3aGl0ZSIvPgogIDx0ZXh0IHg9IjE5OCIgeT0iMTYzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjYzRiNWZkIiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkTDnFNTRUxET1JGPC90ZXh0PgogIDwhLS0gRXNzZW4gLS0+CiAgPGNpcmNsZSBjeD0iMTc1IiBjeT0iMTUyIiByPSI4IiBmaWxsPSIjMGVhNWU5IiBvcGFjaXR5PSIwLjE1IiBmaWx0ZXI9InVybCgjZ2xvdy1uKSIvPgogIDxjaXJjbGUgY3g9IjE3NSIgY3k9IjE1MiIgcj0iNCIgZmlsbD0iIzM4YmRmOCIgZmlsdGVyPSJ1cmwoI2dsb3ctbikiLz4KICA8Y2lyY2xlIGN4PSIxNzUiIGN5PSIxNTIiIHI9IjIiIGZpbGw9IndoaXRlIi8+CiAgPHRleHQgeD0iMTc1IiB5PSIxNDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMzOGJkZjgiIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+RVNTRU48L3RleHQ+CiAgPCEtLSBLw7ZsbiAtLT4KICA8Y2lyY2xlIGN4PSIxOTUiIGN5PSIyMzAiIHI9IjYiIGZpbGw9IiM2ZDI4ZDkiIG9wYWNpdHk9IjAuMSIvPgogIDxjaXJjbGUgY3g9IjE5NSIgY3k9IjIzMCIgcj0iMyIgZmlsbD0iI2E3OGJmYSIgb3BhY2l0eT0iMC42Ii8+CiAgPHRleHQgeD0iMTk1IiB5PSIyNDgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYzMCIgZm9udC1zaXplPSI4IiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5Lw5ZMTjwvdGV4dD4KICA8IS0tIERvcnRtdW5kIC0tPgogIDxjaXJjbGUgY3g9IjIzMCIgY3k9IjE0OCIgcj0iNiIgZmlsbD0iIzA2ZDZjNyIgb3BhY2l0eT0iMC4xIi8+CiAgPGNpcmNsZSBjeD0iMjMwIiBjeT0iMTQ4IiByPSIzIiBmaWxsPSIjMDZkNmM3IiBvcGFjaXR5PSIwLjYiLz4KICA8dGV4dCB4PSIyMzAiIHk9IjEzOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZmZmZjMwIiBmb250LXNpemU9IjgiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPkRPUlRNVU5EPC90ZXh0PgogIDwhLS0gTcO8bnN0ZXIgLS0+CiAgPGNpcmNsZSBjeD0iMjA1IiBjeT0iMTEwIiByPSI1IiBmaWxsPSIjMGVhNWU5IiBvcGFjaXR5PSIwLjEiLz4KICA8Y2lyY2xlIGN4PSIyMDUiIGN5PSIxMTAiIHI9IjIuNSIgZmlsbD0iIzM4YmRmOCIgb3BhY2l0eT0iMC41Ii8+CiAgPHRleHQgeD0iMjA1IiB5PSIxMDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYyNSIgZm9udC1zaXplPSI4IiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5Nw5xOU1RFUjwvdGV4dD4KICA8IS0tIENvbm5lY3Rpb25zIGJldHdlZW4gU2t5dkFJIGJhc2VzIC0tPgogIDxsaW5lIHgxPSIxOTgiIHkxPSIxNzUiIHgyPSIxNzUiIHkyPSIxNTIiIHN0cm9rZT0idXJsKCNnbl9saW5lKSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2Utb3BhY2l0eT0iMC41IiBzdHJva2UtZGFzaGFycmF5PSI0Ii8+CiAgPGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJnbl9saW5lIiB4MT0iMCIgeTE9IjAiIHgyPSIxIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMjhkOSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBlYTVlOSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgogIDwhLS0gUmFkaXVzIGNpcmNsZXMgKHJlYWNoKSAtLT4KICA8Y2lyY2xlIGN4PSIxOTAiIGN5PSIxNjUiIHI9IjgwIiBmaWxsPSJub25lIiBzdHJva2U9IiM2ZDI4ZDkiIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2Utb3BhY2l0eT0iMC4yIiBzdHJva2UtZGFzaGFycmF5PSIzIi8+CiAgPGNpcmNsZSBjeD0iMTkwIiBjeT0iMTY1IiByPSIxMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzBlYTVlOSIgc3Ryb2tlLXdpZHRoPSIwLjUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS1kYXNoYXJyYXk9IjMiLz4KICA8IS0tIExhYmVsIC0tPgogIDx0ZXh0IHg9IjI1MCIgeT0iMzMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmZmZmMjAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGxldHRlci1zcGFjaW5nPSIzIj5OT1JEUkhFSU4tV0VTVEZBTEVOPC90ZXh0PgogIDx0ZXh0IHg9IjI1MCIgeT0iMzQ4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNmQyOGQ5NDAiIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+NzAwLjAwMCsgS01VIMK3IFVOU0VSIE1BUktUPC90ZXh0Pgo8L3N2Zz4=" alt="NRW Karte" style="width:100%;border-radius:20px;border:1px solid rgba(109,40,217,.15);">
+        <!-- Floating badge -->
+        <div style="position:absolute;top:20px;right:20px;background:rgba(10,8,20,.9);border:1px solid rgba(109,40,217,.3);border-radius:12px;padding:10px 16px;backdrop-filter:blur(10px);">
+          <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:1px;">SERVICEGEBIET</div>
+          <div style="font-family:'Space Age',sans-serif;font-size:14px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">NRW + DACH</div>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--sky-light);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px;">Unser Markt<div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(14,165,233,.3),transparent);"></div></div>
+        <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;margin-bottom:20px;">Gemacht für <em style="font-style:normal;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">NRW</em></h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:32px;">NRW ist Deutschlands stärkstes Wirtschaftsland — mit über 700.000 KMU, aktiven Förderprogrammen und einer wachsenden Digitalwirtschaft. Genau hier sind wir zuhause.</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:32px;">
+          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+            <div style="font-family:'Space Age',sans-serif;font-size:30px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">700K+</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace;">KMU in NRW</div>
+          </div>
+          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+            <div style="font-family:'Space Age',sans-serif;font-size:30px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">&lt;15%</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace;">Nutzen KI</div>
+          </div>
+          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+            <div style="font-family:'Space Age',sans-serif;font-size:30px;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">15K€</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace;">Förderung möglich</div>
+          </div>
+          <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:14px;padding:20px;text-align:center;">
+            <div style="font-family:'Space Age',sans-serif;font-size:30px;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">#1</div>
+            <div style="font-size:11px;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace;">KI-Agentur NRW</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <span style="display:inline-block;background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.25);border-radius:50px;padding:6px 16px;font-size:12px;color:var(--violet-light);font-family:'DM Mono',monospace;">IHK Düsseldorf</span>
+          <span style="display:inline-block;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.25);border-radius:50px;padding:6px 16px;font-size:12px;color:var(--sky-light);font-family:'DM Mono',monospace;">IHK Essen</span>
+          <span style="display:inline-block;background:rgba(6,214,199,.1);border:1px solid rgba(6,214,199,.25);border-radius:50px;padding:6px 16px;font-size:12px;color:var(--aqua);font-family:'DM Mono',monospace;">MID-Gutschein</span>
+          <span style="display:inline-block;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:50px;padding:6px 16px;font-size:12px;color:#6ee7b7;font-family:'DM Mono',monospace;">Digitalhub.NRW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIALS ═══ -->
+<section style="background:var(--ink2);padding:90px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--sky-light);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px;">Was Kunden sagen<div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(14,165,233,.3),transparent);"></div></div>
+    <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;margin-bottom:48px;">Echte <em style="font-style:normal;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Ergebnisse</em></h2>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;">
+
+      <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:all .3s;" onmouseover="this.style.borderColor='rgba(109,40,217,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+        <div style="font-size:48px;line-height:.8;background:linear-gradient(135deg,rgba(167,139,250,.3),rgba(56,189,248,.2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;font-family:Georgia,serif;">"</div>
+        <p style="font-size:15px;color:rgba(232,228,240,.85);line-height:1.8;margin-bottom:24px;font-style:italic;">"SkyvAI hat unsere Angebotserstellung komplett automatisiert. Was früher 45 Minuten dauerte, läuft jetzt in Sekunden. Unglaublich, was heute möglich ist."</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--sky));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">👔</div>
+          <div>
+            <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:2px;">Thomas K.</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;">GF · INDUSTRIE · 30 MA · NRW</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:20px;right:20px;display:flex;gap:2px;">
+          <span style="color:#f59e0b;font-size:12px;">★★★★★</span>
+        </div>
+      </div>
+
+      <div style="background:linear-gradient(160deg,rgba(109,40,217,.08),rgba(14,165,233,.05));border:1px solid rgba(109,40,217,.25);border-radius:20px;padding:32px;position:relative;">
+        <div style="font-size:48px;line-height:.8;background:linear-gradient(135deg,rgba(167,139,250,.3),rgba(56,189,248,.2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;font-family:Georgia,serif;">"</div>
+        <p style="font-size:15px;color:rgba(232,228,240,.85);line-height:1.8;margin-bottom:24px;font-style:italic;">"Der KI-Chatbot auf unserer Website beantwortet jetzt 80% der Anfragen automatisch. Unser Team hat endlich wieder Zeit für die wirklich wichtigen Kunden."</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--sky),var(--aqua));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">👩‍💼</div>
+          <div>
+            <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:2px;">Sandra M.</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;">MARKETINGLEITUNG · DIENSTL. · NRW</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:20px;right:20px;display:flex;gap:2px;">
+          <span style="color:#f59e0b;font-size:12px;">★★★★★</span>
+        </div>
+      </div>
+
+      <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:20px;padding:32px;position:relative;transition:all .3s;" onmouseover="this.style.borderColor='rgba(109,40,217,.3)'" onmouseout="this.style.borderColor='rgba(255,255,255,.07)'">
+        <div style="font-size:48px;line-height:.8;background:linear-gradient(135deg,rgba(167,139,250,.3),rgba(56,189,248,.2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:16px;font-family:Georgia,serif;">"</div>
+        <p style="font-size:15px;color:rgba(232,228,240,.85);line-height:1.8;margin-bottom:24px;font-style:italic;">"Ich war skeptisch ob KI wirklich was für einen Handwerksbetrieb ist. Nach dem ersten Quick-Win-Projekt habe ich 3 Stunden täglich zurückgewonnen. Das überzeugt."</p>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--aqua));display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🔧</div>
+          <div>
+            <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:2px;">Michael B.</div>
+            <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1px;">INHABER · HANDWERK · 12 MA · NRW</div>
+          </div>
+        </div>
+        <div style="position:absolute;top:20px;right:20px;display:flex;gap:2px;">
+          <span style="color:#f59e0b;font-size:12px;">★★★★★</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ROI / ZAHLEN SECTION ═══ -->
+<section style="background:var(--ink);padding:90px 40px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%, rgba(6,214,199,.04), transparent 60%);pointer-events:none;"></div>
+  <div style="max-width:1100px;margin:0 auto;position:relative;z-index:1;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--sky-light);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px;">ROI & Wachstum<div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(14,165,233,.3),transparent);"></div></div>
+        <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;margin-bottom:20px;">KI zahlt sich <em style="font-style:normal;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">aus</em></h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:32px;">Unsere Kunden sehen im Durchschnitt innerhalb von 90 Tagen einen messbaren ROI. Kein Versprechen — echte Zahlen aus echten NRW-Projekten.</p>
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(6,214,199,.15),rgba(14,165,233,.1));border:1px solid rgba(6,214,199,.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">📈</div>
+            <div>
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">+43% Umsatz</div>
+              <div style="font-size:13px;color:var(--muted);">Ø über alle AI-Partner-Kunden im Jahr 1</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(109,40,217,.15),rgba(139,92,246,.1));border:1px solid rgba(109,40,217,.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">⚡</div>
+            <div>
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">-68% Zeitaufwand</div>
+              <div style="font-size:13px;color:var(--muted);">Bei automatisierten Admin-Prozessen</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(16,185,129,.15),rgba(6,214,199,.1));border:1px solid rgba(16,185,129,.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🏛️</div>
+            <div>
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,#6ee7b7,var(--aqua));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">50% Förderung</div>
+              <div style="font-size:13px;color:var(--muted);">Via MID-Gutschein NRW — wir begleiten Sie</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <div style="width:56px;height:56px;border-radius:14px;background:linear-gradient(135deg,rgba(14,165,233,.15),rgba(56,189,248,.1));border:1px solid rgba(14,165,233,.2);display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">🗓️</div>
+            <div>
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,var(--sky-light),var(--aqua));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">1–2 Wochen</div>
+              <div style="font-size:13px;color:var(--muted);">Bis zur ersten messbaren Veränderung</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div style="background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:20px;padding:28px;">
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:var(--sky-light);letter-spacing:2px;margin-bottom:20px;">UMSATZENTWICKLUNG · AI-PARTNER-KUNDEN</div>
+          <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTYwIDI0MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3IxIiB4MT0iMCIgeTE9IjEiIHgyPSIwIiB5Mj0iMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzZkMjhkOSIgc3RvcC1vcGFjaXR5PSIwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNmQyOGQ5IiBzdG9wLW9wYWNpdHk9IjAuOSIvPjwvbGluZWFyR3JhZGllbnQ+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImdyMiIgeDE9IjAiIHkxPSIxIiB4Mj0iMCIgeTI9IjAiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMwZWE1ZTkiIHN0b3Atb3BhY2l0eT0iMCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBlYTVlOSIgc3RvcC1vcGFjaXR5PSIwLjkiLz48L2xpbmVhckdyYWRpZW50PgogICAgPGxpbmVhckdyYWRpZW50IGlkPSJncjMiIHgxPSIwIiB5MT0iMSIgeDI9IjAiIHkyPSIwIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDZkNmM3IiBzdG9wLW9wYWNpdHk9IjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwNmQ2YzciIHN0b3Atb3BhY2l0eT0iMC45Ii8+PC9saW5lYXJHcmFkaWVudD4KICA8L2RlZnM+CiAgPHJlY3Qgd2lkdGg9IjU2MCIgaGVpZ2h0PSIyNDAiIGZpbGw9InRyYW5zcGFyZW50Ii8+CiAgPCEtLSBBeGVzIC0tPgogIDxsaW5lIHgxPSI2MCIgeTE9IjIwMCIgeDI9IjU0MCIgeTI9IjIwMCIgc3Ryb2tlPSIjZmZmZmZmMTIiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSI2MCIgeTE9IjIwIiB4Mj0iNjAiIHkyPSIyMDAiIHN0cm9rZT0iI2ZmZmZmZjEyIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8IS0tIEdyaWQgLS0+CiAgPGxpbmUgeDE9IjYwIiB5MT0iMTYwIiB4Mj0iNTQwIiB5Mj0iMTYwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSI0Ii8+CiAgPGxpbmUgeDE9IjYwIiB5MT0iMTIwIiB4Mj0iNTQwIiB5Mj0iMTIwIiBzdHJva2U9IiNmZmZmZmYwNiIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSI0Ii8+CiAgPGxpbmUgeDE9IjYwIiB5MT0iODAiIHgyPSI1NDAiIHkyPSI4MCIgc3Ryb2tlPSIjZmZmZmZmMDYiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iNCIvPgogIDxsaW5lIHgxPSI2MCIgeTE9IjQwIiB4Mj0iNTQwIiB5Mj0iNDAiIHN0cm9rZT0iI2ZmZmZmZjA2IiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1kYXNoYXJyYXk9IjQiLz4KICA8IS0tIFZPUkhFUiBiYXIgZ3JvdXAgLS0+CiAgPHJlY3QgeD0iOTAiIHk9IjEyMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjgwIiByeD0iNCIgZmlsbD0idXJsKCNncjEpIi8+CiAgPHJlY3QgeD0iMTg1IiB5PSIxMDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDAiIHJ4PSI0IiBmaWxsPSJ1cmwoI2dyMSkiLz4KICA8cmVjdCB4PSIyODAiIHk9IjgwIiB3aWR0aD0iNDAiIGhlaWdodD0iMTIwIiByeD0iNCIgZmlsbD0idXJsKCNncjEpIi8+CiAgPHJlY3QgeD0iMzc1IiB5PSI2MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjE0MCIgcng9IjQiIGZpbGw9InVybCgjZ3IxKSIvPgogIDxyZWN0IHg9IjQ3MCIgeT0iMzAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxNzAiIHJ4PSI0IiBmaWxsPSJ1cmwoI2dyMykiIG9wYWNpdHk9IjAuOSIvPgogIDwhLS0gVHJlbmQgbGluZSAtLT4KICA8cG9seWxpbmUgcG9pbnRzPSIxMTAsMTIwIDIwNSwxMDAgMzAwLDgwIDM5NSw2MCA0OTAsMzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzA2ZDZjNyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjExMCIgY3k9IjEyMCIgcj0iNCIgZmlsbD0iIzA2ZDZjNyIvPgogIDxjaXJjbGUgY3g9IjIwNSIgY3k9IjEwMCIgcj0iNCIgZmlsbD0iIzA2ZDZjNyIvPgogIDxjaXJjbGUgY3g9IjMwMCIgY3k9IjgwIiByPSI0IiBmaWxsPSIjMDZkNmM3Ii8+CiAgPGNpcmNsZSBjeD0iMzk1IiBjeT0iNjAiIHI9IjQiIGZpbGw9IiMwNmQ2YzciLz4KICA8Y2lyY2xlIGN4PSI0OTAiIGN5PSIzMCIgcj0iNiIgZmlsbD0iIzA2ZDZjNyIgc3Ryb2tlPSIjMGEwODE0IiBzdHJva2Utd2lkdGg9IjIiLz4KICA8IS0tIFRvb2x0aXAgb24gbGFzdCBwb2ludCAtLT4KICA8cmVjdCB4PSI0NjAiIHk9IjgiIHdpZHRoPSI3MCIgaGVpZ2h0PSIyMiIgcng9IjYiIGZpbGw9IiMwNmQ2YzcyMCIgc3Ryb2tlPSIjMDZkNmM3NDAiIHN0cm9rZS13aWR0aD0iMSIvPgogIDx0ZXh0IHg9IjQ5NSIgeT0iMjMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwNmQ2YzciIGZvbnQtc2l6ZT0iMTAiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiIGZvbnQtd2VpZ2h0PSJib2xkIj4rNjglIFJPSTwvdGV4dD4KICA8IS0tIFggTGFiZWxzIC0tPgogIDx0ZXh0IHg9IjExMCIgeT0iMjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmZmZmMzAiIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+TTE8L3RleHQ+CiAgPHRleHQgeD0iMjA1IiB5PSIyMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmZmZmYzMCIgZm9udC1zaXplPSI5IiBmb250LWZhbWlseT0ibW9ub3NwYWNlIj5NMzwvdGV4dD4KICA8dGV4dCB4PSIzMDAiIHk9IjIxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iI2ZmZmZmZjMwIiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPk02PC90ZXh0PgogIDx0ZXh0IHg9IjM5NSIgeT0iMjE4IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjZmZmZmZmMzAiIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+TTk8L3RleHQ+CiAgPHRleHQgeD0iNDkwIiB5PSIyMTgiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwNmQ2YzciIGZvbnQtc2l6ZT0iOSIgZm9udC1mYW1pbHk9Im1vbm9zcGFjZSI+TTEyPC90ZXh0PgogIDwhLS0gWSBMYWJlbHMgLS0+CiAgPHRleHQgeD0iNTAiIHk9IjIwNCIgdGV4dC1hbmNob3I9ImVuZCIgZmlsbD0iI2ZmZmZmZjI1IiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPjA8L3RleHQ+CiAgPHRleHQgeD0iNTAiIHk9IjQ0IiB0ZXh0LWFuY2hvcj0iZW5kIiBmaWxsPSIjMDZkNmM3IiBmb250LXNpemU9IjkiIGZvbnQtZmFtaWx5PSJtb25vc3BhY2UiPjIwMEs8L3RleHQ+Cjwvc3ZnPg==" alt="ROI Chart" style="width:100%;">
+          <div style="display:flex;justify-content:space-between;margin-top:16px;">
+            <div style="text-align:center;">
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">5</div>
+              <div style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;">Kunden M6</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">12.500€</div>
+              <div style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;">Umsatz M6</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-family:'Space Age',sans-serif;font-size:22px;background:linear-gradient(135deg,var(--aqua),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">+68%</div>
+              <div style="font-size:10px;color:var(--muted);font-family:'DM Mono',monospace;">Ø ROI M12</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section style="background:var(--ink2);padding:90px 40px;">
+  <div style="max-width:760px;margin:0 auto;">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--sky-light);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px;">Häufige Fragen<div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(14,165,233,.3),transparent);"></div></div>
+    <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;margin-bottom:48px;">Ihre Fragen — <em style="font-style:normal;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">beantwortet</em></h2>
+    
+    <div style="display:flex;flex-direction:column;gap:12px;" id="faq">
+
+      <details style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:0;overflow:hidden;cursor:pointer;">
+        <summary style="padding:22px 24px;font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+          Brauchen wir eine eigene IT-Abteilung?
+          <span style="font-size:20px;color:var(--violet-light);transition:transform .3s;flex-shrink:0;margin-left:16px;">＋</span>
+        </summary>
+        <div style="padding:0 24px 22px;font-size:15px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);margin-top:0;padding-top:18px;">
+          Nein — das ist unser Alleinstellungsmerkmal. Wir kümmern uns um die gesamte technische Umsetzung. Ihr Team muss lediglich die fertigen Lösungen nutzen. Wir schulen Ihre Mitarbeiter und begleiten Sie durch den gesamten Prozess.
+        </div>
+      </details>
+
+      <details style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
+        <summary style="padding:22px 24px;font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+          Wie schnell sehe ich erste Ergebnisse?
+          <span style="font-size:20px;color:var(--violet-light);flex-shrink:0;margin-left:16px;">＋</span>
+        </summary>
+        <div style="padding:0 24px 22px;font-size:15px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);padding-top:18px;">
+          Unser Versprechen: erste messbare Ergebnisse innerhalb von 1–2 Wochen. Im Kickoff-Call identifizieren wir gemeinsam den Quick-Win mit dem größten Hebel. Dieser wird sofort umgesetzt — nicht in Monaten.
+        </div>
+      </details>
+
+      <details style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
+        <summary style="padding:22px 24px;font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+          Was kostet der Einstieg wirklich?
+          <span style="font-size:20px;color:var(--violet-light);flex-shrink:0;margin-left:16px;">＋</span>
+        </summary>
+        <div style="padding:0 24px 22px;font-size:15px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);padding-top:18px;">
+          Das Erstgespräch und der KI-Potenzial-Check sind vollständig kostenlos. Projekte starten ab 1.500 €. Über den MID-Gutschein des Landes NRW können Sie bis zu 50% (max. 15.000 €) gefördert bekommen. Wir begleiten Sie kostenlos durch den Antragsprozess.
+        </div>
+      </details>
+
+      <details style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
+        <summary style="padding:22px 24px;font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+          Ist meine Branche geeignet für KI?
+          <span style="font-size:20px;color:var(--violet-light);flex-shrink:0;margin-left:16px;">＋</span>
+        </summary>
+        <div style="padding:0 24px 22px;font-size:15px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);padding-top:18px;">
+          Ja — wenn Sie E-Mails schreiben, Angebote erstellen, Kunden betreuen, Reports erstellen oder Social Media nutzen, können wir helfen. Wir haben Kunden aus Handwerk, Industrie, Dienstleistung, Handel und Gesundheit. Der kostenlose Check zeigt genau wo der größte Hebel liegt.
+        </div>
+      </details>
+
+      <details style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
+        <summary style="padding:22px 24px;font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+          Was passiert mit unseren Daten?
+          <span style="font-size:20px;color:var(--violet-light);flex-shrink:0;margin-left:16px;">＋</span>
+        </summary>
+        <div style="padding:0 24px 22px;font-size:15px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);padding-top:18px;">
+          Ihre Daten bleiben Ihre Daten. Wir arbeiten ausschließlich mit DSGVO-konformen Tools und Server-Standorten in Europa. Alle Lösungen werden so konzipiert, dass keine sensiblen Unternehmensdaten an externe KI-Modelle unkontrolliert weitergegeben werden.
+        </div>
+      </details>
+
+      <details style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;overflow:hidden;cursor:pointer;">
+        <summary style="padding:22px 24px;font-family:'Space Age',sans-serif;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;user-select:none;">
+          Was passiert wenn KI-Technologie sich ändert?
+          <span style="font-size:20px;color:var(--violet-light);flex-shrink:0;margin-left:16px;">＋</span>
+        </summary>
+        <div style="padding:0 24px 22px;font-size:15px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);padding-top:18px;">
+          Genau dafür sind wir da. Als AI-Partner-Kunde werden Sie automatisch auf neue Tools und bessere Lösungen umgestellt — ohne Aufpreis. Wir beobachten den KI-Markt täglich und sorgen dafür, dass Sie immer das Beste bekommen.
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ÜBER UNS PREVIEW ═══ -->
+<section style="background:var(--ink);padding:90px 40px;">
+  <div style="max-width:1100px;margin:0 auto;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--sky-light);text-transform:uppercase;margin-bottom:12px;display:flex;align-items:center;gap:12px;">Wer wir sind<div style="flex:1;height:1px;background:linear-gradient(90deg,rgba(14,165,233,.3),transparent);"></div></div>
+        <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(28px,3.5vw,44px);line-height:1.1;margin-bottom:20px;">Aus NRW — für <em style="font-style:normal;background:linear-gradient(135deg,var(--violet-light),var(--sky-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">NRW</em></h2>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:20px;">SkyvAI wurde 2025 in Düsseldorf gegründet mit einer klaren Mission: Die Lücke zwischen KI-Potenzial und KMU-Praxis schließen. Wir kennen den Mittelstand, weil wir aus dem Mittelstand kommen.</p>
+        <p style="font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:32px;">Kein Enterprise-Overhead. Keine leeren Versprechen. Nur echte Ergebnisse — in 1–2 Wochen, nicht in Monaten.</p>
+        <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:32px;">
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🎯</div>
+            <div style="font-size:14px;color:rgba(232,228,240,.8);">Spezialisiert auf den NRW-Mittelstand</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">⚡</div>
+            <div style="font-size:14px;color:rgba(232,228,240,.8);">Ergebnisse in 1–2 Wochen — garantiert</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(6,214,199,.1);border:1px solid rgba(6,214,199,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🏛️</div>
+            <div style="font-size:14px;color:rgba(232,228,240,.8);">Aktive NRW-Förderungs-Begleitung</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;">
+            <div style="width:40px;height:40px;border-radius:10px;background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;">🚑</div>
+            <div style="font-size:14px;color:rgba(232,228,240,.8);">Flaggschiff-App: Erste Hilfe für Jedermann</div>
+          </div>
+        </div>
+        <a href="https://calendly.com/skyvai" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--violet),var(--sky));color:white;padding:14px 28px;border-radius:50px;font-weight:700;font-size:15px;text-decoration:none;box-shadow:0 4px 30px rgba(109,40,217,.35);">Uns kennenlernen →</a>
+      </div>
+
+      <!-- Values grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;">
+          <div style="font-size:32px;margin-bottom:12px;">🚀</div>
+          <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:6px;">Schnell</div>
+          <p style="font-size:12px;color:var(--muted);">Erste Ergebnisse in 1–2 Wochen, keine langen Konzeptphasen</p>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;">
+          <div style="font-size:32px;margin-bottom:12px;">🎯</div>
+          <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:6px;">Klar</div>
+          <p style="font-size:12px;color:var(--muted);">Kein Tech-Kauderwelsch, klare Sprache, klare Ergebnisse</p>
+        </div>
+        <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:16px;padding:24px;text-align:center;">
+          <div style="font-size:32px;margin-bottom:12px;">💡</div>
+          <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:6px;">Ehrlich</div>
+          <p style="font-size:12px;color:var(--muted);">Kostenloser Check vor dem Auftrag — kein Angebot ohne Analyse</p>
+        </div>
+        <div style="background:linear-gradient(145deg,rgba(109,40,217,.08),rgba(14,165,233,.05));border:1px solid rgba(109,40,217,.2);border-radius:16px;padding:24px;text-align:center;">
+          <div style="font-size:32px;margin-bottom:12px;">🤝</div>
+          <div style="font-family:'Space Age',sans-serif;font-size:14px;margin-bottom:6px;">Partner</div>
+          <p style="font-size:12px;color:var(--muted);">Langfristige Beziehung, nicht einmaliger Auftrag</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NEWSLETTER / LEAD MAGNET ═══ -->
+<section style="background:var(--ink2);padding:70px 40px;">
+  <div style="max-width:680px;margin:0 auto;text-align:center;">
+    <div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(14,165,233,.15));border:1px solid rgba(109,40,217,.3);display:flex;align-items:center;justify-content:center;font-size:28px;margin:0 auto 20px;">📧</div>
+    <h2 style="font-family:'Space Age',sans-serif;font-size:clamp(22px,3vw,34px);line-height:1.2;margin-bottom:14px;">KI-Tipps für NRW-Unternehmer</h2>
+    <p style="font-size:15px;color:var(--muted);line-height:1.7;margin-bottom:32px;">Jeden Monat: 3 konkrete KI-Tipps die Ihr Unternehmen weiterbringen. Kein Spam. Direkt anwendbar. Von Praktikern für Praktiker.</p>
+    <div style="display:flex;gap:12px;max-width:480px;margin:0 auto 16px;">
+      <input type="email" placeholder="Ihre E-Mail-Adresse" style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:12px;padding:14px 18px;color:var(--text);font-size:14px;font-family:'Space Grotesk',sans-serif;outline:none;" onfocus="this.style.borderColor='rgba(109,40,217,.5)'" onblur="this.style.borderColor='rgba(255,255,255,.07)'">
+      <button onclick="alert('Vielen Dank! Sie werden in Kürze eine Bestätigungs-E-Mail erhalten.')" style="background:linear-gradient(135deg,var(--violet),var(--sky));color:white;border:none;border-radius:12px;padding:14px 24px;font-family:'Space Age',sans-serif;font-size:13px;cursor:pointer;white-space:nowrap;letter-spacing:.5px;box-shadow:0 4px 20px rgba(109,40,217,.3);">Anmelden</button>
+    </div>
+    <p style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:.5px;">KEIN SPAM · JEDERZEIT ABMELDBAR · DSGVO-KONFORM</p>
+  </div>
+</section>
+
+
 <!-- CTA -->
 <section class="cta-section" id="kontakt">
   <div class="cta-box">
