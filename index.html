@@ -530,6 +530,472 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   .mid-badge{font-size:11px;padding:6px 14px}
   .nrw-stat-row{grid-template-columns:1fr 1fr}
 }
+
+/* ═══════════════════════════════════════════
+   DASHBOARD ANIMATION — Hero Visual
+═══════════════════════════════════════════ */
+.dash-wrap {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  perspective: 1000px;
+}
+
+/* Floating dashboard container */
+.dash-board {
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 10, 28, 0.92);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 0 1px rgba(109,40,217,0.15),
+    0 32px 80px rgba(0,0,0,0.6),
+    0 0 120px rgba(109,40,217,0.08);
+  animation: dash-float 6s ease-in-out infinite;
+}
+
+@keyframes dash-float {
+  0%,100% { transform: translateY(0px) rotateX(2deg) rotateY(-3deg); }
+  50%      { transform: translateY(-12px) rotateX(1deg) rotateY(-2deg); }
+}
+
+/* Top bar */
+.dash-topbar {
+  height: 48px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 14px;
+}
+.dash-dots { display:flex; gap:6px; }
+.dash-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+.dash-dot:nth-child(1) { background: #ef4444; }
+.dash-dot:nth-child(2) { background: #f59e0b; }
+.dash-dot:nth-child(3) { background: #22c55e; }
+.dash-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 2px;
+  margin: 0 auto;
+}
+.dash-live-badge {
+  display: flex; align-items: center; gap: 6px;
+  background: rgba(6,214,199,0.1);
+  border: 1px solid rgba(6,214,199,0.25);
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: #06d6c7;
+  letter-spacing: 1px;
+}
+.live-dot {
+  width: 5px; height: 5px; background: #06d6c7;
+  border-radius: 50%;
+  animation: live-pulse 1.5s ease infinite;
+}
+@keyframes live-pulse {
+  0%,100% { opacity:1; transform:scale(1); }
+  50%      { opacity:0.4; transform:scale(1.5); }
+}
+
+/* Dashboard grid */
+.dash-grid {
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 12px;
+  height: calc(100% - 48px);
+}
+
+/* KPI Cards */
+.kpi-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 14px 16px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+.kpi-card:hover { border-color: rgba(109,40,217,0.3); }
+.kpi-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  border-radius: 14px 14px 0 0;
+}
+.kpi-v .kpi-card::after  { background: linear-gradient(90deg, #6d28d9, #8b5cf6); }
+.kpi-s .kpi-card::after  { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
+.kpi-q .kpi-card::after  { background: linear-gradient(90deg, #06d6c7, #22d3ee); }
+
+.kpi-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.kpi-value {
+  font-family: 'Space Age', sans-serif;
+  font-size: 26px;
+  line-height: 1;
+  background: linear-gradient(135deg, #e0d0ff, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.kpi-delta {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.kpi-delta.up   { color: #22c55e; }
+.kpi-delta.down { color: #ef4444; }
+
+/* Main chart area */
+.chart-card {
+  grid-column: 1 / 3;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.chart-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 2px;
+}
+.chart-tabs {
+  display: flex;
+  gap: 6px;
+}
+.chart-tab {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  padding: 3px 8px;
+  border-radius: 50px;
+  color: rgba(255,255,255,0.3);
+  cursor: default;
+}
+.chart-tab.active {
+  background: rgba(109,40,217,0.2);
+  border: 1px solid rgba(109,40,217,0.3);
+  color: #c4b5fd;
+}
+canvas#heroChart {
+  width: 100% !important;
+  height: 130px !important;
+  display: block;
+}
+
+/* Activity feed */
+.activity-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+}
+.activity-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  animation: slide-in 0.4s ease both;
+}
+.activity-item:last-child { border-bottom: none; }
+@keyframes slide-in {
+  from { opacity:0; transform:translateX(-10px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+.act-dot {
+  width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0;
+  box-shadow: 0 0 6px currentColor;
+}
+.act-text {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.act-time {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.2);
+}
+.act-badge {
+  font-size: 9px;
+  font-family: 'DM Mono', monospace;
+  padding: 2px 7px;
+  border-radius: 50px;
+}
+
+/* Mini chart */
+.mini-chart-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.mini-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+.mini-val {
+  font-family: 'Space Age', sans-serif;
+  font-size: 20px;
+  background: linear-gradient(135deg, #06d6c7, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+}
+canvas.miniChart {
+  width: 100% !important;
+  height: 50px !important;
+}
+
+/* Bottom row */
+.progress-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 14px;
+}
+.prog-title {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.prog-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.prog-item-d {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.prog-lbl-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+.prog-lbl-row span:first-child { color: rgba(255,255,255,0.5); }
+.prog-lbl-row span:last-child  { color: rgba(255,255,255,0.3); font-family: 'DM Mono', monospace; font-size: 9px; }
+.prog-track {
+  height: 4px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.prog-fill-d {
+  height: 100%;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.prog-fill-d::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  animation: shimmer 2s ease infinite;
+}
+@keyframes shimmer {
+  0%   { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Floating particles */
+.dash-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  border-radius: 24px;
+}
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  animation: particle-float linear infinite;
+  opacity: 0;
+}
+@keyframes particle-float {
+  0%   { transform: translateY(100%) translateX(0); opacity: 0; }
+  10%  { opacity: 0.6; }
+  90%  { opacity: 0.3; }
+  100% { transform: translateY(-20px) translateX(30px); opacity: 0; }
+}
+
+/* Glow overlay */
+.dash-glow {
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 250px; height: 250px;
+  background: radial-gradient(circle, rgba(109,40,217,0.12), transparent 70%);
+  pointer-events: none;
+  animation: glow-pulse 4s ease infinite alternate;
+}
+.dash-glow-2 {
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(14,165,233,0.1), transparent 70%);
+  pointer-events: none;
+  animation: glow-pulse 5s ease infinite alternate-reverse;
+}
+@keyframes glow-pulse {
+  from { transform: scale(1); opacity: 0.8; }
+  to   { transform: scale(1.3); opacity: 1; }
+}
+
+/* Scan line effect */
+.dash-scanline {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(14,165,233,0.15), transparent);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+}
+@keyframes scan {
+  from { top: 48px; }
+  to   { top: 100%; }
+}
+
+/* Floating notification */
+.dash-notif {
+  position: absolute;
+  top: 60px;
+  right: -10px;
+  background: rgba(12,10,28,0.95);
+  border: 1px solid rgba(109,40,217,0.3);
+  border-radius: 12px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(109,40,217,0.1);
+  animation: notif-in 0.5s 1.5s cubic-bezier(0.34,1.56,0.64,1) both,
+             notif-float 4s 2s ease-in-out infinite;
+  z-index: 10;
+}
+@keyframes notif-in {
+  from { opacity:0; transform:translateX(40px) scale(0.9); }
+  to   { opacity:1; transform:translateX(0) scale(1); }
+}
+@keyframes notif-float {
+  0%,100% { transform:translateY(0); }
+  50%      { transform:translateY(-6px); }
+}
+.notif-icon {
+  width: 28px; height: 28px;
+  background: linear-gradient(135deg, #6d28d9, #0ea5e9);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px;
+}
+.notif-text { font-size: 11px; line-height: 1.4; }
+.notif-title { color: #e8e4f0; font-weight: 600; font-size: 11px; }
+.notif-sub   { color: rgba(232,228,240,0.45); font-size: 10px; font-family: 'DM Mono', monospace; }
+
+/* Second floating card */
+.dash-float-card {
+  position: absolute;
+  bottom: 20px;
+  left: -18px;
+  background: rgba(12,10,28,0.95);
+  border: 1px solid rgba(14,165,233,0.25);
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4), 0 0 20px rgba(14,165,233,0.08);
+  animation: floatcard-in 0.5s 2s cubic-bezier(0.34,1.56,0.64,1) both,
+             floatcard-float 5s 2.5s ease-in-out infinite;
+  z-index: 10;
+  min-width: 150px;
+}
+@keyframes floatcard-in {
+  from { opacity:0; transform:translateX(-30px) scale(0.9); }
+  to   { opacity:1; transform:translateX(0) scale(1); }
+}
+@keyframes floatcard-float {
+  0%,100% { transform:translateY(0); }
+  50%      { transform:translateY(8px); }
+}
+.fc-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+}
+.fc-value {
+  font-family: 'Space Age', sans-serif;
+  font-size: 22px;
+  background: linear-gradient(135deg, #06d6c7, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.fc-sub {
+  font-size: 10px;
+  color: #22c55e;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: 'DM Mono', monospace;
+}
+
 </style>
 </head>
 <body>
@@ -603,33 +1069,260 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-card">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-          <div class="card-lbl">KI-Transformation · Live</div>
-          <div class="card-status"><div class="status-dot"></div> Aktiv</div>
+<style>
+/* ─── WRAPPER ─── */
+.dash-wrap{position:relative;width:100%;height:510px;perspective:1400px;user-select:none}
+.dash-scene{
+  position:relative;width:100%;height:100%;
+  transform-style:preserve-3d;
+  animation:scene-tilt 14s ease-in-out infinite;
+}
+@keyframes scene-tilt{
+  0%,100%{transform:rotateX(5deg) rotateY(-7deg) rotateZ(0.5deg)}
+  33%    {transform:rotateX(3deg) rotateY(-3deg) rotateZ(0deg)}
+  66%    {transform:rotateX(7deg) rotateY(-9deg) rotateZ(1deg)}
+}
+
+/* ─── GLOW ORBS behind cards ─── */
+.dg{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.dg1{width:300px;height:300px;background:rgba(109,40,217,.2);top:-60px;right:-40px;animation:og1 8s ease-in-out infinite}
+.dg2{width:240px;height:240px;background:rgba(14,165,233,.14);bottom:30px;left:-20px;animation:og1 10s ease-in-out infinite reverse}
+.dg3{width:180px;height:180px;background:rgba(6,214,199,.1);top:40%;right:20%;animation:og1 6s ease-in-out infinite 2s}
+@keyframes og1{0%,100%{transform:scale(1) translate(0,0)}50%{transform:scale(1.15) translate(8px,-12px)}}
+
+/* ─── BASE CARD ─── */
+.gc{
+  position:absolute;
+  background:rgba(15,13,35,.88);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:16px;
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 60px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.06);
+  overflow:hidden;
+  transition:transform .4s ease,box-shadow .4s ease;
+  transform-style:preserve-3d;
+}
+.gc::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent 0%,rgba(109,40,217,.7) 30%,rgba(14,165,233,.7) 70%,transparent 100%);
+}
+.gc:hover{
+  box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 40px rgba(109,40,217,.12),inset 0 1px 0 rgba(255,255,255,.1);
+  transform:translateZ(10px);
+}
+
+/* ─── CARD POSITIONS ─── */
+.gc-main{top:0;left:0;right:0;height:196px;z-index:4}
+.gc-a   {top:208px;left:0;width:46%;height:128px;z-index:3;animation:fa 5.5s ease-in-out infinite}
+.gc-b   {top:208px;right:0;width:52%;height:128px;z-index:3;animation:fb 6.5s ease-in-out infinite}
+.gc-c   {top:348px;left:0;right:0;height:148px;z-index:2;animation:fc 7s ease-in-out infinite}
+@keyframes fa{0%,100%{transform:translateY(0) translateZ(0)}50%{transform:translateY(-7px) translateZ(4px)}}
+@keyframes fb{0%,100%{transform:translateY(-4px) translateZ(0)}50%{transform:translateY(5px) translateZ(4px)}}
+@keyframes fc{0%,100%{transform:translateY(3px) translateZ(0)}50%{transform:translateY(-5px) translateZ(2px)}}
+
+/* ─── CARD HEADER ─── */
+.gh{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 8px}
+.gh-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2.5px;color:rgba(255,255,255,.35);text-transform:uppercase}
+.live-badge{
+  display:flex;align-items:center;gap:5px;
+  background:rgba(6,214,199,.1);border:1px solid rgba(6,214,199,.25);
+  border-radius:20px;padding:2px 9px;
+  font-family:'DM Mono',monospace;font-size:8px;color:#06d6c7;letter-spacing:1px;
+}
+.lpulse{width:5px;height:5px;background:#06d6c7;border-radius:50%;animation:pulse 1.8s infinite}
+
+/* ─── METRICS ROW ─── */
+.mrow{display:flex;padding:0 16px 10px}
+.mi{flex:1;padding:0 10px 0 0}
+.mi:first-child{padding-left:0}
+.mi+.mi{border-left:1px solid rgba(255,255,255,.05);padding-left:12px}
+.mnum{
+  font-family:'Space Age',sans-serif;font-size:20px;line-height:1.1;
+  background:linear-gradient(135deg,#c4b5fd,#38bdf8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.mnum.g{background:linear-gradient(135deg,#34d399,#06d6c7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mlbl{font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.28);letter-spacing:1px;margin-top:2px}
+
+/* ─── CHART AREA ─── */
+.chart-area{position:relative;height:88px;padding:0 0 0 0}
+canvas.main-c{display:block;width:100%;height:100%}
+
+/* ─── PROGRESS BARS ─── */
+.pbar-wrap{padding:8px 16px}
+.pb-row{margin-bottom:9px}
+.pb-top{display:flex;justify-content:space-between;font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.3);margin-bottom:3px}
+.pb-top span:last-child{color:#38bdf8}
+.pb-track{height:3px;background:rgba(255,255,255,.06);border-radius:2px;overflow:hidden}
+.pb-fill{height:100%;width:0;border-radius:2px;transition:width 2.2s cubic-bezier(.34,1.1,.64,1)}
+.pb1{background:linear-gradient(90deg,#6d28d9,#0ea5e9)}
+.pb2{background:linear-gradient(90deg,#6d28d9,#06d6c7)}
+.pb3{background:linear-gradient(90deg,#8b5cf6,#38bdf8)}
+
+/* ─── ACTIVITY FEED ─── */
+.afeed{display:flex;flex-direction:column;gap:0;padding:0 16px}
+.aitem{
+  display:flex;align-items:center;gap:9px;
+  padding:7px 0;border-bottom:1px solid rgba(255,255,255,.04);
+  animation:aslide .4s ease both;
+}
+.aitem:last-child{border-bottom:none}
+@keyframes aslide{from{opacity:0;transform:translateX(8px)}to{opacity:1;transform:translateX(0)}}
+.adot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.atxt{font-size:10px;color:rgba(255,255,255,.5);flex:1;font-family:'Space Grotesk',sans-serif}
+.aval{font-family:'DM Mono',monospace;font-size:10px}
+
+/* ─── BAR CHART ─── */
+.bchart{display:flex;align-items:flex-end;gap:5px;padding:4px 16px 0;height:82px}
+.bbar{
+  flex:1;border-radius:3px 3px 0 0;transform-origin:bottom;
+  transform:scaleY(0);background:linear-gradient(180deg,rgba(109,40,217,.85),rgba(14,165,233,.5));
+  animation:bgrow 1.2s cubic-bezier(.34,1.4,.64,1) forwards;
+}
+@keyframes bgrow{to{transform:scaleY(1)}}
+.blbls{display:flex;justify-content:space-between;padding:3px 16px 0;font-family:'DM Mono',monospace;font-size:7px;color:rgba(255,255,255,.2)}
+
+/* ─── FLOATING PILL (top-right) ─── */
+.dash-pill{
+  position:absolute;top:-14px;right:16px;z-index:10;
+  display:flex;align-items:center;gap:7px;
+  background:rgba(18,16,42,.95);border:1px solid rgba(52,211,153,.3);
+  border-radius:24px;padding:7px 14px;
+  box-shadow:0 8px 30px rgba(0,0,0,.4),0 0 20px rgba(52,211,153,.1);
+  animation:pill-float 4s ease-in-out infinite;
+  font-family:'DM Mono',monospace;font-size:9px;color:#34d399;letter-spacing:1px;
+  white-space:nowrap;
+}
+@keyframes pill-float{0%,100%{transform:translateY(0) translateX(0)}50%{transform:translateY(-5px) translateX(2px)}}
+.pill-icon{font-size:14px}
+
+/* ─── FLOATING BADGE (left) ─── */
+.dash-badge{
+  position:absolute;bottom:130px;left:-18px;z-index:10;
+  background:rgba(18,16,42,.95);border:1px solid rgba(109,40,217,.35);
+  border-radius:14px;padding:10px 14px;
+  box-shadow:0 8px 30px rgba(0,0,0,.4),0 0 20px rgba(109,40,217,.1);
+  animation:badge-float 5s ease-in-out infinite 1s;font-family:'DM Mono',monospace;
+}
+@keyframes badge-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.badge-num{font-family:'Space Age',sans-serif;font-size:18px;background:linear-gradient(135deg,#c4b5fd,#38bdf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1}
+.badge-txt{font-size:8px;color:rgba(255,255,255,.3);letter-spacing:1px;margin-top:2px}
+</style>
+
+<div class="dash-wrap">
+  <!-- background glow -->
+  <div class="dg dg1"></div>
+  <div class="dg dg2"></div>
+  <div class="dg dg3"></div>
+
+  <!-- floating elements outside cards -->
+  <div class="dash-pill">
+    <div class="pill-icon">⚡</div>
+    <span>Workflow automatisiert</span>
+  </div>
+  <div class="dash-badge">
+    <div class="badge-num" id="db-num">0</div>
+    <div class="badge-txt">PROZESSE AKTIV</div>
+  </div>
+
+  <div class="dash-scene">
+
+    <!-- CARD 1: Main chart -->
+    <div class="gc gc-main">
+      <div class="gh">
+        <div class="gh-title">KI-Performance Dashboard</div>
+        <div class="live-badge"><div class="lpulse"></div>LIVE</div>
+      </div>
+      <div class="mrow">
+        <div class="mi">
+          <div class="mnum g" id="dc1">0%</div>
+          <div class="mlbl">ZEITERSPARNIS</div>
         </div>
-        <div class="metric-row">
-          <div class="metric"><div class="metric-val">-68%</div><div class="metric-lbl">Zeitaufwand</div></div>
-          <div class="metric"><div class="metric-val">+43%</div><div class="metric-lbl">Umsatz</div></div>
-          <div class="metric"><div class="metric-val">3h</div><div class="metric-lbl">Einsparen/Tag</div></div>
+        <div class="mi">
+          <div class="mnum" id="dc2">0€</div>
+          <div class="mlbl">ROI/MONAT</div>
+        </div>
+        <div class="mi">
+          <div class="mnum g" id="dc3">0</div>
+          <div class="mlbl">KI-AGENTEN</div>
+        </div>
+        <div class="mi">
+          <div class="mnum" id="dc4">0h</div>
+          <div class="mlbl">EINGESPART/WOCHE</div>
         </div>
       </div>
-      <div class="hero-card">
-        <div style="margin-bottom:14px;" class="card-lbl">Automatisierungs-Status</div>
-        <div class="prog-item"><div class="prog-label"><span>E-Mail-Workflows</span><span>92%</span></div><div class="prog-bar"><div class="prog-fill" style="width:92%;animation:progw 1.5s ease forwards;"></div></div></div>
-        <div class="prog-item"><div class="prog-label"><span>Kundenservice-Bot</span><span>87%</span></div><div class="prog-bar"><div class="prog-fill" style="width:87%;animation:progw 1.8s ease forwards;"></div></div></div>
-        <div class="prog-item"><div class="prog-label"><span>Content-Pipeline</span><span>74%</span></div><div class="prog-bar"><div class="prog-fill" style="width:74%;animation:progw 2.1s ease forwards;"></div></div></div>
-      </div>
-      <div class="hero-card">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
-          <div class="card-lbl">AI-Assistent · Demo</div>
-          <div class="card-status"><div class="status-dot"></div> Online</div>
-        </div>
-        <div class="chat-msg"><div class="chat-av">🤖</div><div class="chat-bub">Hallo! Wie kann ich helfen?</div></div>
-        <div class="chat-msg" style="justify-content:flex-end"><div class="chat-bub u">Öffnungszeiten?</div></div>
-        <div class="chat-msg"><div class="chat-av">🤖</div><div class="chat-bub">Mo–Fr 8–18 Uhr. Kann ich sonst helfen?</div></div>
+      <div class="chart-area">
+        <canvas id="mchart"></canvas>
       </div>
     </div>
+
+    <!-- CARD 2: Progress / Automatisierung -->
+    <div class="gc gc-a">
+      <div class="gh">
+        <div class="gh-title">Automatisierung</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;color:#34d399;letter-spacing:1px">+24% ↑</div>
+      </div>
+      <div class="pbar-wrap">
+        <div class="pb-row">
+          <div class="pb-top"><span>E-Mail Workflows</span><span id="pv1">0%</span></div>
+          <div class="pb-track"><div class="pb-fill pb1" id="pb1"></div></div>
+        </div>
+        <div class="pb-row">
+          <div class="pb-top"><span>Kundenservice Bot</span><span id="pv2">0%</span></div>
+          <div class="pb-track"><div class="pb-fill pb2" id="pb2"></div></div>
+        </div>
+        <div class="pb-row" style="margin-bottom:0">
+          <div class="pb-top"><span>Content Pipeline</span><span id="pv3">0%</span></div>
+          <div class="pb-track"><div class="pb-fill pb3" id="pb3"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3: Activity feed -->
+    <div class="gc gc-b">
+      <div class="gh">
+        <div class="gh-title">AI Aktivität</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.25)">ECHTZEIT</div>
+      </div>
+      <div class="afeed" id="afeed">
+        <div class="aitem" style="animation-delay:.1s">
+          <div class="adot" style="background:#34d399;box-shadow:0 0 6px #34d399"></div>
+          <div class="atxt">Angebot generiert</div>
+          <div class="aval" style="color:#34d399">+1.800€</div>
+        </div>
+        <div class="aitem" style="animation-delay:.25s">
+          <div class="adot" style="background:#38bdf8;box-shadow:0 0 6px #38bdf8"></div>
+          <div class="atxt">E-Mail beantwortet</div>
+          <div class="aval" style="color:#38bdf8">2,1s</div>
+        </div>
+        <div class="aitem" style="animation-delay:.4s">
+          <div class="adot" style="background:#c4b5fd;box-shadow:0 0 6px #c4b5fd"></div>
+          <div class="atxt">Lead qualifiziert</div>
+          <div class="aval" style="color:#c4b5fd">94%</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4: Bar chart -->
+    <div class="gc gc-c">
+      <div class="gh">
+        <div class="gh-title">Monatsverlauf · Stunden eingespart</div>
+        <div style="font-family:'DM Mono',monospace;font-size:8px;color:rgba(255,255,255,.2)">JAN–JUN 2025</div>
+      </div>
+      <div class="bchart">
+        <div class="bbar" style="height:28%;animation-delay:.05s;opacity:.5"></div>
+        <div class="bbar" style="height:40%;animation-delay:.12s;opacity:.6"></div>
+        <div class="bbar" style="height:53%;animation-delay:.2s;background:linear-gradient(180deg,rgba(14,165,233,.9),rgba(109,40,217,.6))"></div>
+        <div class="bbar" style="height:67%;animation-delay:.28s"></div>
+        <div class="bbar" style="height:82%;animation-delay:.36s;background:linear-gradient(180deg,rgba(6,214,199,.9),rgba(14,165,233,.7))"></div>
+        <div class="bbar" style="height:100%;animation-delay:.44s;background:linear-gradient(180deg,#06d6c7,rgba(14,165,233,.85));box-shadow:0 0 16px rgba(6,214,199,.35)"></div>
+      </div>
+      <div class="blbls"><span>Jan</span><span>Feb</span><span>Mär</span><span>Apr</span><span>Mai</span><span>Jun</span></div>
+    </div>
+
+  </div><!-- /dash-scene -->
+</div><!-- /dash-wrap -->
+</div><!-- /hero-visual -->
   </div>
 </section>
 @keyframes progw{from{width:0}}
@@ -956,7 +1649,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
           Kostenlosen Termin buchen
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="mailto:hello@skyvai.de" class="btn-secondary">hello@skyvai.de</a>
+        <a href="/cdn-cgi/l/email-protection#d3bbb6bfbfbc93a0b8aaa5b2bafdb7b6" class="btn-secondary"><span class="__cf_email__" data-cfemail="036b666f6f6c4370687a75626a2d6766">[email&#160;protected]</span></a>
       </div>
       <div class="cta-trust">
         <div class="cta-trust-item"><span style="color:var(--aq);">✓</span> 100% KOSTENLOS</div>
@@ -1004,7 +1697,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
     <div class="footer-col">
       <h4>Kontakt</h4>
       <ul>
-        <li><a href="mailto:hello@skyvai.de">hello@skyvai.de</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#c3aba6afafac83b0a8bab5a2aaeda7a6"><span class="__cf_email__" data-cfemail="0f676a6363604f7c6476796e66216b6a">[email&#160;protected]</span></a></li>
         <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
         <li><a href="https://instagram.com/skyvai.agency" target="_blank">Instagram</a></li>
         <li><a href="https://calendly.com/skyvai" target="_blank">Termin buchen</a></li>
@@ -1017,12 +1710,312 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
     <div class="footer-socials">
       <a href="https://linkedin.com" target="_blank" class="social-link">in</a>
       <a href="https://instagram.com/skyvai.agency" target="_blank" class="social-link">ig</a>
-      <a href="mailto:hello@skyvai.de" class="social-link">✉</a>
+      <a href="/cdn-cgi/l/email-protection#6b030e0707042b1800121d0a02450f0e" class="social-link">✉</a>
     </div>
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js">
+
+// ═══════════════════════════════════════════
+// DASHBOARD ANIMATION ENGINE
+// ═══════════════════════════════════════════
+(function() {
+  // ── Particle System ──────────────────────
+  const particleContainer = document.getElementById('particles');
+  if (particleContainer) {
+    const colors = ['#6d28d9', '#0ea5e9', '#06d6c7', '#8b5cf6'];
+    for (let i = 0; i < 18; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      const size = Math.random() * 3 + 1;
+      p.style.cssText = `
+        width:${size}px; height:${size}px;
+        left:${Math.random()*100}%;
+        bottom:0;
+        background:${colors[Math.floor(Math.random()*colors.length)]};
+        animation-duration:${6 + Math.random()*8}s;
+        animation-delay:${Math.random()*6}s;
+      `;
+      particleContainer.appendChild(p);
+    }
+  }
+
+  // ── Main Line Chart ──────────────────────
+  const heroCtx = document.getElementById('heroChart');
+  if (!heroCtx) return;
+
+  const labels = ['Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa', 'So'];
+  const dataA  = [42, 68, 55, 82, 74, 90, 85];
+  const dataB  = [28, 45, 38, 60, 52, 71, 65];
+
+  // Manual canvas chart — no library needed
+  function drawHeroChart() {
+    const canvas = heroCtx;
+    const ctx = canvas.getContext('2d');
+    const W = canvas.offsetWidth;
+    const H = 130;
+    canvas.width = W * window.devicePixelRatio;
+    canvas.height = H * window.devicePixelRatio;
+    ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+    const pad = { l:30, r:20, t:10, b:28 };
+    const cW = W - pad.l - pad.r;
+    const cH = H - pad.t - pad.b;
+    const maxV = 100;
+    const minV = 0;
+
+    ctx.clearRect(0, 0, W, H);
+
+    // Grid lines
+    ctx.strokeStyle = 'rgba(255,255,255,0.05)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+      const y = pad.t + (cH / 4) * i;
+      ctx.beginPath();
+      ctx.moveTo(pad.l, y);
+      ctx.lineTo(pad.l + cW, y);
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(255,255,255,0.2)';
+      ctx.font = `${8 * window.devicePixelRatio / window.devicePixelRatio}px DM Mono`;
+      ctx.textAlign = 'right';
+      ctx.fillText(Math.round(maxV - (maxV/4)*i), pad.l - 5, y + 3);
+    }
+
+    // X labels
+    ctx.textAlign = 'center';
+    ctx.fillStyle = 'rgba(255,255,255,0.25)';
+    ctx.font = '9px DM Mono';
+    labels.forEach((lbl, i) => {
+      const x = pad.l + (cW / (labels.length - 1)) * i;
+      ctx.fillText(lbl, x, H - 8);
+    });
+
+    function drawLine(data, color1, color2, fillAlpha) {
+      const pts = data.map((v, i) => ({
+        x: pad.l + (cW / (data.length - 1)) * i,
+        y: pad.t + cH - ((v - minV) / (maxV - minV)) * cH
+      }));
+
+      // Gradient fill
+      const grad = ctx.createLinearGradient(0, pad.t, 0, pad.t + cH);
+      grad.addColorStop(0, color1.replace(')', `,${fillAlpha})`).replace('rgb','rgba'));
+      grad.addColorStop(1, 'rgba(0,0,0,0)');
+
+      ctx.beginPath();
+      ctx.moveTo(pts[0].x, pts[0].y);
+      for (let i = 1; i < pts.length; i++) {
+        const cpX = (pts[i-1].x + pts[i].x) / 2;
+        ctx.bezierCurveTo(cpX, pts[i-1].y, cpX, pts[i].y, pts[i].x, pts[i].y);
+      }
+      ctx.lineTo(pts[pts.length-1].x, pad.t + cH);
+      ctx.lineTo(pts[0].x, pad.t + cH);
+      ctx.closePath();
+      ctx.fillStyle = grad;
+      ctx.fill();
+
+      // Stroke
+      const lineGrad = ctx.createLinearGradient(pad.l, 0, pad.l + cW, 0);
+      lineGrad.addColorStop(0, color1);
+      lineGrad.addColorStop(1, color2);
+
+      ctx.beginPath();
+      ctx.moveTo(pts[0].x, pts[0].y);
+      for (let i = 1; i < pts.length; i++) {
+        const cpX = (pts[i-1].x + pts[i].x) / 2;
+        ctx.bezierCurveTo(cpX, pts[i-1].y, cpX, pts[i].y, pts[i].x, pts[i].y);
+      }
+      ctx.strokeStyle = lineGrad;
+      ctx.lineWidth = 2;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.stroke();
+
+      // Dots
+      pts.forEach((pt, i) => {
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, i === pts.length-1 ? 4 : 3, 0, Math.PI*2);
+        ctx.fillStyle = i === pts.length-1 ? color2 : color1;
+        ctx.fill();
+        if (i === pts.length-1) {
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, 7, 0, Math.PI*2);
+          ctx.strokeStyle = color2.replace(')', ',0.3)').replace('rgb','rgba');
+          ctx.lineWidth = 1;
+          ctx.stroke();
+          // Pulsing ring
+          const ringSize = 7 + (Date.now() % 1500) / 1500 * 8;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, ringSize, 0, Math.PI*2);
+          ctx.strokeStyle = color2.replace(')', `,${0.3 - (Date.now()%1500)/1500*0.3})`).replace('rgb','rgba');
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      });
+    }
+
+    drawLine(dataB, 'rgb(14,165,233)', 'rgb(56,189,248)', 0.08);
+    drawLine(dataA, 'rgb(109,40,217)', 'rgb(196,181,253)', 0.12);
+  }
+
+  // ── Mini charts ──────────────────────────
+  function drawMini(canvasId, data, color1, color2) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    const W = canvas.offsetWidth || 180;
+    const H = 50;
+    canvas.width = W * devicePixelRatio;
+    canvas.height = H * devicePixelRatio;
+    ctx.scale(devicePixelRatio, devicePixelRatio);
+
+    const min = Math.min(...data);
+    const max = Math.max(...data);
+    const range = max - min || 1;
+    const pad = 4;
+    const pts = data.map((v, i) => ({
+      x: pad + (W - pad*2) / (data.length - 1) * i,
+      y: pad + (H - pad*2) - ((v - min) / range) * (H - pad*2)
+    }));
+
+    const grad = ctx.createLinearGradient(0, 0, 0, H);
+    grad.addColorStop(0, color1 + '33');
+    grad.addColorStop(1, 'transparent');
+
+    ctx.beginPath();
+    ctx.moveTo(pts[0].x, pts[0].y);
+    for (let i = 1; i < pts.length; i++) {
+      const cx = (pts[i-1].x + pts[i].x) / 2;
+      ctx.bezierCurveTo(cx, pts[i-1].y, cx, pts[i].y, pts[i].x, pts[i].y);
+    }
+    ctx.lineTo(pts[pts.length-1].x, H);
+    ctx.lineTo(pts[0].x, H);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(pts[0].x, pts[0].y);
+    for (let i = 1; i < pts.length; i++) {
+      const cx = (pts[i-1].x + pts[i].x) / 2;
+      ctx.bezierCurveTo(cx, pts[i-1].y, cx, pts[i].y, pts[i].x, pts[i].y);
+    }
+    const lg = ctx.createLinearGradient(0, 0, W, 0);
+    lg.addColorStop(0, color1);
+    lg.addColorStop(1, color2);
+    ctx.strokeStyle = lg;
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+  }
+
+  // ── Activity Feed ────────────────────────
+  const activities = [
+    { color:'#6d28d9', text:'E-Mail-Workflow ausgeführt', badge:'AUTO',   bcolor:'rgba(109,40,217,0.2)', btext:'#c4b5fd', time:'gerade' },
+    { color:'#0ea5e9', text:'Chatbot: 12 Anfragen gelöst', badge:'BOT',   bcolor:'rgba(14,165,233,0.2)',  btext:'#38bdf8', time:'1 Min.' },
+    { color:'#06d6c7', text:'Report automatisch erstellt', badge:'OK',    bcolor:'rgba(6,214,199,0.15)',  btext:'#06d6c7', time:'3 Min.' },
+    { color:'#8b5cf6', text:'Lead qualifiziert → CRM',     badge:'LEAD',  bcolor:'rgba(139,92,246,0.2)',  btext:'#c4b5fd', time:'5 Min.' },
+    { color:'#22c55e', text:'Angebot versendet',           badge:'SENT',  bcolor:'rgba(34,197,94,0.15)',  btext:'#4ade80', time:'8 Min.' },
+  ];
+
+  function renderActivity() {
+    const feed = document.getElementById('activity-feed');
+    if (!feed) return;
+    feed.innerHTML = '';
+    activities.forEach((a, i) => {
+      const el = document.createElement('div');
+      el.className = 'activity-item';
+      el.style.animationDelay = (i * 0.08) + 's';
+      el.innerHTML = `
+        <div class="act-dot" style="background:${a.color};color:${a.color};"></div>
+        <div class="act-text">${a.text}</div>
+        <div class="act-badge" style="background:${a.bcolor};color:${a.btext};">${a.badge}</div>
+        <div class="act-time">${a.time}</div>
+      `;
+      feed.appendChild(el);
+    });
+  }
+  renderActivity();
+
+  // ── Live KPI Animation ───────────────────
+  let kpi1Base = 247, kpi3Base = 14;
+  function animateKPIs() {
+    const k1 = document.getElementById('kpi1');
+    const k3 = document.getElementById('kpi3');
+    const fc = document.getElementById('fc-val');
+    if (k1) {
+      kpi1Base += Math.random() > 0.7 ? 1 : 0;
+      k1.textContent = kpi1Base;
+    }
+    if (k3 && Math.random() > 0.95) {
+      kpi3Base = 14 + Math.floor(Math.random() * 3);
+      k3.textContent = kpi3Base;
+    }
+    if (fc) {
+      const hrs = (2.4 + Math.random() * 0.8).toFixed(1);
+      fc.textContent = hrs + 'h';
+    }
+  }
+
+  // ── Progress Bar animation ───────────────
+  function animateProgress() {
+    const targets = [
+      { bar:'p1', val:'p1v', base:88, range:8 },
+      { bar:'p2', val:'p2v', base:82, range:10 },
+      { bar:'p3', val:'p3v', base:70, range:10 },
+    ];
+    targets.forEach(t => {
+      const pct = t.base + Math.floor(Math.random() * t.range);
+      const bar = document.getElementById(t.bar);
+      const lbl = document.getElementById(t.val);
+      if (bar) bar.style.width = pct + '%';
+      if (lbl) lbl.textContent = pct + '%';
+    });
+  }
+
+  // ── Rolling activity update ──────────────
+  const newActivities = [
+    { color:'#f59e0b', text:'Newsletter kampagne gestartet', badge:'CAMP', bcolor:'rgba(245,158,11,0.15)', btext:'#fbbf24', time:'gerade' },
+    { color:'#ec4899', text:'Neuer Lead aus Chatbot',        badge:'LEAD', bcolor:'rgba(236,72,153,0.15)', btext:'#f472b6', time:'gerade' },
+    { color:'#6d28d9', text:'Bericht an CRM exportiert',     badge:'SYNC', bcolor:'rgba(109,40,217,0.2)',  btext:'#c4b5fd', time:'gerade' },
+    { color:'#0ea5e9', text:'5 Angebote automatisch erstellt', badge:'AUTO', bcolor:'rgba(14,165,233,0.2)', btext:'#38bdf8', time:'gerade' },
+  ];
+  let actIdx = 0;
+  function rollActivity() {
+    const feed = document.getElementById('activity-feed');
+    if (!feed) return;
+    const newAct = newActivities[actIdx % newActivities.length];
+    actIdx++;
+    // Age existing items
+    activities.forEach((a, i) => {
+      const mins = [1,3,5,8,12];
+      a.time = mins[i] + ' Min.';
+    });
+    activities.unshift(newAct);
+    activities.pop();
+    renderActivity();
+  }
+
+  // ── Render loop ──────────────────────────
+  let frame = 0;
+  function render() {
+    frame++;
+    drawHeroChart();
+    drawMini('miniChart1', [800,950,1100,900,1284,1150,1350], '#6d28d9', '#a78bfa');
+    drawMini('miniChart2', [28,35,38,41,39,42,43], '#06d6c7', '#38bdf8');
+    if (frame % 60 === 0)  animateKPIs();
+    if (frame % 120 === 0) animateProgress();
+    if (frame % 240 === 0) rollActivity();
+    requestAnimationFrame(render);
+  }
+
+  // Start after page load
+  if (document.readyState === 'complete') {
+    setTimeout(render, 100);
+  } else {
+    window.addEventListener('load', () => setTimeout(render, 100));
+  }
+})();
+
+</script><script>
 // Nav scroll
 window.addEventListener('scroll', () => {
   document.getElementById('main-nav').style.background =
@@ -1063,18 +2056,4 @@ const co = new IntersectionObserver(entries => {
       el.textContent = (target >= 100 ? Math.round(cur).toLocaleString('de') : Math.round(cur * 10) / 10) + suf;
       if (cur >= target) clearInterval(t);
     }, 18);
-    co.unobserve(el);
-  });
-}, {threshold: 0.5});
-document.querySelectorAll('.counter-num').forEach(el => co.observe(el));
-
-// FAQ toggle
-function toggleFaq(el) {
-  const item = el.closest('.faq-item');
-  const isOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!isOpen) item.classList.add('open');
-}
-</script>
-</body>
-</html>
+    co
