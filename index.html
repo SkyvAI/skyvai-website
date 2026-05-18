@@ -143,124 +143,195 @@ nav{
 .tag-s{background:rgba(14,165,233,.1);border-color:rgba(14,165,233,.22);color:var(--sl)}
 .tag-q{background:rgba(6,214,199,.1);border-color:rgba(6,214,199,.22);color:var(--aq)}
 
-/* ── HERO (OPTIMIERT & ZUSAMMENGEZOGEN) ── */
+/* ── HERO ── */
 .hero {
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 90px 40px 50px; /* Reduzierter oberer/unterer Abstand */
+  padding: 100px 40px 60px;
   position: relative;
   overflow: hidden;
 }
-.hero-bg{position:absolute;inset:0;z-index:0}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);animation:orbf 8s ease-in-out infinite}
-.orb-1{width:500px;height:500px;background:radial-gradient(circle,rgba(109,40,217,.28),transparent 70%);top:-120px;right:-80px}
-.orb-2{width:400px;height:400px;background:radial-gradient(circle,rgba(14,165,233,.18),transparent 70%);bottom:0;left:-80px;animation-delay:3s}
-.orb-3{width:300px;height:300px;background:radial-gradient(circle,rgba(6,214,199,.12),transparent 70%);top:50%;left:45%;animation-delay:5s}
-@keyframes orbf{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(20px,-20px) scale(1.05)}66%{transform:translate(-10px,15px) scale(.97)}}
-.hero-grid{
-  position:absolute;inset:0;
-  background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);
-  background-size:60px 60px;
-  mask-image:radial-gradient(ellipse at center,black 20%,transparent 80%);
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 60% 30%, rgba(99,102,241,.18) 0%, transparent 60%),
+              radial-gradient(ellipse 50% 40% at 90% 70%, rgba(6,214,199,.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
 }
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr; /* Mehr Platz für Text links */
-  gap: 40px; /* Kompakterer Abstand zwischen Spalten */
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
   width: 100%;
 }
-
-/* IHK BADGE (OPTIMIERT FÜR LINKS & MOBILE) */
+.hero-content { display: flex; flex-direction: column; gap: 28px; }
 .hero-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--bd);
-  padding: 10px 16px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-  align-self: flex-start;
-  max-width: fit-content;
-  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  padding: 8px 16px 8px 8px;
+  border-radius: 50px;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+  transition: border-color .2s;
 }
+.hero-badge:hover { border-color: rgba(6,214,199,.4); }
 .hero-badge img {
-  width: 55px;
-  height: auto;
-  object-fit: contain;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
-.badge-info p {
-  margin: 0;
-  font-size: 11px;
-  font-family: 'DM Mono', monospace;
-  color: var(--text);
-  line-height: 1.3;
-}
-.badge-info a {
-  display: inline-block;
-  margin-top: 2px;
-  color: var(--sl);
-  font-size: 11px;
+.hero-badge-text { display: flex; flex-direction: column; line-height: 1.2; }
+.hero-badge-title { font-size: .7rem; color: var(--tm); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.hero-badge-sub { font-size: .75rem; color: rgba(232,232,232,.7); }
+.hero-badge-link {
+  font-size: .65rem;
+  color: var(--aq);
   text-decoration: none;
+  border-bottom: 1px solid rgba(6,214,199,.3);
+  margin-top: 1px;
+  transition: color .2s;
+}
+.hero-badge-link:hover { color: #fff; border-color: #fff; }
+.hero-eyebrow {
+  font-size: .8rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--aq);
   font-weight: 600;
 }
-.badge-info a:hover {
-  text-decoration: underline;
+.hero-h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  margin: 0;
 }
-
-.hero-h1{
-  font-family:'Space Age',sans-serif;
-  font-size:clamp(36px, 5vw, 56px); /* Leicht herunterskaliert für bessere Harmonie */
-  line-height:1.06;letter-spacing:-1.5px;margin-bottom:18px;overflow:visible;
+.hero-h1 .hl { background: linear-gradient(135deg, var(--pu), var(--aq)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(232,232,232,.75);
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
 }
-.hero-h1 em{
-  font-style:normal;
-  background:linear-gradient(135deg,var(--vl) 0%,var(--sl) 50%,var(--aq) 100%);
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-  background-clip:text;padding-right:8px;padding-left:2px;
-  display:inline-block;overflow:visible;
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+.hero-trust { display: flex; gap: 20px; flex-wrap: wrap; }
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: .8rem;
+  color: rgba(232,232,232,.6);
 }
-.hero-sub{font-size:17px;color:var(--mu);line-height:1.7;max-width:480px;margin-bottom:28px}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
-.hero-trust{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-.trust-item{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--mu)}
-.trust-item svg{color:var(--aq);flex-shrink:0}
-.trust-sep{width:1px;height:18px;background:var(--bd)}
-
-/* Hero cards */
-.hero-visual{display:flex;flex-direction:column;gap:14px}
-.hero-card{
-  background:rgba(255,255,255,.04);border:1px solid var(--bd);
-  border-radius:18px;padding:22px;backdrop-filter:blur(20px);transition:transform .3s;
+.trust-item svg { color: var(--aq); flex-shrink: 0; }
+/* HERO VISUAL */
+.hero-visual {
+  position: relative;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.hero-card:hover{transform:translateY(-3px)}
-.card-lbl{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:var(--sl);text-transform:uppercase}
-.card-status{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--aq)}
-.status-dot{width:6px;height:6px;background:var(--aq);border-radius:50%;animation:pulse 2s infinite}
-.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
-.metric{text-align:center}
-.metric-val{
-  font-family:'Space Age',sans-serif;font-size:28px;
-  background:linear-gradient(135deg,var(--vl),var(--sl));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;
+.hero-card-wrap {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
 }
-.metric-lbl{font-size:10px;color:var(--mu);margin-top:3px;font-family:'DM Mono',monospace}
-.prog-item{display:flex;flex-direction:column;gap:5px;margin-bottom:10px}
-.prog-label{display:flex;justify-content:space-between;font-size:11px;color:var(--mu)}
-.prog-label span:last-child{color:var(--sl);font-family:'DM Mono',monospace}
-.prog-bar{height:3px;background:rgba(255,255,255,.07);border-radius:2px;overflow:hidden}
-.prog-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--v),var(--s))}
-.chat-msg{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px}
-.chat-av{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--v),var(--s));display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
-.chat-bub{background:rgba(255,255,255,.06);border-radius:10px 10px 10px 0;padding:8px 12px;font-size:11px;color:var(--text);max-width:200px;line-height:1.5}
-.chat-bub.u{background:linear-gradient(135deg,rgba(109,40,217,.2),rgba(14,165,233,.15));border-radius:10px 10px 0 10px;margin-left:auto}
-
+.hero-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 20px;
+  padding: 28px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 24px 80px rgba(0,0,0,.4);
+}
+.hero-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.hero-card-title { font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: rgba(232,232,232,.5); }
+.hero-card-badge { display: flex; align-items: center; gap: 6px; font-size: .7rem; color: var(--aq); }
+.hero-card-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--aq); animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+.hero-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+.hero-metric {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  padding: 16px;
+}
+.hero-metric-val { font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; background: linear-gradient(135deg, var(--pu), var(--aq)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero-metric-lbl { font-size: .72rem; color: rgba(232,232,232,.5); }
+.hero-progress { display: flex; flex-direction: column; gap: 12px; }
+.hero-prog-item {}
+.hero-prog-header { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: .72rem; color: rgba(232,232,232,.6); }
+.hero-prog-bar { height: 6px; background: rgba(255,255,255,.07); border-radius: 3px; overflow: hidden; }
+.hero-prog-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--pu), var(--aq)); animation: growBar 2.5s ease forwards; }
+@keyframes growBar { from{width:0%} }
+.hero-float-1, .hero-float-2 {
+  position: absolute;
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  padding: 12px 16px;
+  border: 1px solid rgba(255,255,255,.1);
+  font-size: .75rem;
+  animation: float 4s ease-in-out infinite;
+}
+.hero-float-1 {
+  background: rgba(99,102,241,.15);
+  top: 20px;
+  right: -20px;
+  animation-delay: 0s;
+}
+.hero-float-2 {
+  background: rgba(6,214,199,.1);
+  bottom: 40px;
+  left: -20px;
+  animation-delay: 1.5s;
+}
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+/* ORBs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  opacity: .5;
+}
+.hero-orb-1 { width: 400px; height: 400px; top: -100px; right: -100px; background: rgba(99,102,241,.2); }
+.hero-orb-2 { width: 300px; height: 300px; bottom: 50px; right: 200px; background: rgba(6,214,199,.15); }
+/* RESPONSIVE */
+@media(max-width:900px) {
+  .hero { padding: 90px 24px 50px; }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { height: 360px; }
+  .hero-h1 { font-size: clamp(2rem, 8vw, 3rem); }
+  .hero-float-1 { right: 0; }
+  .hero-float-2 { left: 0; }
+}
+@media(max-width:600px) {
+  .hero { padding: 80px 20px 40px; }
+  .hero-visual { height: auto; }
+  .hero-card { padding: 20px; }
+  .hero-metrics { grid-template-columns: 1fr 1fr; }
+  .hero-float-1, .hero-float-2 { display: none; }
+}
 /* ── TRUST BAR ── */
 .trust-bar{
   padding:32px 40px;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);
@@ -637,43 +708,43 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 </div>
 
 <section class="hero">
-  <div class="hero-bg">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-    <div class="hero-grid"></div>
-  </div>
-  
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
   <div class="hero-inner">
-    <div class="hero-content reveal visible">
-      <div class="hero-badge">
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADw9676AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFm2lUWHRYbWw6ZGF0YQo8P3hwYWNrZXQgYmVnaW49IiIsIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuYTM0M2JhYiwgMjAyMi8zNC8xNC0xMzo0NToyNCAgICAgICAgIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiwKICAgIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiwKICAgIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjIgKGFwcGxlbWFjKSIKICAgIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBFNDFGNjI0REE1MTFFREExNzlCOENGN0MyMEMyQ0IiCiAgICB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjcwRTQxRjYzNERBNTExRURBMTc5QjhDRjdDMjBDMkNCIj4KICAgPHhtcE1NOkRlcml2ZWRGcm9tIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgIDxzdFJlZjppbnN0YW5jZUlEPid4bXAuaWlkOjcwRTQxRjYwNERBNTExRURBMTc5QjhDRjdDMjBDMkNCJz4KICAgIDxzdFJlZjpkb2N1bWVudElEPid4bXAuZGlkOjcwRTQxRjYxNERBNTExRURBMTc5QjhDRjdDMjBDMkNCJz4KICAgPC94bXBNTTpEZXJpdmVkRnJvbT4KICA8L3JkZjpEZXNjcmlwdGlv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" alt="IHK Rheinhessen Logo">
-        <div class="badge-info">
-          <p>Zertifiziert durch die <strong>IHK für Rheinhessen</strong></p>
-          <a href="https://www.ihk.de/rheinhessen" target="_blank" rel="noopener">Echtheit prüfen &rarr;</a>
+    <div class="hero-content reveal">
+      <a href="https://badges-api.ihk-kompetenz.plus/public/assertions/701399ba-2ea7-4a1d-b244-24ae167fde9e?id=U2FsdGVkX1/N0aCjYod1tzGZAN3NUc/xibC25VmVn9x09qSuMtj0U1+O4IC4HuhY" target="_blank" rel="noopener noreferrer" class="hero-badge">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFwAAABcCAYAAADw9676AAAACXBIWXMAAAsTAAALEwEAmpwYAAAFm2lUWHRYbWw6ZGF0YQo8P3hwYWNrZXQgYmVnaW49IiIsIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4KPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNy4yLWMwMDAgNzkuYTM0M2JhYiwgMjAyMi8zNC8xNC0xMzo0NToyNCAgICAgICAgIj4KIDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CiAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIKICAgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiwKICAgIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiwKICAgIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjIgKGFwcGxlbWFjKSIKICAgIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBFNDFGNjI0REE1MTFFREExNzlCOENGN0MyMEMyQ0IiCiAgICB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjcwRTQxRjYzNERBNTExRURBMTc5QjhDRjdDMjBDMkNCIj4KICAgPHhtcE1NOkRlcml2ZWRGcm9tIHJkZjpwYXJzZVR5cGU9IlJlc291cmNlIj4KICAgIDxzdFJlZjppbnN0YW5jZUlEPid4bXAuaWlkOjcwRTQxRjYwNERBNTExRURBMTc5QjhDRjdDMjBDMkNCJz4KICAgIDxzdFJlZjpkb2N1bWVudElEPid4bXAuZGlkOjcwRTQxRjYxNERBNTExRURBMTc5QjhDRjdDMjBDMkNCJz4KICAgPC94bXBNTTpEZXJpdmVkRnJvbT4KICA8L3JkZjpEZXNjcmlwdGlv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" alt="IHK Rheinhessen Zertifikat" width="36" height="36">
+        <div class="hero-badge-text"><span class="hero-badge-title">Zertifiziert &bull; IHK f&uuml;r Rheinhessen</span><span class="hero-badge-sub">Echtheit pr&uuml;fen &rarr;</span></div>
+      </a>
+      <h1 class="hero-h1">Digitale Transformation,<br>die <span class="hl">wirklich</span> funktioniert.</h1>
+      <p class="hero-sub">SkyvAI macht KI zug&auml;nglich f&uuml;r KMU in NRW &mdash; ohne IT-Abteilung, ohne Vorkenntnisse. Messbare Ergebnisse in 1&ndash;2 Wochen. Garantiert.</p>
+      <div class="hero-actions"><a href="https://calendly.com/skyvai/ki-check" target="_blank" rel="noopener" class="btn btn-primary">Kostenloser KI-Check &rarr;</a><a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a></div>
+      <div class="hero-trust"><div class="trust-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Ergebnisse in 1&ndash;2 Wochen</span></div><div class="trust-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>NRW-F&ouml;rderung bis 15.000 &euro;</span></div><div class="trust-item"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg><span>Kostenloser Potenzial-Check</span></div></div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card-wrap">
+        <div class="hero-card">
+          <div class="hero-card-header"><span class="hero-card-title">KI-Performance Dashboard</span><span class="hero-card-badge"><span class="dot"></span>Live</span></div>
+          <div class="hero-metrics">
+            <div class="hero-metric"><div class="hero-metric-val">87%</div><div class="hero-metric-lbl">Zeitersparnis</div></div>
+            <div class="hero-metric"><div class="hero-metric-val">3,2&times;</div><div class="hero-metric-lbl">Mehr Auftr&auml;ge</div></div>
+            <div class="hero-metric"><div class="hero-metric-val">14 T</div><div class="hero-metric-lbl">Bis zum Start</div></div>
+            <div class="hero-metric"><div class="hero-metric-val">0 &euro;</div><div class="hero-metric-lbl">Einstiegskosten</div></div>
+          </div>
+          <div class="hero-progress">
+            <div class="hero-prog-item"><div class="hero-prog-header"><span>Automatisierung</span><span>87%</span></div><div class="hero-prog-bar"><div class="hero-prog-fill" style="width:87%"></div></div></div>
+            <div class="hero-prog-item"><div class="hero-prog-header"><span>Kundenzufriedenheit</span><span>94%</span></div><div class="hero-prog-bar"><div class="hero-prog-fill" style="width:94%"></div></div></div>
+            <div class="hero-prog-item"><div class="hero-prog-header"><span>ROI</span><span>320%</span></div><div class="hero-prog-bar"><div class="hero-prog-fill" style="width:100%"></div></div></div>
+          </div>
         </div>
-      </div>
-
-      <h1 class="hero-h1">Digitale Transformation, die <em>wirklich</em> funktioniert.</h1>
-      <p class="hero-sub">SkyvAI macht KI zugänglich für KMU in NRW — ohne IT-Abteilung, ohne Vorkenntnisse. Messbare Ergebnisse in 1–2 Wochen. Garantiert.</p>
-      <div class="hero-actions">
-        <a href="#" class="btn-primary">Kostenloser KI-Check &rarr;</a>
-        <a href="#services" class="btn-secondary">Leistungen ansehen</a>
-      </div>
-      <div class="hero-trust">
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
-          <span>Ergebnisse in 1–2 Wochen</span>
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
-          <span>NRW-Förderung bis 15.000 €</span>
-        </div>
-        <div class="trust-sep"></div>
-        <div class="trust-item">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"></path></svg>
-          <span>Kostenloser Potenzial-Check</span>
-        </div>
+        <div class="hero-float-1">&#x1F916; KI-Agent aktiv</div>
+        <div class="hero-float-2">&#x2705; +47% Effizienz</div>
       </div>
     </div>
+  </div>
+</section>
+
+</body>
+</html>
