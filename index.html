@@ -558,19 +558,19 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   .nrw-stat-row{grid-template-columns:1fr 1fr}
 }
 .hero-badge {
-  position: absolute;
-  top: 68px; /* vorher 80px */
-  left: 48%;
-  transform: none;
+  position: fixed; /* bleibt oben, unabhängig vom Scrollen */
+  top: 80px; /* Abstand zur Navigation */
+  right: 40px; /* rechtsbündig unter dem Menü */
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   background: rgba(255,255,255,0.05);
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  z-index: 10;
+  z-index: 1000; /* über allem sichtbar */
 }
+
 
 
 
