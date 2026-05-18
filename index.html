@@ -554,7 +554,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   nav{padding:0 20px}
   .nav-links{display:none}
   .nav-hamburger{display:flex}
-  .hero{padding:70px 20px 40px} /* Kompakter für Mobile */
+  .hero{padding:70px 20px 40px;min-height:auto}
   .hero-inner{grid-template-columns:1fr;gap:24px}
   .hero-visual{display:none}
   .hero-h1{font-size:clamp(32px,7vw,46px)}
@@ -562,12 +562,17 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   
   /* Mobile Badge Anpassungen */
   .hero-badge {
-    align-self: center;
-    margin: 0 auto 10px auto;
-    width: 100%;
-    max-width: 340px;
-    justify-content: center;
-    text-align: left;
+    align-self: flex-start;
+    margin: 0 0 20px 0;
+    width: auto;
+    max-width: 100%;
+    justify-content: flex-start;
+  }
+  .badge-info {
+    min-width: 0;
+  }
+  .badge-info p {
+    word-break: break-word;
   }
   
   .trust-bar{padding:24px 20px}
