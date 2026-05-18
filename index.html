@@ -104,7 +104,7 @@ nav{
 .btn-primary{
   display:inline-flex;align-items:center;gap:8px;
   background:linear-gradient(135deg,var(--v),var(--s));
-  color:white;padding:15px 30px;border-radius:50px;
+  color:white;padding:17px 34px;border-radius:50px;
   font-weight:700;font-size:15px;text-decoration:none;
   transition:all .3s;box-shadow:0 4px 30px var(--gv);letter-spacing:.3px;
 }
@@ -122,7 +122,7 @@ nav{
   margin-bottom:14px;display:block;
 }
 .sec-title{
-  font-family:'Space Age',sans-serif;font-size:clamp(28px,4vw,46px);
+  font-family:'Space Age',sans-serif;font-size:clamp(30px,4.5vw,52px);
   line-height:1.08;letter-spacing:-0.5px;margin-bottom:16px;
 }
 .sec-title em{
@@ -203,8 +203,8 @@ nav{
   flex-shrink: 0;
 }
 .hero-badge-text { display: flex; flex-direction: column; line-height: 1.2; }
-.hero-badge-title { font-size: .7rem; color: var(--tm); font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
-.hero-badge-sub { font-size: .75rem; color: rgba(232,232,232,.7); }
+.hero-badge-title { font-size: .78rem; color: var(--tm); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.hero-badge-sub { font-size: .82rem; color: rgba(232,232,232,.75); }
 .hero-badge-link {
   font-size: .65rem;
   color: var(--aq);
@@ -222,7 +222,7 @@ nav{
   font-weight: 600;
 }
 .hero-h1 {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -.02em;
@@ -279,7 +279,7 @@ nav{
   border-radius: 14px;
   padding: 16px;
 }
-.hero-metric-val { font-size: 1.8rem; font-weight: 800; margin-bottom: 4px; background: linear-gradient(135deg, var(--vm), var(--aq)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: var(--aq); }
+.hero-metric-val { font-size: 2rem; font-weight: 800; margin-bottom: 4px; background: linear-gradient(135deg, var(--vm), var(--aq)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: var(--aq); }
 .hero-metric-lbl { font-size: .72rem; color: rgba(232,232,232,.5); }
 .hero-progress { display: flex; flex-direction: column; gap: 12px; }
 .hero-prog-item {}
@@ -356,13 +356,13 @@ nav{
 }
 
 /* ── SERVICES ── */
-.services-sec{background:var(--ink2);padding:90px 40px;position:relative;overflow:hidden}
+.services-sec{background:var(--ink2);padding:110px 40px;position:relative;overflow:hidden}
 .services-sec::before{
   content:'';position:absolute;inset:0;
   background:url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="1" cy="1" r="1" fill="rgba(109,40,217,0.06)"/></svg>') repeat;
   pointer-events:none;
 }
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:60px}
 .s-card{
   background:rgba(255,255,255,.03);border:1px solid var(--bd);
   border-radius:20px;padding:28px;overflow:hidden;
@@ -375,17 +375,17 @@ nav{
 }
 .s-card:hover::before{opacity:1}
 .s-card:hover{border-color:rgba(109,40,217,.3);transform:translateY(-4px)}
-.s-card img{width:100%;height:100px;object-fit:cover;border-radius:10px;margin-bottom:14px;opacity:.78}
+.s-card img{width:100%;height:160px;object-fit:cover;border-radius:14px;margin-bottom:18px;opacity:.85}
 .s-icon{
   width:48px;height:48px;border-radius:13px;display:flex;
   align-items:center;justify-content:center;font-size:22px;margin-bottom:14px;
 }
-.s-title{font-family:'Space Age',sans-serif;font-size:17px;margin-bottom:8px}
-.s-desc{font-size:13px;color:var(--mu);line-height:1.7;margin-bottom:14px}
+.s-title{font-family:'Space Age',sans-serif;font-size:19px;margin-bottom:10px}
+.s-desc{font-size:14px;color:var(--mu);line-height:1.75;margin-bottom:16px}
 .s-tags{display:flex;flex-wrap:wrap;gap:5px}
 
 /* ── PROCESS ── */
-.process-sec{background:var(--ink);padding:90px 40px;overflow:hidden}
+.process-sec{background:var(--ink);padding:110px 40px;overflow:hidden}
 .process-steps{
   display:grid;grid-template-columns:repeat(5,1fr);gap:0;
   margin-top:56px;position:relative;
@@ -681,6 +681,11 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   .mid-badge{font-size:11px;padding:6px 14px}
   .nrw-stat-row{grid-template-columns:1fr 1fr}
 }
+/* REDESIGN ENHANCEMENTS */
+.nrw-sec-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1467803738586-46b7eb7b16a1?w=1400&q=80&auto=format&fit=crop');background-size:cover;background-position:center;opacity:.08;pointer-events:none;}
+.s-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--v),var(--s),var(--aq));opacity:0;transition:opacity .3s;border-radius:20px 20px 0 0;}
+.s-card:hover::after{opacity:1;}
+@keyframes scrollStrip{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 </style>
 </head>
 <body>
@@ -711,6 +716,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 <!-- ══ HERO ══════════════════════════════════ -->
 <section class="hero">
   <div class="hero-bg"></div>
+    <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=60&auto=format&fit=crop');background-size:cover;background-position:center;opacity:.04;pointer-events:none;"></div>
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
   <div class="hero-grid"></div>
@@ -845,6 +851,15 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 </div>
 
 <!-- ══ SERVICES ══════════════════════════════ -->
+
+<!-- AI IMAGERY STRIP -->
+<div style="overflow:hidden;height:200px;position:relative;border-top:1px solid rgba(255,255,255,.05);border-bottom:1px solid rgba(255,255,255,.05);">
+  <div style="display:flex;height:100%;animation:scrollStrip 35s linear infinite;width:max-content;">
+    <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=360&h=200&fit=crop&auto=format&q=70" alt="" style="height:200px;width:280px;object-fit:cover;opacity:.45;flex-shrink:0;">
+  </div>
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,#0a0814 0%,transparent 12%,transparent 88%,#0a0814 100%);pointer-events:none;"></div>
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:'DM Mono',monospace;font-size:9px;letter-spacing:5px;color:rgba(255,255,255,.2);white-space:nowrap;text-align:center;">KI &middot; Automatisierung &middot; Transformation &middot; NRW</div>
+</div>
 <section class="services-sec" id="leistungen">
   <div class="container">
     <div class="reveal">
@@ -945,19 +960,19 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
     </div>
     <div class="branchen-grid">
       <div class="b-card featured reveal">
-        <div class="b-icon">🔧</div>
+        <div style="height:120px;border-radius:14px;overflow:hidden;margin-bottom:18px;position:relative;"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=500&h=240&fit=crop&auto=format&q=70" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.6;"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,20,.85) 0%,rgba(10,8,20,.15) 100%);"></div></div><div class="b-icon">🔧</div>
         <div class="b-title">Handwerk & Industrie</div>
         <div class="b-text">Angebotserstellung automatisieren, Terminplanung per KI, Dokumentation ohne Aufwand.</div>
         <div class="b-pill">Ø -3h täglich</div>
       </div>
       <div class="b-card reveal">
-        <div class="b-icon">🛒</div>
+        <div style="height:120px;border-radius:14px;overflow:hidden;margin-bottom:18px;position:relative;"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=240&fit=crop&auto=format&q=70" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.6;"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,20,.85) 0%,rgba(10,8,20,.15) 100%);"></div></div><div class="b-icon">🛒</div>
         <div class="b-title">Handel & E-Commerce</div>
         <div class="b-text">Produktbeschreibungen, Kundensupport-Bot, automatisierte Newsletter — skalierbar ohne Mehraufwand.</div>
         <div class="b-pill">+40% Conversion</div>
       </div>
       <div class="b-card reveal">
-        <div class="b-icon">💼</div>
+        <div style="height:120px;border-radius:14px;overflow:hidden;margin-bottom:18px;position:relative;"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=240&fit=crop&auto=format&q=70" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.6;"><div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(10,8,20,.85) 0%,rgba(10,8,20,.15) 100%);"></div></div><div class="b-icon">💼</div>
         <div class="b-title">Dienstleistung & Beratung</div>
         <div class="b-text">Lead-Qualifizierung, Terminbuchung, Reporting-Automatisierung. Mehr Zeit für Kunden.</div>
         <div class="b-pill">-60% Verwaltung</div>
@@ -1006,7 +1021,8 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 </section>
 
 <!-- ══ NRW-FOKUS ══════════════════════════════ -->
-<section class="nrw-sec" id="nrw">
+<section class="nrw-sec" id="nrw" style="position:relative;">
+  <div class="nrw-sec-bg"></div>
   <div class="container">
     <div class="nrw-inner">
       <div class="reveal">
