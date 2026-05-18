@@ -557,6 +557,51 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   .mid-badge{font-size:11px;padding:6px 14px}
   .nrw-stat-row{grid-template-columns:1fr 1fr}
 }
+.hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 120px; /* Abstand unter der Navigation */
+  background: rgba(255,255,255,0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hero-badge img {
+  width: 130px;
+  height: auto;
+}
+
+.badge-info p {
+  margin: 0;
+  font-size: 1rem;
+  color: #e8e4f0;
+}
+
+.badge-info a {
+  display: inline-block;
+  margin-top: 0.3rem;
+  color: #38bdf8;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.badge-info a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero-badge {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-badge img {
+    width: 100px;
+  }
+}
+  
 </style>
 </head>
 <body>
@@ -577,7 +622,15 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
     <span></span><span></span><span></span>
   </div>
 </nav>
-<div class="nav-mobile" id="nav-mobile">
+<div class="hero-badge">
+  <img src="ihk-badge.png" alt="IHK Zertifikat: Manager/in für KI-Transformation und Toolintegration">
+  <div class="badge-info">
+    <p>Zertifiziert durch die <strong>IHK für Rheinhessen</strong></p>
+    <a href="https://badges-api.ihk-kompetenz.plus/public/assertions/701399ba-2ea7-4a1d-b244-24ae167fde9e?id=U2FsdGVkX1/N0aCjYod1tzGZAN3NUc/xibC25VmVn9x09qSuMtj0U1+O4IC4HuhY" target="_blank">Echtheit prüfen</a>
+  </div>
+</div>
+
+  <div class="nav-mobile" id="nav-mobile">
   <a href="leistungen.html">Leistungen</a>
   <a href="erstehilfe.html">Erste Hilfe App</a>
   <a href="impressum.html">Impressum</a>
