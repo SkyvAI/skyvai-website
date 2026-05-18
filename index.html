@@ -559,7 +559,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 }
 .hero-badge {
   position: absolute;
-  top: 80px;
+  top: 60px; /* etwas näher an der Navigation */
   right: 40px;
   display: flex;
   align-items: center;
@@ -597,7 +597,12 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   height: auto;
 }
 
-/* ✅ Responsive Anpassung */
+/* Hero-Abstand korrigieren */
+.hero {
+  padding-top: 40px; /* reduziert vertikalen Abstand */
+}
+
+/* ✅ Mobile Ansicht */
 @media (max-width: 768px) {
   .hero-badge {
     position: relative;
@@ -616,6 +621,10 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 
   .badge-info p {
     font-size: 1rem;
+  }
+
+  .hero {
+    padding-top: 20px; /* kompakter auf mobilen Geräten */
   }
 }
 
