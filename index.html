@@ -809,6 +809,21 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 }
 
 #particles {  position: absolute;
+              inset: 0;
+              z-index: 0;
+              pointer-events: none;
+           }
+    .hl {
+          position: relative;
+          display: inline-block;
+          animation: pulseGlow 3s ease-in-out infinite;
+    }
+    @keyframes pulseGlow {
+          0% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
+          50% { text-shadow: 0 0 18px rgba(109,40,217,0.9); }
+          100% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
+    }
+    </style>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="380bccf3-187b-46b3-afa2-0a4163a11731";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
 <body>
