@@ -833,18 +833,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   z-index: 0;
   pointer-events: none;
 }
-.hero-bg,
-.hero-orb,
-.hero-grid {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
 
-.hero-inner {
-  position: relative;
-  z-index: 2;
-}
 .hl {
   position: relative;
   display: inline-block;
@@ -856,7 +845,12 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   50% { text-shadow: 0 0 18px rgba(109,40,217,0.9); }
   100% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
 }
-
+#particles {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
     </style>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="380bccf3-187b-46b3-afa2-0a4163a11731";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
@@ -1462,6 +1456,22 @@ function toggleFaq(el) {
 }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>particlesJS("particles", {
+
+<script>
+particlesJS("particles", {
+  "particles": {
+    "number": { "value": 40 },
+    "size": { "value": 2 },
+    "color": { "value": "#6d28d9" },
+    "line_linked": {
+      "enable": true,
+      "color": "#6d28d9",
+      "opacity": 0.25
+    },
+    "move": { "speed": 1 }
+  }
+});
+</script>
+</body>,
 
                     
