@@ -317,6 +317,63 @@ footer { background:var(--ink); border-top:1px solid var(--border); padding:48px
 .legal-section a { color:var(--sky-light); text-decoration:none; overflow-wrap:anywhere; word-break:break-word; }
 .legal-section a:hover { text-decoration:underline; }
 .notice-box { background:rgba(109,40,217,.06); border:1px solid rgba(109,40,217,.2); border-radius:12px; padding:20px 24px; margin-top:16px; font-size:13px; color:var(--muted); line-height:1.7; }
+
+/* ── RESPONSIVE SCALING FIX ── */
+/* Optimiert für große Bildschirme (>1440px / 4K) + volle responsive Skalierung */
+
+.container,
+.footer-inner,
+.footer-bottom {
+  max-width: clamp(1100px, 88vw, 1600px);
+}
+
+@media (min-width: 1440px) {
+  .container,
+  .footer-inner,
+  .footer-bottom {
+    max-width: clamp(1300px, 85vw, 1600px);
+  }
+  section,
+  .page-hero {
+    padding-left: clamp(40px, 4vw, 80px);
+    padding-right: clamp(40px, 4vw, 80px);
+  }
+  .page-title { font-size: clamp(44px, 4.5vw, 72px); }
+  .page-subtitle { max-width: clamp(560px, 45vw, 800px); }
+}
+
+@media (min-width: 1920px) {
+  .container,
+  .footer-inner,
+  .footer-bottom {
+    max-width: 1600px;
+  }
+  section,
+  .page-hero {
+    padding-left: clamp(60px, 5vw, 120px);
+    padding-right: clamp(60px, 5vw, 120px);
+  }
+  .page-hero {
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+  nav { padding: 0 clamp(60px, 5vw, 120px); }
+}
+
+@media (min-width: 2400px) {
+  .container,
+  .footer-inner,
+  .footer-bottom {
+    max-width: clamp(1600px, 70vw, 2000px);
+  }
+  section,
+  .page-hero {
+    padding-left: clamp(80px, 6vw, 160px);
+    padding-right: clamp(80px, 6vw, 160px);
+  }
+  nav { padding: 0 clamp(80px, 6vw, 160px); }
+}
+
 </style>
 </head>
 <body>
