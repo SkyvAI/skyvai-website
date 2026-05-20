@@ -343,6 +343,106 @@ footer { background:var(--ink); border-top:1px solid var(--border); padding:48px
     height:auto;
   }
 }
+
+/* ── RESPONSIVE SCALING FIX ── */
+/* Optimiert für große Bildschirme (>1440px / 4K) + volle responsive Skalierung */
+
+/* Fluid container sizing */
+.container,
+.footer-inner,
+.footer-bottom {
+  max-width: clamp(1100px, 88vw, 1600px);
+}
+
+/* Large Desktop (ab 1440px) */
+@media (min-width: 1440px) {
+  .container,
+  .footer-inner,
+  .footer-bottom {
+    max-width: clamp(1300px, 85vw, 1600px);
+  }
+
+  section,
+  .page-hero {
+    padding-left: clamp(40px, 4vw, 80px);
+    padding-right: clamp(40px, 4vw, 80px);
+  }
+
+  .page-title {
+    font-size: clamp(44px, 4.5vw, 72px);
+  }
+
+  .page-subtitle {
+    max-width: clamp(560px, 45vw, 800px);
+    font-size: clamp(18px, 1.5vw, 22px);
+  }
+
+  .sec-head {
+    font-size: clamp(32px, 3vw, 54px);
+  }
+}
+
+/* XL Desktop / Full HD (ab 1920px) */
+@media (min-width: 1920px) {
+  .container,
+  .footer-inner,
+  .footer-bottom {
+    max-width: 1600px;
+  }
+
+  section,
+  .page-hero {
+    padding-left: clamp(60px, 5vw, 120px);
+    padding-right: clamp(60px, 5vw, 120px);
+  }
+
+  .page-hero {
+    padding-top: 160px;
+    padding-bottom: 100px;
+  }
+
+  .page-title {
+    font-size: clamp(52px, 4vw, 72px);
+  }
+
+  .page-subtitle {
+    max-width: clamp(600px, 40vw, 900px);
+    font-size: clamp(18px, 1.4vw, 24px);
+  }
+
+  .sec-head {
+    font-size: clamp(38px, 2.8vw, 54px);
+  }
+
+  nav {
+    padding: 0 clamp(60px, 5vw, 120px);
+  }
+}
+
+/* 2K / 2560px+ */
+@media (min-width: 2400px) {
+  .container,
+  .footer-inner,
+  .footer-bottom {
+    max-width: clamp(1600px, 70vw, 2000px);
+  }
+
+  section,
+  .page-hero {
+    padding-left: clamp(80px, 6vw, 160px);
+    padding-right: clamp(80px, 6vw, 160px);
+  }
+
+  .page-hero {
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+
+  nav {
+    padding: 0 clamp(80px, 6vw, 160px);
+  }
+}
+
 </style>
 <title>Leistungen - SkyvAI KI-Agentur NRW</title>
 <meta name="description" content="SkyvAI Leistungen: KI-Automatisierung, Chatbots, Strategie, Content und Workshops für KMU in NRW.">
