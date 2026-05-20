@@ -323,10 +323,9 @@ nav{
 @media(max-width:900px) {
   .hero { padding: 90px 24px 50px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-  .hero-visual { height: 360px; }
+  .hero-visual { height: 360px; overflow: hidden; }
   .hero-h1 { font-size: clamp(2rem, 8vw, 3rem); }
-  .hero-float-1 { right: 0; }
-  .hero-float-2 { left: 0; }
+  .hero-float-1, .hero-float-2 { display: none; }
 }
 @media(max-width:600px) {
   .hero { padding: 80px 20px 40px; }
@@ -858,6 +857,87 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 
 @keyframes orbPulse {
   0% { opacity: 0.25; transform: scale(1); }
+
+/* ── HERO ANIMATIONS ── */
+
+/* Gradient shimmer on headline highlight */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.hero-h1 .hl {
+  background: linear-gradient(270deg, var(--vl), var(--sl), var(--aq), var(--vm), var(--vl));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+/* Fade-in-up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Eyebrow typewriter */
+@keyframes typeIn {
+  from { width: 0; }
+  to { width: 100%; }
+}
+.hero-eyebrow {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typeIn 1.2s steps(30, end) 0.3s both;
+}
+
+/* Staggered content fade-in */
+.hero-content > * {
+  animation: fadeInUp 0.7s ease-out both;
+}
+.hero-content > *:nth-child(1) { animation-delay: 0.05s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.35s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.5s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.65s; }
+.hero-content > *:nth-child(6) { animation-delay: 0.8s; }
+
+/* Scan-line */
+@keyframes scanMove {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+.hero-scan {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+.hero-scan::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(109,40,217,0.15), rgba(56,189,248,0.12), transparent);
+  animation: scanMove 6s linear infinite;
+  top: 0;
+}
+
+/* CTA glow pulse */
+@keyframes ctaGlow {
+  0%, 100% { box-shadow: 0 4px 30px rgba(109,40,217,0.35); }
+  50%       { box-shadow: 0 4px 50px rgba(109,40,217,0.6), 0 0 20px rgba(56,189,248,0.2); }
+}
+.btn-primary {
+  animation: ctaGlow 3s ease-in-out infinite;
+}
+
+/* Trust checkmark stagger */
+.trust-item:nth-child(2) svg { animation-delay: 0.5s; }
+.trust-item:nth-child(3) svg { animation-delay: 1s; }
   50% { opacity: 0.45; transform: scale(1.05); }
   100% { opacity: 0.25; transform: scale(1); }
 }
@@ -969,6 +1049,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
   <div class="hero-grid"></div>
+  <div class="hero-scan"></div>
   <div class="hero-inner">
   
 
