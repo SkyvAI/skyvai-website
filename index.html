@@ -806,7 +806,6 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   nav {
     padding: 0 clamp(80px, 6vw, 160px);
   }
-}
 
 #particles {  position: absolute;
               inset: 0;
@@ -851,6 +850,7 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   z-index: -1;
   pointer-events: none;
 }
+/* HERO FADE-IN */
 .hero-inner {
   opacity: 0;
   transform: translateY(20px);
@@ -863,6 +863,8 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
     transform: translateY(0);
   }
 }
+
+/* DASHBOARD FLOAT */
 .hero-visual {
   animation: floatDash 6s ease-in-out infinite;
 }
@@ -872,7 +874,40 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   50% { transform: translateY(-12px); }
   100% { transform: translateY(0); }
 }
+
+/* ORB PULSE */
 .hero-orb {
+  animation: orbPulse 4s ease-in-out infinite;
+}
+
+@keyframes orbPulse {
+  0% { opacity: 0.25; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(1.05); }
+  100% { opacity: 0.25; transform: scale(1); }
+}
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFade 1.2s ease-out forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-card-wrap {
+  animation: floatDash 6s ease-in-out infinite;
+}
+
+@keyframes floatDash {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+.hero-orb-1,
+.hero-orb-2 {
   animation: orbPulse 4s ease-in-out infinite;
 }
 
