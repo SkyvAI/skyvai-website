@@ -916,6 +916,24 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   50% { opacity: 0.45; transform: scale(1.05); }
   100% { opacity: 0.25; transform: scale(1); }
 }
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(109,40,217,0.4), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
 
 </style>
 </head>
