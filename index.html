@@ -686,6 +686,128 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 .s-card::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--v),var(--s),var(--aq));opacity:0;transition:opacity .3s;border-radius:20px 20px 0 0;}
 .s-card:hover::after{opacity:1;}
 @keyframes scrollStrip{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── RESPONSIVE SCALING FIX ── */
+/* Optimiert für große Bildschirme (>1440px / 4K) + volle responsive Skalierung */
+
+/* Fluid container sizing - nutzt verfügbaren Platz optimal */
+.container,
+.footer-inner,
+.footer-bottom,
+.trust-bar-inner {
+  max-width: clamp(1100px, 88vw, 1600px);
+}
+
+.hero-inner {
+  max-width: clamp(1200px, 90vw, 1700px);
+}
+
+/* Large Desktop (ab 1440px) */
+@media (min-width: 1440px) {
+  .container,
+  .footer-inner,
+  .footer-bottom,
+  .trust-bar-inner {
+    max-width: clamp(1300px, 85vw, 1600px);
+  }
+
+  .hero-inner {
+    max-width: clamp(1400px, 88vw, 1700px);
+  }
+
+  section,
+  .hero {
+    padding-left: clamp(40px, 4vw, 80px);
+    padding-right: clamp(40px, 4vw, 80px);
+  }
+
+  .hero-h1 {
+    font-size: clamp(48px, 4.5vw, 80px);
+  }
+
+  .sec-head {
+    font-size: clamp(32px, 3vw, 54px);
+  }
+}
+
+/* XL Desktop / Full HD (ab 1920px) */
+@media (min-width: 1920px) {
+  .container,
+  .footer-inner,
+  .footer-bottom,
+  .trust-bar-inner {
+    max-width: 1600px;
+  }
+
+  .hero-inner {
+    max-width: 1700px;
+  }
+
+  .hero,
+  section,
+  .ba-sec,
+  .branchen-sec,
+  .testi-sec,
+  .nrw-sec,
+  .faq-sec,
+  .cta-sec {
+    padding-left: clamp(60px, 5vw, 120px);
+    padding-right: clamp(60px, 5vw, 120px);
+  }
+
+  .hero {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .hero-h1 {
+    font-size: clamp(56px, 4vw, 80px);
+  }
+
+  .sec-head {
+    font-size: clamp(38px, 2.8vw, 54px);
+  }
+
+  nav {
+    padding: 0 clamp(60px, 5vw, 120px);
+  }
+}
+
+/* 2K / 2560px+ */
+@media (min-width: 2400px) {
+  .container,
+  .footer-inner,
+  .footer-bottom,
+  .trust-bar-inner {
+    max-width: clamp(1600px, 70vw, 2000px);
+  }
+
+  .hero-inner {
+    max-width: clamp(1700px, 72vw, 2100px);
+  }
+
+  .hero,
+  section,
+  .ba-sec,
+  .branchen-sec,
+  .testi-sec,
+  .nrw-sec,
+  .faq-sec,
+  .cta-sec {
+    padding-left: clamp(80px, 6vw, 160px);
+    padding-right: clamp(80px, 6vw, 160px);
+  }
+
+  .hero {
+    padding-top: 130px;
+    padding-bottom: 90px;
+  }
+
+  nav {
+    padding: 0 clamp(80px, 6vw, 160px);
+  }
+}
+
 </style>
 </head>
 <body>
