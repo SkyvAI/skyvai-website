@@ -16,7 +16,7 @@
     <meta name="description" content="SkyvAI: KI-Automatisierung, Chatbots und Strategie für KMU in NRW. Erste messbare Ergebnisse in 1–2 Wochen. Kostenloser KI-Potenzial-Check.">
     <link rel="canonical" href="https://skyvai.de/" />
     <meta name="robots" content="index, follow" />
-    <meta name="google-site-verification" content="Dsslfvq3OCHvoamC1cdJGrD6HId9sm1sy1O1l36hDNc" />
+    <meta name="google-site-verification" content="Dsslfvq3OCHvoamC1cdJGrD6HId9sm1sy1O1l36hDNc" />h
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://skyvai.de/" />
@@ -31,15 +31,7 @@
     
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=space-grotesk:300,400,500,600,700|dm-mono:400,500&display=swap" rel="stylesheet">
-<style>
-.hero,
-.hero-inner,
-.hero-content {
-  text-align: left;
-  align-items: flex-start;
-  justify-content: flex-start;
-}
-    
+<style>h
 @font-face {
   font-family: 'Space Age';
   src: url('https://fonts.cdnfonts.com/s/14022/space age.woff') format('woff');
@@ -814,30 +806,12 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   nav {
     padding: 0 clamp(80px, 6vw, 160px);
   }
-
-#particles {  position: absolute;
-              inset: 0;
-              z-index: 0;
-              pointer-events: none;
-           }
-    .hl {
-          position: relative;
-          display: inline-block;
-          animation: pulseGlow 3s ease-in-out infinite;
-    }
-    @keyframes pulseGlow {
-          0% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
-          50% { text-shadow: 0 0 18px rgba(109,40,217,0.9); }
-          100% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
-    }
-    .hero {
-  position: relative;
 }
 
 #particles {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   pointer-events: none;
 }
 
@@ -851,12 +825,6 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
   0% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
   50% { text-shadow: 0 0 18px rgba(109,40,217,0.9); }
   100% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
-}
-#particles {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
 }
 /* HERO FADE-IN */
 .hero-inner {
@@ -966,13 +934,6 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
     text-align: left !important;
   }
 }
-.hero-content,
-.hero-inner {
-  text-align: left !important;
-  align-items: flex-start !important;
-  justify-content: flex-start !important;
-}
-
 </style>
 </head>
 <body>
@@ -1581,16 +1542,19 @@ function toggleFaq(el) {
 <script>
 particlesJS("particles", {
   "particles": {
-    "number": { "value": 40 },
+    "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
     "size": { "value": 2 },
     "color": { "value": "#6d28d9" },
+    "opacity": { "value": 0.5 },
     "line_linked": {
       "enable": true,
       "color": "#6d28d9",
-      "opacity": 0.25
+      "opacity": 0.25,
+      "distance": 150
     },
     "move": { "speed": 1 }
-  }
+  },
+  "retina_detect": true
 });
 </script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
