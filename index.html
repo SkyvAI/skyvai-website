@@ -823,6 +823,40 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
           50% { text-shadow: 0 0 18px rgba(109,40,217,0.9); }
           100% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
     }
+    .hero {
+  position: relative;
+}
+
+#particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+.hero-bg,
+.hero-orb,
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+}
+.hl {
+  position: relative;
+  display: inline-block;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
+  50% { text-shadow: 0 0 18px rgba(109,40,217,0.9); }
+  100% { text-shadow: 0 0 8px rgba(109,40,217,0.4); }
+}
+
     </style>
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="380bccf3-187b-46b3-afa2-0a4163a11731";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 </head>
@@ -852,13 +886,16 @@ footer{background:var(--ink);border-top:1px solid var(--bd);padding:56px 40px 36
 </div>
 
 <!-- ══ HERO ══════════════════════════════════ -->
-<section class="hero">  <div id="particles"></div>
+<section class="hero">
+  <div id="particles"></div>
   <div class="hero-bg"></div>
-    <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=60&auto=format&fit=crop');background-size:cover;background-position:center;opacity:.04;pointer-events:none;"></div>
+  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=60&auto=format&fit=crop');background-size:cover;background-position:center;opacity:.04;pointer-events:none;"></div>
   <div class="hero-orb hero-orb-1"></div>
   <div class="hero-orb hero-orb-2"></div>
   <div class="hero-grid"></div>
   <div class="hero-inner">
+  ...
+
 
     <!-- LEFT: Text & IHK-Badge -->
     <div class="hero-content">
@@ -1427,3 +1464,5 @@ function toggleFaq(el) {
 </script>
 <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <script>particlesJS("particles", {
+
+                    
