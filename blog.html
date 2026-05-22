@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RHFVFS4V2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3RHFVFS4V2');</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog – KI-Wissen für KMU in NRW | SkyvAI Essen</title>
+<meta name="description" content="KI-Blog von SkyvAI: Praxiswissen zu KI-Strategie, Automatisierung und Digitalisierung für KMU in Essen und NRW. Monatlich neue Artikel.">
+<meta property="og:title" content="Blog – KI-Wissen für KMU in NRW | SkyvAI"/>
+<meta property="og:description" content="Praxiswissen zu KI-Strategie, Automatisierung und Digitalisierung für KMU in Essen und NRW."/>
+<meta property="og:url" content="https://skyvai.de/blog.html"/>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"SkyvAI Blog","description":"KI-Wissen für KMU in NRW","url":"https://skyvai.de/blog.html","publisher":{"@type":"Organization","name":"SkyvAI","url":"https://skyvai.de"}}
+</script>
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=space-grotesk:300,400,500,600,700|dm-mono:400,500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'Space Age';src:url('https://fonts.cdnfonts.com/s/14022/space age.woff') format('woff')}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{background:#0a0814;color:#e8e4f0;font-family:'Space Grotesk',sans-serif;line-height:1.6;overflow-x:clip}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.4}
+:root{--v:#6d28d9;--vm:#8b5cf6;--vl:#c4b5fd;--s:#0ea5e9;--sl:#38bdf8;--aq:#06d6c7;--ink:#0a0814;--ink2:#12102a;--text:#e8e4f0;--mu:rgba(232,228,240,.45);--bd:rgba(255,255,255,.07);--gv:rgba(109,40,217,.35)}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--v);border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(16px,5vw,80px);height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,8,20,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);transition:background .3s}
+.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.nav-logo img{width:36px;height:36px;border-radius:10px;object-fit:cover}
+.nav-logo-text{font-family:'Space Age',sans-serif;font-size:20px;background:linear-gradient(135deg,var(--vl),var(--sl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a{color:var(--mu);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--text)}
+.nav-cta{background:linear-gradient(135deg,var(--v),var(--s));color:white!important;padding:10px 20px;border-radius:50px;font-weight:700!important;font-size:13px!important;box-shadow:0 0 20px var(--gv);transition:all .2s!important}
+.nav-cta:hover{transform:translateY(-1px)!important}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:10px}
+.nav-hamburger span{width:20px;height:2px;background:var(--text);border-radius:2px;display:block}
+.nav-mobile{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,8,20,.98);backdrop-filter:blur(20px);padding:20px 20px 28px;flex-direction:column;gap:4px;border-bottom:1px solid var(--bd);z-index:999}
+.nav-mobile.open{display:flex}
+.nav-mobile a{color:var(--text);text-decoration:none;font-size:16px;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.05)}
+.nav-mobile .nav-cta{border:none;text-align:center;margin-top:10px;padding:14px;border-radius:14px;border-bottom:none}
+
+/* UTILS */
+.container{max-width:clamp(1100px,88vw,1500px);margin:0 auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* HERO */
+.hero{padding:140px clamp(16px,5vw,80px) 80px;background:var(--ink);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(109,40,217,.18) 0%,transparent 55%);pointer-events:none}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse at 50% 0%,black 30%,transparent 70%)}
+.hero-inner{max-width:760px;position:relative;z-index:1}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--sl);text-transform:uppercase;margin-bottom:14px;display:block}
+.hero-h1{font-family:'Space Age',sans-serif;font-size:clamp(2rem,5vw,3.6rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:16px}
+.hero-h1 span{background:linear-gradient(135deg,var(--vm),var(--aq));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:var(--mu);line-height:1.8;max-width:560px}
+
+/* FILTER BAR */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin:48px 0 0}
+.filter-btn{background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:50px;padding:7px 18px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--mu);cursor:pointer;transition:all .2s;text-transform:uppercase}
+.filter-btn:hover,.filter-btn.active{background:rgba(109,40,217,.15);border-color:rgba(109,40,217,.4);color:var(--vl)}
+
+/* BLOG GRID */
+.blog-section{padding:72px clamp(16px,5vw,80px) 100px;background:var(--ink2)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* FEATURED (first article — full width) */
+.blog-card-featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.5fr;border-radius:24px;overflow:hidden;border:1px solid var(--bd);background:rgba(255,255,255,.03);text-decoration:none;transition:all .35s}
+.blog-card-featured:hover{border-color:rgba(109,40,217,.35);transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.featured-img{overflow:hidden;position:relative;min-height:280px}
+.featured-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.7);display:block;transition:transform .7s ease}
+.blog-card-featured:hover .featured-img img{transform:scale(1.04)}
+.featured-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(109,40,217,.22),rgba(14,165,233,.12))}
+.featured-label{position:absolute;top:20px;left:20px;z-index:1;background:linear-gradient(135deg,var(--v),var(--s));border-radius:50px;padding:4px 14px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:white;text-transform:uppercase}
+.featured-body{padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.featured-tag-row{display:flex;gap:8px;flex-wrap:wrap}
+.tag{display:inline-block;border-radius:50px;padding:3px 12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.5px}
+.tag-v{background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.22);color:var(--vl)}
+.tag-s{background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.22);color:var(--sl)}
+.tag-aq{background:rgba(6,214,199,.08);border:1px solid rgba(6,214,199,.22);color:var(--aq)}
+.featured-title{font-family:'Space Age',sans-serif;font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--text);line-height:1.2;margin-bottom:10px}
+.featured-excerpt{font-size:clamp(13px,1.8vw,15px);color:var(--mu);line-height:1.78}
+.featured-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.meta-info{font-family:'DM Mono',monospace;font-size:10px;color:rgba(232,228,240,.4);letter-spacing:.5px}
+.read-link{display:inline-flex;align-items:center;gap:6px;color:var(--sl);font-size:14px;font-weight:600}
+
+/* REGULAR CARDS */
+.blog-card{border-radius:20px;overflow:hidden;border:1px solid var(--bd);background:rgba(255,255,255,.03);text-decoration:none;transition:all .35s;display:flex;flex-direction:column}
+.blog-card:hover{border-color:rgba(109,40,217,.32);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.card-img{height:clamp(160px,18vw,200px);overflow:hidden;position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.68);display:block;transition:transform .6s ease}
+.blog-card:hover .card-img img{transform:scale(1.06)}
+.card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,20,.85) 0%,transparent 50%)}
+.card-body{padding:clamp(18px,2.5vw,24px);flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
+.card-title{font-family:'Space Age',sans-serif;font-size:clamp(14px,1.8vw,17px);color:var(--text);line-height:1.25}
+.card-excerpt{font-size:clamp(12px,1.6vw,13.5px);color:var(--mu);line-height:1.7}
+.card-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.card-meta{font-family:'DM Mono',monospace;font-size:9px;color:rgba(232,228,240,.35);letter-spacing:.5px}
+
+/* COMING SOON CARD */
+.blog-card-soon{border-radius:20px;border:2px dashed rgba(255,255,255,.08);background:rgba(255,255,255,.015);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;gap:12px;min-height:280px}
+.soon-icon{font-size:32px;opacity:.4}
+.soon-title{font-family:'Space Age',sans-serif;font-size:15px;color:rgba(232,228,240,.3)}
+.soon-text{font-size:12px;color:rgba(232,228,240,.25);font-family:'DM Mono',monospace;letter-spacing:.5px}
+
+/* NEWSLETTER */
+.nl-section{padding:72px clamp(16px,5vw,80px);background:var(--ink)}
+.nl-box{max-width:640px;margin:0 auto;text-align:center}
+.nl-title{font-family:'Space Age',sans-serif;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:10px}
+.nl-title span{background:linear-gradient(135deg,var(--vl),var(--aq));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.nl-sub{font-size:15px;color:var(--mu);line-height:1.75;margin-bottom:28px}
+.nl-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.nl-input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid var(--bd);border-radius:12px;padding:12px 18px;color:var(--text);font-size:14px;font-family:'Space Grotesk',sans-serif;outline:none;transition:border-color .2s}
+.nl-input:focus{border-color:rgba(109,40,217,.5)}
+.nl-input::placeholder{color:rgba(232,228,240,.3)}
+.nl-btn{background:linear-gradient(135deg,var(--v),var(--s));color:white;border:none;border-radius:12px;padding:12px 24px;font-weight:700;font-size:14px;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all .3s;box-shadow:0 4px 20px var(--gv)}
+.nl-btn:hover{transform:translateY(-2px)}
+.nl-note{font-family:'DM Mono',monospace;font-size:10px;color:rgba(232,228,240,.3);letter-spacing:.5px;margin-top:14px}
+
+/* FOOTER */
+footer{background:var(--ink);border-top:1px solid var(--bd);padding:clamp(40px,5vw,56px) clamp(16px,4vw,80px) 32px}
+.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand h3{font-family:'Space Age',sans-serif;font-size:20px;background:linear-gradient(135deg,var(--vl),var(--sl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+.footer-brand p{font-size:13px;color:var(--mu);line-height:1.7;max-width:260px}
+.footer-col h4{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--mu);text-transform:uppercase;margin-bottom:12px}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.footer-col a{color:rgba(232,228,240,.5);text-decoration:none;font-size:13.5px;transition:color .2s}
+.footer-col a:hover{color:var(--text)}
+.footer-bottom{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:12px;color:var(--mu);font-family:'DM Mono',monospace}
+
+/* RESPONSIVE */
+@media(max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr)}.blog-card-featured{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr;gap:32px}}
+@media(max-width:640px){nav{padding:0 16px}.nav-links{display:none}.nav-hamburger{display:flex}.blog-grid{grid-template-columns:1fr}.blog-card-featured{grid-column:auto}.footer-inner{grid-template-columns:1fr;gap:28px}.nl-form{flex-direction:column}.nl-input,.nl-btn{width:100%}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="nav-logo">
+    <img src="favicon.png" alt="SkyvAI">
+    <span class="nav-logo-text">SkyvAI</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="leistungen.html">Leistungen</a></li>
+    <li><a href="erstehilfe.html">Erste Hilfe App</a></li>
+    <li><a href="blog.html" class="active">Blog</a></li>
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="https://www.cal.eu/skyvai/erstgespraech" target="_blank" class="nav-cta">Erstgespräch buchen</a></li>
+  </ul>
+  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="leistungen.html">Leistungen</a>
+  <a href="erstehilfe.html">Erste Hilfe App</a>
+  <a href="blog.html">Blog</a>
+  <a href="impressum.html">Impressum</a>
+  <a href="https://www.cal.eu/skyvai/erstgespraech" target="_blank" class="nav-cta">Erstgespräch buchen</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="hero-inner reveal">
+      <span class="eyebrow">KI-Wissen &middot; NRW &middot; Mittelstand</span>
+      <h1 class="hero-h1">KI-Praxis<br><span>für den Mittelstand</span></h1>
+      <p class="hero-sub">Monatlich neue Artikel zu KI-Strategie, Automatisierung und Digitalisierung. Kein Theorie-Kauderwelsch, sondern konkrete Praxis aus NRW-Projekten.</p>
+      <div class="filter-bar">
+        <button class="filter-btn active">Alle</button>
+        <button class="filter-btn">KI-Strategie</button>
+        <button class="filter-btn">Automatisierung</button>
+        <button class="filter-btn">NRW</button>
+        <button class="filter-btn">Förderung</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="blog-section">
+  <div class="container">
+    <div class="blog-grid">
+
+      <!-- FEATURED: Artikel 1 -->
+      <a href="blog-ki-strategie-kmu-nrw.html" class="blog-card-featured reveal">
+        <div class="featured-img">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=900&q=80&auto=format&fit=crop" alt="KI Strategie KMU NRW" loading="eager">
+          <div class="featured-label">Neuester Artikel</div>
+        </div>
+        <div class="featured-body">
+          <div>
+            <div class="featured-tag-row" style="margin-bottom:14px">
+              <span class="tag tag-v">KI-STRATEGIE</span>
+              <span class="tag tag-s">NRW</span>
+              <span class="tag tag-aq">KMU</span>
+            </div>
+            <div class="featured-title">KI bei KMU in NRW implementieren: mit der richtigen Strategie</div>
+            <p class="featured-excerpt">Warum 60% aller KI-Projekte scheitern, welche 4 Fehler du vermeiden musst und wie du in 5 Schritten zur funktionierenden KI-Losung kommst. Mit konkreten Zahlen aus der NRW-Praxis und dem MID-Forderhinweis.</p>
+          </div>
+          <div class="featured-meta">
+            <div class="meta-info">Mai 2026 &middot; 8 Min Lesezeit &middot; SkyvAI Redaktion</div>
+            <span class="read-link">Artikel lesen &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Platzhalter: Artikel 2 -->
+      <div class="blog-card-soon reveal" style="transition-delay:.06s">
+        <div class="soon-icon">✍️</div>
+        <div class="soon-title">Nächster Artikel</div>
+        <div class="soon-text">Juni 2026 &middot; KI-Automatisierung<br>für Handwerker in NRW</div>
+      </div>
+
+      <!-- Platzhalter: Artikel 3 -->
+      <div class="blog-card-soon reveal" style="transition-delay:.12s">
+        <div class="soon-icon">✍️</div>
+        <div class="soon-title">Nächster Artikel</div>
+        <div class="soon-text">Juli 2026 &middot; Chatbot für kleine<br>Unternehmen Essen</div>
+      </div>
+
+      <!-- Platzhalter: Artikel 4 -->
+      <div class="blog-card-soon reveal" style="transition-delay:.18s">
+        <div class="soon-icon">✍️</div>
+        <div class="soon-title">Nächster Artikel</div>
+        <div class="soon-text">August 2026 &middot; MID-Forderung NRW:<br>So beantragst du sie richtig</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="nl-section">
+  <div class="nl-box reveal">
+    <h2 class="nl-title">Monatlich neues<br><span>KI-Wissen</span></h2>
+    <p class="nl-sub">Kein Spam. Einmal pro Monat ein neuer Artikel direkt in dein Postfach, praxisnah, fur KMU in NRW.</p>
+    <div class="nl-form">
+      <input type="email" class="nl-input" placeholder="deine@email.de">
+      <button class="nl-btn" onclick="nlSubmit(this)">Anmelden</button>
+    </div>
+    <p class="nl-note">Kein Spam &middot; Jederzeit abmeldbar &middot; DSGVO-konform</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <h3>SkyvAI</h3>
+      <p>KI-Agentur fur den Mittelstand in NRW. Digitale Transformation, die wirklich funktioniert.</p>
+      <p style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(232,228,240,.22);margin-top:10px">Essen, NRW &middot; 2026</p>
+    </div>
+    <div class="footer-col">
+      <h4>Leistungen</h4>
+      <ul>
+        <li><a href="leistungen.html">KI-Automatisierung</a></li>
+        <li><a href="leistungen.html">Chatbots &amp; AI</a></li>
+        <li><a href="leistungen.html">KI-Strategie</a></li>
+        <li><a href="leistungen.html">Website Design</a></li>
+        <li><a href="erstehilfe.html">Erste Hilfe App</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Blog</h4>
+      <ul>
+        <li><a href="blog-ki-strategie-kmu-nrw.html">KI-Strategie fur KMU NRW</a></li>
+        <li><a href="blog.html">Alle Artikel</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="mailto:skyvai@hotmail.com">skyvai@hotmail.com</a></li>
+        <li><a href="https://www.linkedin.com/company/skyvai" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.cal.eu/skyvai/erstgespraech" target="_blank">Termin buchen</a></li>
+        <li><a href="impressum.html">Impressum</a></li>
+        <li><a href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 SkyvAI &middot; Essen, NRW</p>
+    <p><a href="impressum.html" style="color:var(--mu);text-decoration:none">Impressum</a> &middot; <a href="datenschutz.html" style="color:var(--mu);text-decoration:none">Datenschutz</a></p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('nav-mobile').classList.toggle('open')}
+document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('#nav-mobile'))document.getElementById('nav-mobile').classList.remove('open')});
+window.addEventListener('scroll',()=>{document.getElementById('main-nav').style.background=window.scrollY>50?'rgba(10,8,20,.97)':'rgba(10,8,20,.92)';},{passive:true});
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.06});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')})});
+function nlSubmit(btn){
+  const input=btn.previousElementSibling;
+  if(!input.value||!input.value.includes('@')){input.style.borderColor='rgba(239,68,68,.5)';return;}
+  btn.textContent='Angemeldet!';btn.style.background='linear-gradient(135deg,#16a34a,#22c55e)';
+  input.disabled=true;btn.disabled=true;
+}
+</script>
+</body>
+</html>
