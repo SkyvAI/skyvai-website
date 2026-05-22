@@ -2153,7 +2153,7 @@ async function janSend(text) {
     const res = await fetch(JAN_WORKER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages: janHistory })
+      body: JSON.stringify({ messages: janHistory, page_url: window.location.href })
     });
 
     const data = await res.json();
