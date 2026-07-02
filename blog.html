@@ -1,352 +1,792 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3RHFVFS4V2"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3RHFVFS4V2');</script>
-<meta charset="UTF-8">
-<link rel="icon" type="image/png" href="/favicon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog – KI-Wissen für KMU in NRW | SkyvAI Essen</title>
-<meta name="description" content="KI-Blog von SkyvAI: Praxiswissen zu KI-Strategie, Automatisierung und Digitalisierung für KMU in Essen und NRW. Monatlich neue Artikel.">
-<link rel="canonical" href="https://www.skyvai.de/blog.html">
-<meta property="og:title" content="Blog – KI-Wissen für KMU in NRW | SkyvAI"/>
-<meta property="og:description" content="Praxiswissen zu KI-Strategie, Automatisierung und Digitalisierung für KMU in Essen und NRW."/>
-<meta property="og:url" content="https://skyvai.de/blog.html"/>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "SkyvAI Blog",
-  "description": "KI-Wissen für KMU in NRW",
-  "url": "https://skyvai.de/blog.html",
-  "publisher": {
-    "@type": "Organization",
-    "name": "SkyvAI",
-    "url": "https://skyvai.de",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://skyvai.de/favicon.png"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog – KI-Wissen für KMU in NRW | SkyvAI Essen</title>
+  <meta name="description" content="KI-Blog von SkyvAI: Praxiswissen zu KI-Strategie, Automatisierung und Digitalisierung für KMU in Essen und NRW. Monatlich neue Artikel.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.skyvai.de/blog.html">
+  <meta property="og:title" content="Blog – KI-Wissen für KMU in NRW | SkyvAI">
+  <meta property="og:description" content="Praxiswissen zu KI-Strategie, Automatisierung und Digitalisierung für KMU in Essen und NRW.">
+  <meta property="og:url" content="https://skyvai.de/blog.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="https://www.skyvai.de/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple: #7C3AED;
+      --purple-light: #a78bfa;
+      --cyan: #06B6D4;
+      --cyan-light: #22d3ee;
+      --dark: #060610;
+      --dark2: #0a0a1e;
+      --dark3: #0f0f2e;
+      --white: #f0f0ff;
+      --muted: rgba(255,255,255,0.45);
+      --border: rgba(255,255,255,0.07);
     }
-  },
-  "blogPost": [
-    {
-      "@type": "BlogPosting",
-      "headline": "KI-Strategie in 30 Tagen aufbauen: Der SkyvAI-Fahrplan fuer KMU in NRW",
-      "url": "https://skyvai.de/blog-ki-strategie-30-tage-nrw.html",
-      "datePublished": "2026-06-02"
-    },
-    {
-      "@type": "BlogPosting",
-      "headline": "KI bei KMU in NRW implementieren: mit der richtigen Strategie",
-      "url": "https://skyvai.de/blog-ki-strategie-kmu-nrw.html",
-      "datePublished": "2026-05-21"
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.bunny.net">
-<link href="https://fonts.bunny.net/css?family=space-grotesk:300,400,500,600,700|dm-mono:400,500&display=swap" rel="stylesheet">
-<style>
-@font-face{font-family:'Space Age';src:url('https://fonts.cdnfonts.com/s/14022/space age.woff') format('woff')}
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:clip}
-body{background:#0a0814;color:#e8e4f0;font-family:'Space Grotesk',sans-serif;line-height:1.6;overflow-x:clip}
-body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:.4}
-:root{--v:#6d28d9;--vm:#8b5cf6;--vl:#c4b5fd;--s:#0ea5e9;--sl:#38bdf8;--aq:#06d6c7;--ink:#0a0814;--ink2:#12102a;--text:#e8e4f0;--mu:rgba(232,228,240,.45);--bd:rgba(255,255,255,.07);--gv:rgba(109,40,217,.35)}
-::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--ink)}::-webkit-scrollbar-thumb{background:var(--v);border-radius:2px}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 clamp(16px,5vw,80px);height:72px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,8,20,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--bd);transition:background .3s}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo img{width:36px;height:36px;border-radius:10px;object-fit:cover}
-.nav-logo-text{font-family:'Space Age',sans-serif;font-size:20px;background:linear-gradient(135deg,var(--vl),var(--sl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
-.nav-links a{color:var(--mu);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
-.nav-links a:hover,.nav-links a.active{color:var(--text)}
-.nav-cta{background:linear-gradient(135deg,var(--v),var(--s));color:white!important;padding:10px 20px;border-radius:50px;font-weight:700!important;font-size:13px!important;box-shadow:0 0 20px var(--gv);transition:all .2s!important}
-.nav-cta:hover{transform:translateY(-1px)!important}
-.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:10px}
-.nav-hamburger span{width:20px;height:2px;background:var(--text);border-radius:2px;display:block}
-.nav-mobile{display:none;position:fixed;top:72px;left:0;right:0;background:rgba(10,8,20,.98);backdrop-filter:blur(20px);padding:20px 20px 28px;flex-direction:column;gap:4px;border-bottom:1px solid var(--bd);z-index:999}
-.nav-mobile.open{display:flex}
-.nav-mobile a{color:var(--text);text-decoration:none;font-size:16px;padding:12px 4px;border-bottom:1px solid rgba(255,255,255,.05)}
-.nav-mobile .nav-cta{border:none;text-align:center;margin-top:10px;padding:14px;border-radius:14px;border-bottom:none}
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      background: rgba(6,6,16,0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
 
-/* UTILS */
-.container{max-width:clamp(1100px,88vw,1500px);margin:0 auto}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--white);
+    }
 
-/* HERO */
-.hero{padding:140px clamp(16px,5vw,80px) 80px;background:var(--ink);position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 0%,rgba(109,40,217,.18) 0%,transparent 55%);pointer-events:none}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.022) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.022) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse at 50% 0%,black 30%,transparent 70%)}
-.hero-inner{max-width:760px;position:relative;z-index:1}
-.eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:3px;color:var(--sl);text-transform:uppercase;margin-bottom:14px;display:block}
-.hero-h1{font-family:'Space Age',sans-serif;font-size:clamp(2rem,5vw,3.6rem);line-height:1.06;letter-spacing:-.02em;margin-bottom:16px}
-.hero-h1 span{background:linear-gradient(135deg,var(--vm),var(--aq));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:clamp(1rem,2vw,1.15rem);color:var(--mu);line-height:1.8;max-width:560px}
+    .nav-logo img { width: 28px; height: 28px; }
 
-/* FILTER BAR */
-.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin:48px 0 0}
-.filter-btn{background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:50px;padding:7px 18px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:1px;color:var(--mu);cursor:pointer;transition:all .2s;text-transform:uppercase}
-.filter-btn:hover,.filter-btn.active{background:rgba(109,40,217,.15);border-color:rgba(109,40,217,.4);color:var(--vl)}
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
 
-/* BLOG GRID */
-.blog-section{padding:72px clamp(16px,5vw,80px) 100px;background:var(--ink2)}
-.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .nav-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
 
-/* FEATURED (first article — full width) */
-.blog-card-featured{grid-column:1/-1;display:grid;grid-template-columns:1fr 1.5fr;border-radius:24px;overflow:hidden;border:1px solid var(--bd);background:rgba(255,255,255,.03);text-decoration:none;transition:all .35s}
-.blog-card-featured:hover{border-color:rgba(109,40,217,.35);transform:translateY(-4px);box-shadow:0 24px 60px rgba(0,0,0,.35)}
-.featured-img{overflow:hidden;position:relative;min-height:280px}
-.featured-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.7);display:block;transition:transform .7s ease}
-.blog-card-featured:hover .featured-img img{transform:scale(1.04)}
-.featured-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(109,40,217,.22),rgba(14,165,233,.12))}
-.featured-label{position:absolute;top:20px;left:20px;z-index:1;background:linear-gradient(135deg,var(--v),var(--s));border-radius:50px;padding:4px 14px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:2px;color:white;text-transform:uppercase}
-.featured-body{padding:clamp(24px,3vw,44px);display:flex;flex-direction:column;justify-content:space-between;gap:20px}
-.featured-tag-row{display:flex;gap:8px;flex-wrap:wrap}
-.tag{display:inline-block;border-radius:50px;padding:3px 12px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.5px}
-.tag-v{background:rgba(109,40,217,.1);border:1px solid rgba(109,40,217,.22);color:var(--vl)}
-.tag-s{background:rgba(14,165,233,.1);border:1px solid rgba(14,165,233,.22);color:var(--sl)}
-.tag-aq{background:rgba(6,214,199,.08);border:1px solid rgba(6,214,199,.22);color:var(--aq)}
-.featured-title{font-family:'Space Age',sans-serif;font-size:clamp(1.3rem,2.5vw,1.9rem);color:var(--text);line-height:1.2;margin-bottom:10px}
-.featured-excerpt{font-size:clamp(13px,1.8vw,15px);color:var(--mu);line-height:1.78}
-.featured-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
-.meta-info{font-family:'DM Mono',monospace;font-size:10px;color:rgba(232,228,240,.4);letter-spacing:.5px}
-.read-link{display:inline-flex;align-items:center;gap:6px;color:var(--sl);font-size:14px;font-weight:600}
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--white); }
 
-/* REGULAR CARDS */
-.blog-card{border-radius:20px;overflow:hidden;border:1px solid var(--bd);background:rgba(255,255,255,.03);text-decoration:none;transition:all .35s;display:flex;flex-direction:column}
-.blog-card:hover{border-color:rgba(109,40,217,.32);transform:translateY(-5px);box-shadow:0 20px 50px rgba(0,0,0,.3)}
-.card-img{height:clamp(160px,18vw,200px);overflow:hidden;position:relative}
-.card-img img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) brightness(.68);display:block;transition:transform .6s ease}
-.blog-card:hover .card-img img{transform:scale(1.06)}
-.card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,8,20,.85) 0%,transparent 50%)}
-.card-body{padding:clamp(18px,2.5vw,24px);flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:14px}
-.card-title{font-family:'Space Age',sans-serif;font-size:clamp(14px,1.8vw,17px);color:var(--text);line-height:1.25}
-.card-excerpt{font-size:clamp(12px,1.6vw,13.5px);color:var(--mu);line-height:1.7}
-.card-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
-.card-meta{font-family:'DM Mono',monospace;font-size:9px;color:rgba(232,228,240,.35);letter-spacing:.5px}
+    .nav-cta {
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      color: var(--white) !important;
+      padding: 10px 22px !important;
+      border-radius: 8px;
+      font-weight: 600;
+      letter-spacing: 0.04em !important;
+    }
 
-/* COMING SOON CARD */
-.blog-card-soon{border-radius:20px;border:2px dashed rgba(255,255,255,.08);background:rgba(255,255,255,.015);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 24px;gap:12px;min-height:280px}
-.soon-icon{font-size:32px;opacity:.4}
-.soon-title{font-family:'Space Age',sans-serif;font-size:15px;color:rgba(232,228,240,.3)}
-.soon-text{font-size:12px;color:rgba(232,228,240,.25);font-family:'DM Mono',monospace;letter-spacing:.5px}
+    /* ── HERO ── */
+    .blog-hero {
+      text-align: center;
+      padding: 80px 24px 56px;
+      max-width: 720px;
+      margin: 0 auto;
+    }
 
-/* NEWSLETTER */
-.nl-section{padding:72px clamp(16px,5vw,80px);background:var(--ink)}
-.nl-box{max-width:640px;margin:0 auto;text-align:center}
-.nl-title{font-family:'Space Age',sans-serif;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:10px}
-.nl-title span{background:linear-gradient(135deg,var(--vl),var(--aq));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.nl-sub{font-size:15px;color:var(--mu);line-height:1.75;margin-bottom:28px}
-.nl-form{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.nl-input{flex:1;min-width:220px;background:rgba(255,255,255,.06);border:1px solid var(--bd);border-radius:12px;padding:12px 18px;color:var(--text);font-size:14px;font-family:'Space Grotesk',sans-serif;outline:none;transition:border-color .2s}
-.nl-input:focus{border-color:rgba(109,40,217,.5)}
-.nl-input::placeholder{color:rgba(232,228,240,.3)}
-.nl-btn{background:linear-gradient(135deg,var(--v),var(--s));color:white;border:none;border-radius:12px;padding:12px 24px;font-weight:700;font-size:14px;cursor:pointer;font-family:'Space Grotesk',sans-serif;transition:all .3s;box-shadow:0 4px 20px var(--gv)}
-.nl-btn:hover{transform:translateY(-2px)}
-.nl-note{font-family:'DM Mono',monospace;font-size:10px;color:rgba(232,228,240,.3);letter-spacing:.5px;margin-top:14px}
+    .blog-hero-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 20px;
+    }
 
-/* FOOTER */
-footer{background:var(--ink);border-top:1px solid var(--bd);padding:clamp(40px,5vw,56px) clamp(16px,4vw,80px) 32px}
-.footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:40px}
-.footer-brand h3{font-family:'Space Age',sans-serif;font-size:20px;background:linear-gradient(135deg,var(--vl),var(--sl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
-.footer-brand p{font-size:13px;color:var(--mu);line-height:1.7;max-width:260px}
-.footer-col h4{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--mu);text-transform:uppercase;margin-bottom:12px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:9px}
-.footer-col a{color:rgba(232,228,240,.5);text-decoration:none;font-size:13.5px;transition:color .2s}
-.footer-col a:hover{color:var(--text)}
-.footer-bottom{max-width:1200px;margin:0 auto;padding-top:24px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
-.footer-bottom p{font-size:12px;color:var(--mu);font-family:'DM Mono',monospace}
+    .blog-hero h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
 
-/* RESPONSIVE */
-@media(max-width:1024px){.blog-grid{grid-template-columns:repeat(2,1fr)}.blog-card-featured{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr 1fr;gap:32px}}
-@media(max-width:640px){nav{padding:0 16px}.nav-links{display:none}.nav-hamburger{display:flex}.blog-grid{grid-template-columns:1fr}.blog-card-featured{grid-column:auto}.footer-inner{grid-template-columns:1fr;gap:28px}.nl-form{flex-direction:column}.nl-input,.nl-btn{width:100%}}
-</style>
+    .blog-hero h1 span {
+      background: linear-gradient(135deg, var(--purple-light), var(--cyan-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .blog-hero p {
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    /* ── FILTER TABS ── */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 24px 56px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: rgba(124,58,237,0.15);
+      border-color: rgba(124,58,237,0.4);
+      color: var(--white);
+    }
+
+    /* ── ARTICLES WRAPPER ── */
+    .articles-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 120px;
+    }
+
+    /* ── FEATURED CARD ── */
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      text-decoration: none;
+      color: inherit;
+      background: var(--dark2);
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .featured-card:hover {
+      border-color: rgba(124,58,237,0.4);
+      transform: translateY(-3px);
+    }
+
+    .featured-image {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 380px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s;
+    }
+
+    .featured-card:hover .featured-image img {
+      transform: scale(1.03);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: var(--white);
+    }
+
+    .featured-content {
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .featured-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .tag-pill {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid rgba(124,58,237,0.35);
+      color: var(--purple-light);
+    }
+
+    .tag-pill.cyan {
+      border-color: rgba(6,182,212,0.35);
+      color: var(--cyan-light);
+    }
+
+    .featured-content h2 {
+      font-size: clamp(22px, 2.5vw, 30px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--white);
+    }
+
+    .featured-content p {
+      font-size: 15px;
+      color: rgba(240,240,255,0.65);
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .featured-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .meta-info {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .read-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--cyan);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* ── GRID CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .article-card {
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+
+    .article-card:hover {
+      border-color: rgba(124,58,237,0.4);
+      transform: translateY(-3px);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .card-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(124,58,237,0.3);
+      color: var(--purple-light);
+    }
+
+    .card-body h3 {
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .card-body p {
+      font-size: 14px;
+      color: rgba(240,240,255,0.6);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    .card-footer {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-footer a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-size: 11px;
+    }
+
+    /* ── PLACEHOLDER CARD ── */
+    .placeholder-card {
+      background: var(--dark2);
+      border: 1px dashed rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 12px;
+      min-height: 280px;
+    }
+
+    .placeholder-icon {
+      font-size: 28px;
+      opacity: 0.5;
+    }
+
+    .placeholder-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .placeholder-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      color: rgba(240,240,255,0.35);
+      line-height: 1.5;
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter-section {
+      max-width: 640px;
+      margin: 0 auto 120px;
+      text-align: center;
+      padding: 0 24px;
+    }
+
+    .newsletter-section h2 {
+      font-size: clamp(24px, 3vw, 34px);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .newsletter-section h2 span {
+      background: linear-gradient(135deg, var(--purple-light), var(--cyan-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .newsletter-section p {
+      font-size: 15px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      max-width: 420px;
+      margin: 0 auto 16px;
+    }
+
+    .newsletter-form input {
+      flex: 1;
+      background: var(--dark2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 18px;
+      color: var(--white);
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .newsletter-form input:focus {
+      border-color: rgba(124,58,237,0.5);
+    }
+
+    .newsletter-form input::placeholder { color: var(--muted); }
+
+    .newsletter-form button {
+      background: linear-gradient(135deg, var(--purple), var(--cyan));
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      padding: 14px 22px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+
+    .newsletter-form button:hover { opacity: 0.85; }
+
+    .newsletter-hint {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.04em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--dark2);
+      padding: 64px 48px 40px;
+    }
+
+    .footer-inner { max-width: 1100px; margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 12px;
+      max-width: 260px;
+      line-height: 1.6;
+    }
+
+    .footer-location {
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+      margin-top: 8px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: rgba(240,240,255,0.55);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-col ul li a:hover { color: var(--white); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom span {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .footer-bottom-links { display: flex; gap: 20px; }
+    .footer-bottom-links a {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-bottom-links a:hover { color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .featured-card { grid-template-columns: 1fr; }
+      .featured-image img { min-height: 240px; }
+      .cards-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      nav { padding: 16px 20px; }
+      .nav-links { display: none; }
+      .featured-content { padding: 28px 24px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      footer { padding: 48px 20px 32px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: 1 / -1; }
+    }
+  </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav id="main-nav">
-  <a href="index.html" class="nav-logo">
-    <img src="favicon.png" alt="SkyvAI">
-    <span class="nav-logo-text">SkyvAI</span>
+<nav>
+  <a href="https://www.skyvai.de/index.html" class="nav-logo">
+    <img src="https://www.skyvai.de/favicon.png" alt="SkyvAI">
+    SkyvAI
   </a>
   <ul class="nav-links">
-    <li><a href="leistungen.html">Leistungen</a></li>
-    <li><a href="erstehilfe.html">Erste Hilfe App</a></li>
-    <li><a href="blog.html" class="active">Blog</a></li>
-    <li><a href="impressum.html">Impressum</a></li>
-    <li><a href="https://www.cal.eu/skyvai/erstgespraech" target="_blank" class="nav-cta">Erstgespräch buchen</a></li>
+    <li><a href="https://www.skyvai.de/leistungen.html">Leistungen</a></li>
+    <li><a href="https://www.skyvai.de/erstehilfe.html">Erste Hilfe App</a></li>
+    <li><a href="https://www.skyvai.de/blog.html" class="active">Blog</a></li>
+    <li><a href="https://www.skyvai.de/impressum.html">Impressum</a></li>
+    <li><a href="https://www.cal.eu/skyvai/erstgespraech" class="nav-cta">Erstgespräch buchen</a></li>
   </ul>
-  <div class="nav-hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
 </nav>
-<div class="nav-mobile" id="nav-mobile">
-  <a href="leistungen.html">Leistungen</a>
-  <a href="erstehilfe.html">Erste Hilfe App</a>
-  <a href="blog.html">Blog</a>
-  <a href="impressum.html">Impressum</a>
-  <a href="https://www.cal.eu/skyvai/erstgespraech" target="_blank" class="nav-cta">Erstgespräch buchen</a>
-</div>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-grid"></div>
-  <div class="container">
-    <div class="hero-inner reveal">
-      <span class="eyebrow">KI-Wissen &middot; NRW &middot; Mittelstand</span>
-      <h1 class="hero-h1">KI-Praxis<br><span>für den Mittelstand</span></h1>
-      <p class="hero-sub">Monatlich neue Artikel zu KI-Strategie, Automatisierung und Digitalisierung. Kein Theorie-Kauderwelsch, sondern konkrete Praxis aus NRW-Projekten.</p>
-      <div class="filter-bar">
-        <button class="filter-btn active">Alle</button>
-        <button class="filter-btn">KI-Strategie</button>
-        <button class="filter-btn">Automatisierung</button>
-        <button class="filter-btn">NRW</button>
-        <button class="filter-btn">Förderung</button>
+<div class="blog-hero">
+  <div class="blog-hero-tag">KI-Wissen · NRW · Mittelstand</div>
+  <h1>KI-Praxis <span>für den Mittelstand</span></h1>
+  <p>Monatlich neue Artikel zu KI-Strategie, Automatisierung und Digitalisierung. Kein Theorie-Kauderwelsch, sondern konkrete Praxis aus NRW-Projekten.</p>
+</div>
+
+<!-- FILTER -->
+<div class="filter-bar">
+  <button class="filter-btn active">Alle</button>
+  <button class="filter-btn">KI-Strategie</button>
+  <button class="filter-btn">Automatisierung</button>
+  <button class="filter-btn">NRW</button>
+  <button class="filter-btn">Förderung</button>
+</div>
+
+<!-- ARTICLES -->
+<div class="articles-wrapper">
+
+  <!-- FEATURED: JULI 2026 -->
+  <a href="https://www.skyvai.de/blog-ki-sommerpause-nrw.html" class="featured-card">
+    <div class="featured-image">
+      <img
+        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&q=85&auto=format&fit=crop"
+        alt="KI-Einstieg in der Sommerpause für NRW-KMU"
+        loading="eager"
+      >
+      <div class="featured-badge">Neuester Artikel</div>
+    </div>
+    <div class="featured-content">
+      <div>
+        <div class="featured-tags">
+          <span class="tag-pill">KI-Strategie</span>
+          <span class="tag-pill cyan">NRW</span>
+          <span class="tag-pill">KMU</span>
+        </div>
+        <h2>Jetzt starten, im Herbst ernten</h2>
+        <p>Warum die Sommerpause der klügste Einstiegspunkt für KI-Projekte in NRW-KMU ist. Mit konkreten Sommer-Quick-Wins, einem 6-Wochen-Plan und Hinweisen zur MID-Förderung.</p>
+      </div>
+      <div class="featured-meta">
+        <span class="meta-info">Juli 2026 · 8 Min Lesezeit · SkyvAI Redaktion</span>
+        <span class="read-link">Artikel lesen &rarr;</span>
       </div>
     </div>
-  </div>
-</section>
+  </a>
 
-<!-- BLOG GRID -->
-<section class="blog-section">
-  <div class="container">
-        <div class="blog-grid">
+  <!-- GRID: 3 KARTEN -->
+  <div class="cards-grid">
 
-      <!-- FEATURED: Neuer Artikel - Juni 2026 -->
-      <a href="blog-ki-strategie-30-tage-nrw.html" class="blog-card-featured reveal">
-        <div class="featured-img">
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=900&amp;q=80&amp;auto=format&amp;fit=crop" alt="KI-Strategie in 30 Tagen für KMU in NRW" loading="eager">
-          <div class="featured-label">Neuester Artikel</div>
+    <!-- JUNI 2026 -->
+    <a href="https://www.skyvai.de/blog-ki-strategie-30-tage-nrw.html" class="article-card">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop"
+        alt="KI-Strategie in 30 Tagen NRW KMU"
+        loading="lazy"
+      >
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="card-tag">KI-Strategie</span>
+          <span class="card-tag">NRW</span>
+          <span class="card-tag">KMU</span>
         </div>
-        <div class="featured-body">
-          <div>
-            <div class="featured-tag-row" style="margin-bottom:14px">
-              <span class="tag tag-v">KI-STRATEGIE</span>
-              <span class="tag tag-s">NRW</span>
-              <span class="tag tag-aq">KMU</span>
-            </div>
-            <div class="featured-title">KI-Strategie in 30 Tagen: Der SkyvAI-Fahrplan</div>
-            <p class="featured-excerpt">Wie NRW-KMU in 30 Tagen eine wirksame KI-Strategie aufbauen: Schritt-für-Schritt-Fahrplan mit Quick-Wins, Praxisbeispielen und Fördermittel-Hinweisen.</p>
-          </div>
-          <div class="featured-meta">
-            <div class="meta-info">Juni 2026 &middot; 9 Min Lesezeit &middot; SkyvAI Redaktion</div>
-            <span class="read-link">Artikel lesen &rarr;</span>
-          </div>
+        <h3>KI-Strategie in 30 Tagen: Der SkyvAI-Fahrplan</h3>
+        <p>Wie NRW-KMU in 30 Tagen eine wirksame KI-Strategie aufbauen: Schritt-für-Schritt-Fahrplan mit Quick-Wins, Praxisbeispielen und Fördermittel-Hinweisen.</p>
+        <div class="card-footer">
+          <span>Juni 2026 · 9 Min · SkyvAI</span>
+          <a href="https://www.skyvai.de/blog-ki-strategie-30-tage-nrw.html">Lesen &rarr;</a>
         </div>
-      </a>
-
-      <!-- Artikel 2 - Mai 2026 -->
-      <a href="blog-ki-strategie-kmu-nrw.html" class="blog-card reveal" style="transition-delay:.06s">
-        <div class="card-img">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&amp;q=75&amp;auto=format&amp;fit=crop" alt="KI Strategie KMU NRW" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div>
-            <div style="display:flex;gap:8px;margin-bottom:10px;flex-wrap:wrap">
-              <span class="tag tag-v">KI-STRATEGIE</span>
-              <span class="tag tag-s">NRW</span>
-              <span class="tag tag-aq">KMU</span>
-            </div>
-            <div class="card-title">KI bei KMU in NRW implementieren</div>
-            <p class="card-excerpt">Warum 60% aller KI-Projekte scheitern, welche 4 Fehler du vermeiden musst und wie du in 5 Schritten zur funktionierenden KI-Lösung kommst.</p>
-          </div>
-          <div class="card-footer">
-            <div class="card-meta">Mai 2026 &middot; 8 Min &middot; SkyvAI</div>
-            <span class="read-link" style="font-size:13px">Lesen &rarr;</span>
-          </div>
-        </div>
-      </a>
-
-      <!-- Platzhalter: Artikel 3 -->
-      <div class="blog-card-soon reveal" style="transition-delay:.12s">
-        <div class="soon-icon">✍️</div>
-        <div class="soon-title">Nächster Artikel</div>
-        <div class="soon-text">Juli 2026 &middot; Chatbot für kleine<br>Unternehmen Essen</div>
       </div>
+    </a>
 
-      <!-- Platzhalter: Artikel 4 -->
-      <div class="blog-card-soon reveal" style="transition-delay:.18s">
-        <div class="soon-icon">✍️</div>
-        <div class="soon-title">Nächster Artikel</div>
-        <div class="soon-text">August 2026 &middot; MID-Förderung NRW:<br>So beantragst du sie richtig</div>
+    <!-- MAI 2026 -->
+    <a href="https://www.skyvai.de/blog-ki-strategie-kmu-nrw.html" class="article-card">
+      <img
+        class="card-image"
+        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80&auto=format&fit=crop"
+        alt="KI bei KMU in NRW implementieren"
+        loading="lazy"
+      >
+      <div class="card-body">
+        <div class="card-tags">
+          <span class="card-tag">KI-Strategie</span>
+          <span class="card-tag">NRW</span>
+          <span class="card-tag">KMU</span>
+        </div>
+        <h3>KI bei KMU in NRW implementieren</h3>
+        <p>Warum 60% aller KI-Projekte scheitern, welche 4 Fehler du vermeiden musst und wie du in 5 Schritten zur funktionierenden KI-Lösung kommst.</p>
+        <div class="card-footer">
+          <span>Mai 2026 · 8 Min · SkyvAI</span>
+          <a href="https://www.skyvai.de/blog-ki-strategie-kmu-nrw.html">Lesen &rarr;</a>
+        </div>
       </div>
+    </a>
 
+    <!-- AUGUST 2026 PLACEHOLDER -->
+    <div class="placeholder-card">
+      <div class="placeholder-icon">&#9997;&#65039;</div>
+      <div class="placeholder-label">Nächster Artikel</div>
+      <div class="placeholder-title">August 2026 · MID-Förderung NRW:<br>So beantragst du sie richtig</div>
     </div>
+
   </div>
-</section>
+</div>
 
 <!-- NEWSLETTER -->
-<section class="nl-section">
-  <div class="nl-box reveal">
-    <h2 class="nl-title">Monatlich neues<br><span>KI-Wissen</span></h2>
-    <p class="nl-sub">Kein Spam. Einmal pro Monat ein neuer Artikel direkt in dein Postfach, praxisnah, fur KMU in NRW.</p>
-    <div class="nl-form">
-      <input type="email" class="nl-input" placeholder="deine@email.de">
-      <button class="nl-btn" onclick="nlSubmit(this)">Anmelden</button>
-    </div>
-    <p class="nl-note">Kein Spam &middot; Jederzeit abmeldbar &middot; DSGVO-konform</p>
+<div class="newsletter-section">
+  <h2>Monatlich neues <span>KI-Wissen</span></h2>
+  <p>Kein Spam. Einmal pro Monat ein neuer Artikel direkt in dein Postfach, praxisnah, für KMU in NRW.</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="Deine E-Mail-Adresse">
+    <button type="submit">Anmelden</button>
   </div>
-</section>
+  <div class="newsletter-hint">Kein Spam · Jederzeit abmeldbar · DSGVO-konform</div>
+</div>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-brand">
-      <h3>SkyvAI</h3>
-      <p>KI-Agentur fur den Mittelstand in NRW. Digitale Transformation, die wirklich funktioniert.</p>
-      <p style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(232,228,240,.22);margin-top:10px">Essen, NRW &middot; 2026</p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="https://www.skyvai.de/index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:18px;color:var(--white);">
+          SkyvAI
+        </a>
+        <p>KI-Agentur fur den Mittelstand in NRW. Digitale Transformation, die wirklich funktioniert.</p>
+        <div class="footer-location">Essen, NRW · 2026</div>
+      </div>
+      <div class="footer-col">
+        <h4>Leistungen</h4>
+        <ul>
+          <li><a href="https://www.skyvai.de/leistungen.html">KI-Automatisierung</a></li>
+          <li><a href="https://www.skyvai.de/leistungen.html">Chatbots &amp; AI</a></li>
+          <li><a href="https://www.skyvai.de/leistungen.html">KI-Strategie</a></li>
+          <li><a href="https://www.skyvai.de/leistungen.html">Website Design</a></li>
+          <li><a href="https://www.skyvai.de/erstehilfe.html">Erste Hilfe App</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="https://www.skyvai.de/blog-ki-sommerpause-nrw.html">KI-Einstieg im Sommer</a></li>
+          <li><a href="https://www.skyvai.de/blog-ki-strategie-30-tage-nrw.html">KI-Strategie in 30 Tagen</a></li>
+          <li><a href="https://www.skyvai.de/blog-ki-strategie-kmu-nrw.html">KI-Strategie fur KMU NRW</a></li>
+          <li><a href="https://www.skyvai.de/blog.html">Alle Artikel</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:skyvai@hotmail.com">skyvai@hotmail.com</a></li>
+          <li><a href="https://www.linkedin.com/company/skyvai">LinkedIn</a></li>
+          <li><a href="https://www.cal.eu/skyvai/erstgespraech">Termin buchen</a></li>
+          <li><a href="https://www.skyvai.de/impressum.html">Impressum</a></li>
+          <li><a href="https://www.skyvai.de/datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Leistungen</h4>
-      <ul>
-        <li><a href="leistungen.html">KI-Automatisierung</a></li>
-        <li><a href="leistungen.html">Chatbots &amp; AI</a></li>
-        <li><a href="leistungen.html">KI-Strategie</a></li>
-        <li><a href="leistungen.html">Website Design</a></li>
-        <li><a href="erstehilfe.html">Erste Hilfe App</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <span>© 2026 SkyvAI · Essen, NRW</span>
+      <div class="footer-bottom-links">
+        <a href="https://www.skyvai.de/impressum.html">Impressum</a>
+        <a href="https://www.skyvai.de/datenschutz.html">Datenschutz</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Blog</h4>
-      <ul>
-        <li><a href="blog-ki-strategie-30-tage-nrw.html">KI-Strategie in 30 Tagen</a></li>
-        <li><a href="blog-ki-strategie-kmu-nrw.html">KI-Strategie fur KMU NRW</a></li>
-        <li><a href="blog.html">Alle Artikel</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Kontakt</h4>
-      <ul>
-        <li><a href="mailto:skyvai@hotmail.com">skyvai@hotmail.com</a></li>
-        <li><a href="https://www.linkedin.com/company/skyvai" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.cal.eu/skyvai/erstgespraech" target="_blank">Termin buchen</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 SkyvAI &middot; Essen, NRW</p>
-    <p><a href="impressum.html" style="color:var(--mu);text-decoration:none">Impressum</a> &middot; <a href="datenschutz.html" style="color:var(--mu);text-decoration:none">Datenschutz</a></p>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){document.getElementById('nav-mobile').classList.toggle('open')}
-document.addEventListener('click',e=>{if(!e.target.closest('nav')&&!e.target.closest('#nav-mobile'))document.getElementById('nav-mobile').classList.remove('open')});
-window.addEventListener('scroll',()=>{document.getElementById('main-nav').style.background=window.scrollY>50?'rgba(10,8,20,.97)':'rgba(10,8,20,.92)';},{passive:true});
-const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.06});
-document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
-document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',function(){document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));this.classList.add('active')})});
-function nlSubmit(btn){
-  const input=btn.previousElementSibling;
-  if(!input.value||!input.value.includes('@')){input.style.borderColor='rgba(239,68,68,.5)';return;}
-  btn.textContent='Angemeldet!';btn.style.background='linear-gradient(135deg,#16a34a,#22c55e)';
-  input.disabled=true;btn.disabled=true;
-}
+  // Filter buttons (visual only)
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
 </script>
+
 </body>
 </html>
